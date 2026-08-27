@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1과목 분석 기획 — 13회 빅분기 쪽집게</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">13회 빅분기 필기 쪽집게<small>2026.09</small></div><a href="index.html">홈</a><a href="합격전략.html">전략</a><a href="1과목.html" class="active">1 기획</a><a href="2과목.html">2 탐색</a><a href="3과목.html">3 모델링</a><a href="4과목.html">4 해석</a><a href="합본.html">합본·인쇄</a></header>
+<div class="layout">
+<nav class="toc"><strong>이 페이지</strong>
+<a class="h2" href="#1장-빅데이터의-이해">1장. 빅데이터의 이해</a>
+<a class="h3" href="#1-1-데이터-vs-정보-DIKW">1-1. 데이터 vs 정보, DIKW ★</a>
+<a class="h3" href="#1-2-정형-반정형-비정형-특강-100">1-2. 정형 · 반정형 · 비정형 특강 100%</a>
+<a class="h3" href="#1-3-저장-방식-3분법-특강-변별력">1-3. 저장 방식 3분법 특강 변별력</a>
+<a class="h3" href="#1-4-ETL-ODS-DW-DM-Data-Lake-특강-100">1-4. ETL · ODS · DW · DM · Data Lake 특강 100%</a>
+<a class="h3" href="#1-5-SQL-분류">1-5. SQL 분류 ⚠</a>
+<a class="h3" href="#1-6-분석-가치-4유형-특강">1-6. 분석 가치 4유형 특강</a>
+<a class="h3" href="#1-7-마이데이터-산업-흐름">1-7. 마이데이터 · 산업 흐름</a>
+<a class="h3" href="#1-8-조직-인력-특강-반복-출제">1-8. 조직 · 인력 특강 반복 출제</a>
+<a class="h3" href="#1-9-데이터-거버넌스-특강">1-9. 데이터 거버넌스 특강</a>
+<a class="h2" href="#2장-빅데이터-기술-및-제도">2장. 빅데이터 기술 및 제도</a>
+<a class="h3" href="#2-1-플랫폼-3계층-특강-최근-가중치-최고">2-1. 플랫폼 3계층 특강 (최근 가중치 최고)</a>
+<a class="h3" href="#2-2-하둡-코어-에코시스템-특강">2-2. 하둡 코어 + 에코시스템 특강</a>
+<a class="h3" href="#2-3-저장장치-DAS-NAS-SAN">2-3. 저장장치 DAS / NAS / SAN</a>
+<a class="h3" href="#2-4-인공지능-학습-유형-특강-교집합-3과목_모델링_쪽집게">2-4. 인공지능 학습 유형 특강 교집합 → 3과목_모델링_쪽집게</a>
+<a class="h3" href="#2-5-개인정보-특강">2-5. 개인정보 특강</a>
+<a class="h3" href="#2-6-비식별화-5기법-세분화-특강-강력예상">2-6. 비식별화 5기법 — 세분화 특강 강력예상</a>
+<a class="h2" href="#3장-데이터-분석-계획">3장. 데이터 분석 계획</a>
+<a class="h3" href="#3-1-분석-기획-4유형">3-1. 분석 기획 4유형 ★</a>
+<a class="h3" href="#3-2-마스터플랜-우선순위-ROI-4V-특강">3-2. 마스터플랜 우선순위 · ROI · 4V 특강</a>
+<a class="h3" href="#3-3-하향식-vs-상향식-특강-가중치-높음">3-3. 하향식 vs 상향식 특강 가중치 높음</a>
+<a class="h3" href="#3-4-분석-방법론-3-빅데이터-방법론-특강-핵심-축">3-4. 분석 방법론 3 + 빅데이터 방법론 특강 핵심 축</a>
+<a class="h3" href="#3-5-모형화-모델링-특강">3-5. 모형화 ≠ 모델링 특강</a>
+<a class="h2" href="#4장-수집-저장-품질">4장. 수집 · 저장 · 품질</a>
+<a class="h3" href="#4-1-수집-기술-Sqoop-vs-Open-API-vs-FTP-특강-이번회-예상">4-1. 수집 기술 — Sqoop vs Open API vs FTP 특강 이번회 예상</a>
+<a class="h3" href="#4-2-변환-전처리-포맷통일-후처리-특강">4-2. 변환 = 전처리 + 포맷통일 + 후처리 특강</a>
+<a class="h3" href="#4-3-데이터-품질-특강-100-빅분기-고유">4-3. 데이터 품질 특강 100% (빅분기 고유)</a>
+<a class="h3" href="#4-4-분산-파일-시스템-vs-DB-클러스터-특강-변별력">4-4. 분산 파일 시스템 vs DB 클러스터 특강 변별력</a>
+<a class="h3" href="#4-5-NoSQL-4유형-특강-마지막-변별력">4-5. NoSQL 4유형 특강 마지막 변별력</a>
+<a class="h2" href="#척도-4종-2과목과-공유-1에서도-수집계획에-출제">척도 4종 (2과목과 공유, 1에서도 수집계획에 출제)</a>
+<a class="h2" href="#시험-직전-체크리스트-1과목">시험 직전 체크리스트 (1과목)</a>
+<a class="h2" href="#OX-응용-훈련-가리고-답하기">OX · 응용 훈련 (가리고 답하기)</a>
+<a class="h2" href="#암기-카드-출퇴근용">암기 카드 (출퇴근용)</a></nav>
+<main class="paper">
+<h1>1과목. 빅데이터 분석 기획</h1>
+<div class="callout danger"><div class="callout-title">특강 — 전략 과목</div><p>타깃 <strong>13~14 / 20</strong>. 깊이는 얕다. 정의만 알아도 11~12. <strong>저장 3분법·ODS/DW/Lake·비식별 세분·품질 5</strong>에서 +1~2를 만든다.
+ADSP/ADP 데이터 처리 기술과 문항이 겹친다. <strong>1과목 + <a href="4과목.html">4과목</a>을 한 과목처럼.</strong></p></div>
+
+<p><strong>이 과목의 고정 축 (특강: 3·4·7번은 항상 출제 구조)</strong><br />
+1. 데이터 구조 → 정형 / 반정형 / 비정형<br />
+2. 저장 방식 → RDB / NoSQL / HDFS<br />
+3. 저장소 흐름 → ETL · ODS · DW · DM · Data Lake</p>
+<p>시험은 정의 40% + <strong>옳지 않은 것 20~30%</strong>. 정의만 외우면 40%에서 멈춘다. <strong>차이점 한 줄</strong>을 같이 외워라.</p>
+<hr />
+<h2 id="1장-빅데이터의-이해">1장. 빅데이터의 이해</h2>
+<h3 id="1-1-데이터-vs-정보-DIKW">1-1. 데이터 vs 정보, DIKW ★</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>단계</th>
+<th>정의</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data</td>
+<td>가공 전 사실</td>
+<td>A대리점 100만, B 200만</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>패턴 인식</td>
+<td>A가 더 싸다</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>예측·활용</td>
+<td>A에서 사면 이득</td>
+</tr>
+<tr>
+<td>Wisdom</td>
+<td>창의적 판단</td>
+<td>A의 다른 제품도 쌀 것이다</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>데이터 = 객관적 사실 / 정보 = 의미 부여</li>
+<li>3V(가트너): Volume, Variety, Velocity → 5V: + Value, Veracity</li>
+<li>활용 3요소: 인력·자원(데이터)·기술 ☞ 인자기</li>
+<li>출현 배경 ★: 스마트폰, 저장비용↓, 클라우드, 하둡, IoT</li>
+<li><strong>함정</strong>: “직관적 의사결정의 중요성 증가”는 배경 아님 (데이터 기반이 핵심)</li>
+<li>단위: PB &lt; EB &lt; ZB &lt; YB ☞ 패엑제요</li>
+<li>SECI ☞ 공표연내: 공통화(암→암) · 표출화(암→형) · 연결화(형→형) · 내면화(형→암)</li>
+<li>가치 산정이 어려운 이유: 누가 언제 쓸지 모름 + 새 기법으로 무가치 데이터가 가치화</li>
+<li>변화 ☞ 전후양상: 전수조사, 사후처리, 양, 상관관계</li>
+</ul>
+<h3 id="1-2-정형-반정형-비정형-특강-100">1-2. 정형 · 반정형 · 비정형 특강 100%</h3>
+<div class="callout tip"><div class="callout-title">특강 키워드</div><p><strong>정형 = 스키마</strong> / <strong>반정형 = 메타데이터·태그</strong> / <strong>비정형 = 구조 없음</strong>
+반정형 종류를 묻는 문항이 대부분을 차지한다.</p></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>키워드</th>
+<th>예</th>
+<th>함정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정형</strong></td>
+<td>고정 스키마, 행·열, SQL</td>
+<td>RDB, CSV, ERP/CRM/SCM</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>반정형</strong></td>
+<td>스키마 없이 <strong>태그·메타데이터</strong></td>
+<td><strong>JSON, XML, HTML</strong>, 웹로그, RFID, 센서</td>
+<td>“구조 변경 불가”(X)</td>
+</tr>
+<tr>
+<td><strong>비정형</strong></td>
+<td>구조 없음</td>
+<td>이미지·영상·음성·SNS·자유텍스트</td>
+<td>전처리하면 정형화 가능(O)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>JSON ★: 자바스크립트 기반 키-값 쌍 텍스트</li>
+<li>정량(수치) vs 정성(언어·인터뷰 텍스트)</li>
+<li>내부 vs 외부, 가역 vs 불가역도 가끔</li>
+</ul>
+<h3 id="1-3-저장-방식-3분법-특강-변별력">1-3. 저장 방식 3분법 특강 변별력</h3>
+<div class="callout danger"><div class="callout-title">특강</div><p>RDB / NoSQL / Hadoop HDFS <strong>차이점이 1과목에서 13~14를 가르는 문항.</strong>
+디테일만 외우고 근본 차이를 놓치면 문항을 읽어도 이해가 안 된다.</p></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>RDB</strong></th>
+<th><strong>NoSQL</strong></th>
+<th><strong>HDFS (하둡)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스키마</td>
+<td>선정의, 엄격 (Schema-on-Write)</td>
+<td>유연·스키마리스</td>
+<td>파일 단위, 스키마 약함</td>
+</tr>
+<tr>
+<td>일관성</td>
+<td>ACID, 정규화</td>
+<td>BASE,  eventual</td>
+<td>복제 3벌, 내결함</td>
+</tr>
+<tr>
+<td>확장</td>
+<td>수직 확장 중심</td>
+<td>수평 확장</td>
+<td>노드 추가 수평 확장</td>
+</tr>
+<tr>
+<td>처리</td>
+<td>트랜잭션·조인</td>
+<td>단순 조회·대규모</td>
+<td><strong>배치</strong>, 높은 처리율</td>
+</tr>
+<tr>
+<td>실시간</td>
+<td>좋음 (OLTP)</td>
+<td>유형에 따라</td>
+<td><strong>부적합</strong> (파일 기반)</td>
+</tr>
+<tr>
+<td>데이터</td>
+<td>정형</td>
+<td>반정형·비정형 강점</td>
+<td>모든 원본 파일</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>함정 세트</strong><br />
+- HDFS를 “낮은 응답 지연(실시간)”이라고 하면 <strong>오답</strong>. 설계 목적은 <strong>높은 처리율(throughput), 배치</strong>.<br />
+- NoSQL = “SQL을 안 쓴다”가 아니라 <strong>Not Only SQL</strong> (비관계형 + 수평확장).<br />
+- RDB만의 특징: 조인·정규화·강결합 스키마·트랜잭션.</p>
+<h3 id="1-4-ETL-ODS-DW-DM-Data-Lake-특강-100">1-4. ETL · ODS · DW · DM · Data Lake 특강 100%</h3>
+<pre><code>OLTP(현업 운영) → ODS(운영 임시 통합) → ETL → DW(전사) → DM(부서) → OLAP/BI
+                              ↘ Data Lake(원본 그대로, 하둡/S3)
+</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>용어</th>
+<th>한 줄</th>
+<th>특강 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ETL</strong></td>
+<td>Extract → Transform → Load</td>
+<td>운영DB → DW. 추출·변환·적재 기능 정의</td>
+</tr>
+<tr>
+<td><strong>ODS</strong></td>
+<td>Operational Data Store. 현업 운영 저장소의 통합 중간층</td>
+<td>ADP와 동일 문항. <strong>이번 회 예상</strong></td>
+</tr>
+<tr>
+<td><strong>DW</strong></td>
+<td>전사 분석용. Inmon 4특징: <strong>주제지향·통합·시계열·비휘발성</strong></td>
+<td>함정: ‘확장성’은 4특징 아님</td>
+</tr>
+<tr>
+<td><strong>DM</strong></td>
+<td>부서·주제별 소규모 DW</td>
+<td>DW의 부분집합</td>
+</tr>
+<tr>
+<td><strong>Data Lake</strong></td>
+<td>정형~비정형 <strong>원본 포맷 그대로</strong></td>
+<td><strong>Schema-on-Read</strong></td>
+</tr>
+<tr>
+<td>DW</td>
+<td>구조를 먼저 만들고 저장</td>
+<td><strong>Schema-on-Write</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout tip"><div class="callout-title">특강 강력 예상</div><p>Lake = 포맷을 정하지 않고 가져온다 (<strong>스키마 온 리드</strong>).
+DW = 포맷을 만들어 놓고 저장 (<strong>스키마 온 라이트</strong>).</p></div>
+
+<p><strong>OLTP vs OLAP</strong><br />
+- OLTP = 거래 실시간 입력수정삭제 / OLAP = 다차원 대화식 분석<br />
+- OLAP 5연산: Roll-up, Drill-down, Slice, Dice, Pivot<br />
+- BI = 무슨 일이 있었나 / BA = 왜, 앞으로 어떻게<br />
+- 내부 DB 활용 예: ERP·CRM·SCM. 외부 SNS 분석은 내부 활용 아님 ★</p>
+<h3 id="1-5-SQL-분류">1-5. SQL 분류 ⚠</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>명령</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDL</td>
+<td>CREATE ALTER DROP TRUNCATE</td>
+<td>구조(틀)</td>
+</tr>
+<tr>
+<td>DML</td>
+<td>SELECT INSERT UPDATE DELETE</td>
+<td>내용물</td>
+</tr>
+<tr>
+<td><strong>DCL</strong></td>
+<td><strong>GRANT, REVOKE</strong></td>
+<td>권한</td>
+</tr>
+<tr>
+<td>TCL</td>
+<td>COMMIT ROLLBACK SAVEPOINT</td>
+<td>트랜잭션</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-6-분석-가치-4유형-특강">1-6. 분석 가치 4유형 특강</h3>
+<blockquote>
+<p>1·2·3·4번(쉬운 정의)은 누구나 맞춘다. <strong>5번이 나만의 변별.</strong></p>
+</blockquote>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>질문</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>묘사적 Descriptive</strong></td>
+<td>무슨 일이 일어났나</td>
+<td>대시보드, 리포트</td>
+</tr>
+<tr>
+<td><strong>진단적 Diagnostic</strong></td>
+<td>왜 일어났나</td>
+<td>드릴다운, 원인 분석</td>
+</tr>
+<tr>
+<td><strong>예측적 Predictive</strong></td>
+<td>무슨 일이 일어날까</td>
+<td>회귀, 분류, 시계열</td>
+</tr>
+<tr>
+<td><strong>처방적 Prescriptive</strong></td>
+<td>무엇을 해야 하나</td>
+<td>최적화, 추천 액션</td>
+</tr>
+</tbody>
+</table></div>
+<p>(특강 구어: “예방적”으로 들리기도 함 → 표준 용어는 <strong>예측적·처방적</strong>로 정리)</p>
+<h3 id="1-7-마이데이터-산업-흐름">1-7. 마이데이터 · 산업 흐름</h3>
+<p>처리(프로그래밍) → 통합(DBMS) → 분석(빅데이터) → 연결(API·오픈데이터) → 권리(<strong>마이데이터</strong>)<br />
+- 마이데이터: 정보주체가 본인 정보를 제3자에게 제공하게 하여 서비스를 받음<br />
+- 특강: 정의 문제 가중치는 떨어짐. 다만 <strong>프로세스 순서</strong>는 시험을 좋아한다.</p>
+<h3 id="1-8-조직-인력-특강-반복-출제">1-8. 조직 · 인력 특강 반복 출제</h3>
+<p><strong>분석 수행 주체 ☞ 집기분</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>구조</th>
+<th>장</th>
+<th>단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>집중형</strong></td>
+<td>독립 DSCoE가 전사 분석</td>
+<td>전문성·표준화</td>
+<td>현업 즉시 대응 느림, 병목</td>
+</tr>
+<tr>
+<td><strong>기능형</strong></td>
+<td>부서별 자체 분석, 전담조직 없음</td>
+<td>현업 이해</td>
+<td>전사 관점 부족, 수준 불균형</td>
+</tr>
+<tr>
+<td><strong>분산형</strong></td>
+<td>분석 인력을 현업에 배치</td>
+<td>실무 밀착·신속</td>
+<td>통합 관리 어려움</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>★ 집중형의 특징이 아닌 것 → “현업에 즉시 적용” (그건 분산형)</li>
+</ul>
+<p><strong>데이터 사이언티스트</strong><br />
+- 하드: 수학·통계·가설검정, 프로그래밍·모델링, 저장 구조<br />
+- <strong>소프트</strong>: 통찰(호기심·논리), 전달(스토리텔링·시각화), 협업<br />
+- 함정: “예산·채용 전담”은 역할 아님. 통계 모델 설계는 하드.</p>
+<p><strong>분석 준비도 vs 성숙도</strong> → 기업을 도입형/확산형 등 고유명사로 구분 특강</p>
+<p>준비도 6 ☞ IT문데기인파: 분석업무, 인력조직, 기법, 데이터, 문화, IT인프라<br />
+성숙도 4 ☞ 도활확최: 도입 → 활용 → 확산 → 최적화</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>준비도</th>
+<th>성숙도</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>준비형</td>
+<td>낮</td>
+<td>낮</td>
+<td>사전 준비</td>
+</tr>
+<tr>
+<td>정착형</td>
+<td>낮</td>
+<td>높</td>
+<td>제한 사용 중, 정착 필요</td>
+</tr>
+<tr>
+<td><strong>도입형</strong></td>
+<td>높</td>
+<td>낮</td>
+<td>조직 준비됨, 바로 도입</td>
+</tr>
+<tr>
+<td><strong>확산형</strong></td>
+<td>높</td>
+<td>높</td>
+<td>지속 확산</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-9-데이터-거버넌스-특강">1-9. 데이터 거버넌스 특강</h3>
+<ul>
+<li>3요소 ☞ 원조프: <strong>원칙, 조직, 프로세스</strong> (교재에 따라 4요소: + 기술/표준)</li>
+<li>관리 대상: 마스터데이터, 메타데이터, 데이터 사전</li>
+<li>분석 거버넌스 5: 조직, 프로세스, 시스템, 데이터, 교육·마인드</li>
+<li>위기 3과 통제 (바꿔치기 함정)</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>위기</th>
+<th>예</th>
+<th>통제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사생활 침해</td>
+<td>SNS 원치 않는 노출</td>
+<td>제공자 책임 → <strong>사용자 책임</strong></td>
+</tr>
+<tr>
+<td>책임 원칙 훼손</td>
+<td>예측만으로 체포·대출거부</td>
+<td><strong>실제 결과에 대해서만</strong> 책임</td>
+</tr>
+<tr>
+<td>데이터 오용</td>
+<td>결과 맹신·악용</td>
+<td>해석가능 알고리즘, <strong>알고리즈미스트</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>함정: 알고리즈미스트를 책임원칙 훼손의 통제라고 하면 X.</p>
+<hr />
+<h2 id="2장-빅데이터-기술-및-제도">2장. 빅데이터 기술 및 제도</h2>
+<h3 id="2-1-플랫폼-3계층-특강-최근-가중치-최고">2-1. 플랫폼 3계층 특강 (최근 가중치 최고)</h3>
+<p>수집 → 저장 → 처리분석 → 서비스시각화 를 한 환경에서.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>계층</th>
+<th>역할</th>
+<th>예</th>
+<th>빨간 키워드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>소프트웨어</strong></td>
+<td>수집·정제, 처리·분석, 사용자 서비스</td>
+<td>Kafka, Spark, Hive, BI, 알고리즘</td>
+<td>시각화·분석 알고리즘은 여기</td>
+</tr>
+<tr>
+<td><strong>플랫폼</strong></td>
+<td>데이터·자원 관리, 스케줄링, 프로파일링</td>
+<td>Hadoop, <strong>YARN</strong></td>
+<td>작업 스케줄</td>
+</tr>
+<tr>
+<td><strong>인프라</strong></td>
+<td>서버·스토리지·네트워크, 자원 배치</td>
+<td>서버, 디스크, 망</td>
+<td>물리 자원</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: 소프트 다음엔 플랫폼이 나올 타이밍. <strong>특징 문장으로 계층을 고르는 문항.</strong></p>
+<h3 id="2-2-하둡-코어-에코시스템-특강">2-2. 하둡 코어 + 에코시스템 특강</h3>
+<p><strong>코어</strong>: HDFS(저장) + MapReduce(처리) + YARN(자원) + Common</p>
+<h4>HDFS 특강 100%</h4>
+<ul>
+<li>구글 <strong>GFS를 모사한 클론</strong>. NameNode(마스터, <strong>메타데이터</strong>) + DataNode(슬레이브, <strong>블록 저장</strong>, 복제 기본 3)</li>
+<li>블록 크기 <strong>변경 가능</strong>. 대용량 특화 (소규모 파일에 부적합)</li>
+<li><strong>낮은 지연 시간보다 높은 처리율</strong>. 실시간 X, 배치 O</li>
+<li>내결함성 = 일부 노드 죽어도 복제본으로 계속 동작</li>
+</ul>
+<p><strong>NameNode vs DataNode 역할을 섞어 놓고 틀린 설명 찾기</strong> = 출제 포인트.</p>
+<h4>MapReduce 특강</h4>
+<ul>
+<li>Map(키값 변환) → Shuffle&amp;Sort(같은 키) → Reduce(집계)</li>
+<li><strong>무공유(Shared Nothing)</strong>: CPU·메모리·디스크가 노드마다 독립</li>
+<li>“공유 아키텍처”라고 쓰면 <strong>오답</strong></li>
+<li>디스크 기반 <strong>배치</strong>. 실시간·반복연산은 <strong>Spark(인메모리)</strong></li>
+</ul>
+<h4>에코시스템 — 정의만 짧게 특강</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>도구</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sqoop</strong></td>
+<td>RDBMS ↔ Hadoop <strong>정형</strong> 대량 전송</td>
+</tr>
+<tr>
+<td><strong>Flume</strong></td>
+<td>로그 수집·전송</td>
+</tr>
+<tr>
+<td><strong>Kafka</strong></td>
+<td>실시간 스트림 Pub/Sub</td>
+</tr>
+<tr>
+<td><strong>Spark</strong></td>
+<td>인메모리 고속 (배치+스트림+ML)</td>
+</tr>
+<tr>
+<td><strong>Hive</strong></td>
+<td>HiveQL, 하둡 위 DW</td>
+</tr>
+<tr>
+<td><strong>HBase</strong></td>
+<td>HDFS 위 컬럼 NoSQL, 랜덤 읽기쓰기</td>
+</tr>
+<tr>
+<td><strong>Zookeeper</strong></td>
+<td>분산 서버 조정(코디네이터)</td>
+</tr>
+<tr>
+<td>YARN</td>
+<td>클러스터 자원·스케줄</td>
+</tr>
+<tr>
+<td>Pig</td>
+<td>스크립트 ETL</td>
+</tr>
+</tbody>
+</table></div>
+<p>흐름: Kafka/Flume 수집 → HDFS/HBase 저장 → YARN 자원 → Spark/Hive/MR 처리<br />
+함정: HBase는 파일시스템이 아님. JDBC는 분석 도구 아님. Zookeeper ≠ 로그수집.</p>
+<h3 id="2-3-저장장치-DAS-NAS-SAN">2-3. 저장장치 DAS / NAS / SAN</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>연결</th>
+<th>단위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DAS</td>
+<td>서버 직접</td>
+<td>로컬 디스크</td>
+</tr>
+<tr>
+<td>NAS</td>
+<td>LAN</td>
+<td><strong>파일</strong> 공유</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td>전용망</td>
+<td><strong>블록</strong>, 고성능</td>
+</tr>
+</tbody>
+</table></div>
+<p>병렬 DBMS: 공유메모리 / 공유디스크 / <strong>Shared Nothing</strong></p>
+<h3 id="2-4-인공지능-학습-유형-특강-교집합-3과목_모델링_쪽집게">2-4. 인공지능 학습 유형 특강 교집합 → <a href="3과목.html">3과목_모델링_쪽집게</a></h3>
+<p>딥러닝 ⊂ 머신러닝 ⊂ 인공지능</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>라벨</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지도</td>
+<td>있음</td>
+<td>분류·회귀, 스팸, 집값</td>
+</tr>
+<tr>
+<td>비지도</td>
+<td>없음</td>
+<td>군집·차원축소·연관·이상탐지</td>
+</tr>
+<tr>
+<td><strong>준지도</strong></td>
+<td>일부만</td>
+<td>라벨 비용 클 때. <strong>정의 문제 가능</strong> 특강</td>
+</tr>
+<tr>
+<td>강화</td>
+<td>보상</td>
+<td>게임, 로봇, Q-러닝. “라벨로 규칙 학습”(X)</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: <strong>사례를 주고 학습 유형 고르기.</strong> 4과목에도 스침.</p>
+<p>전이학습: 사전학습 모델 재사용 / Fine-tuning / 지식증류<br />
+XAI, AutoML, MLOps, 생성형 AI 용어도 한 줄.</p>
+<h3 id="2-5-개인정보-특강">2-5. 개인정보 특강</h3>
+<blockquote>
+<p>개인정보 = <strong>가명정보까지</strong>. <strong>익명정보는 개인정보가 아니다.</strong> 익명 공개는 처벌 대상 아님.<br />
+다른 데이터와 결합해 식별 가능하면 법이 정하는 개인정보.<br />
+활용은 <strong>가급적 익명 원칙</strong>.</p>
+</blockquote>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>식별</th>
+<th>복원</th>
+<th>법</th>
+<th>활용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개인정보</td>
+<td>가능</td>
+<td>—</td>
+<td>적용</td>
+<td>동의</td>
+</tr>
+<tr>
+<td><strong>가명정보</strong></td>
+<td>추가정보 없으면 불가</td>
+<td><strong>추가정보로 복원 가능</strong></td>
+<td>적용</td>
+<td>통계·연구·공익은 동의 없이</td>
+</tr>
+<tr>
+<td>익명정보</td>
+<td>불가</td>
+<td><strong>복원 불가</strong></td>
+<td><strong>미적용</strong></td>
+<td>자유</td>
+</tr>
+</tbody>
+</table></div>
+<p>데이터 3법 ☞ 개정신: 개인정보보호법, 정보통신망법, 신용정보법 (위치정보법 X)<br />
+처리 원칙: 목적제한, <strong>최소수집</strong>, 목적외 제한, 정확성, 안전성, 목적달성 시 파기<br />
+함정: “최대한 오래 보관”(X)</p>
+<p>프라이버시 모델: k-익명성=연결공격 / l-다양성=동질성·배경지식 / t-근접성=쏠림·유사성<br />
+차등정보보호: 통계 결과에 <strong>확률적 노이즈</strong></p>
+<h3 id="2-6-비식별화-5기법-세분화-특강-강력예상">2-6. 비식별화 5기법 — 세분화 특강 강력예상</h3>
+<p>ADP보다 <strong>기사답게 세부 기술 정의</strong>가 나온다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기법</th>
+<th>한 줄 예</th>
+<th>세부 (암기)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>가명처리</strong></td>
+<td>홍길동35 → 임꺽정30</td>
+<td>휴리스틱 가명화, 암호화, 교환(셔플)</td>
+</tr>
+<tr>
+<td><strong>총계처리</strong></td>
+<td>개인키 → 평균 175</td>
+<td>부분총계, 라운딩, 재배열, 전체총계</td>
+</tr>
+<tr>
+<td><strong>데이터 삭제</strong></td>
+<td>주민번호 삭제</td>
+<td>식별자 삭제, 부분삭제, 레코드 삭제, 로컬삭제</td>
+</tr>
+<tr>
+<td><strong>범주화</strong></td>
+<td>35세 → 30~40세</td>
+<td>범위화, 제어 라운딩, 감추기</td>
+</tr>
+<tr>
+<td><strong>마스킹</strong></td>
+<td>홍길동 → 홍OO</td>
+<td>임의잡음, 공백·대체문자</td>
+</tr>
+</tbody>
+</table></div>
+<p>절차: 사전검토 → 비식별조치 → <strong>적정성평가(k·l·t)</strong> → 사후관리<br />
+함정: “총계처리는 재현성이 높아 항상 동일 결과”(X)</p>
+<hr />
+<h2 id="3장-데이터-분석-계획">3장. 데이터 분석 계획</h2>
+<h3 id="3-1-분석-기획-4유형">3-1. 분석 기획 4유형 ★</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>방법 앎</th>
+<th>방법 모름</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상 앎</td>
+<td><strong>최적화</strong></td>
+<td><strong>솔루션</strong></td>
+</tr>
+<tr>
+<td>대상 모름</td>
+<td><strong>통찰</strong></td>
+<td><strong>발견</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="3-2-마스터플랜-우선순위-ROI-4V-특강">3-2. 마스터플랜 우선순위 · ROI · 4V 특강</h3>
+<p>시급성(비즈니스 효과, Value) vs 난이도(투자비용, 3V: Volume Variety Velocity)<br />
+- 시급성 기준 순서: <strong>3 → 4 → 2</strong><br />
+- 난이도 기준 순서: <strong>3 → 1 → 2</strong><br />
+- ROI 관점: <strong>Volume·Variety·Velocity = 투자비용 / Value = 비즈니스 효과</strong></p>
+<p>분석 과제 위험 (4): 데이터 확보, 분석 기술, 분석 인력·조직, 범위·일정 등 — 정의 문항</p>
+<p>의사결정 저해: 고정관념, 편향, 프레이밍</p>
+<h3 id="3-3-하향식-vs-상향식-특강-가중치-높음">3-3. 하향식 vs 상향식 특강 가중치 높음</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>하향식 Top-down</th>
+<th>상향식 Bottom-up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>언제</td>
+<td><strong>문제가 명확</strong></td>
+<td><strong>문제가 불명확</strong>, 데이터에서 문제 정의</td>
+</tr>
+<tr>
+<td>출발</td>
+<td>비즈니스 문제</td>
+<td>데이터</td>
+</tr>
+<tr>
+<td>절차</td>
+<td>문제탐색 → 정의 → 해결방안 → 타당성</td>
+<td>What 관점 인식, 비지도와 친함</td>
+</tr>
+<tr>
+<td>특강</td>
+<td><strong>프로세스 순서</strong> 출제</td>
+<td><strong>프로세스 순서</strong> 출제</td>
+</tr>
+</tbody>
+</table></div>
+<p>혼합: 발산(상향)+수렴(하향) / 디자인싱킹: 공감→정의→아이디어→프로토타입→테스트<br />
+문제탐색: 비즈니스모델캔버스 5 (업무·제품·고객·규제감사·지원인프라, <strong>재무 없음</strong>)<br />
+거시: STEEP / 타당성: 경제·데이터·기술</p>
+<h3 id="3-4-분석-방법론-3-빅데이터-방법론-특강-핵심-축">3-4. 분석 방법론 3 + 빅데이터 방법론 특강 핵심 축</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법론</th>
+<th>순서</th>
+<th>키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KDD</strong></td>
+<td>선택 → 전처리 → 변환 → 마이닝 → 평가</td>
+<td>DB 지식발견</td>
+</tr>
+<tr>
+<td><strong>CRISP-DM</strong></td>
+<td><strong>업무이해 → 데이터이해 → 데이터준비 → 모델링 → 평가 → 전개</strong></td>
+<td>업데데모평전. 산업표준, 피드백</td>
+</tr>
+<tr>
+<td>SEMMA</td>
+<td>Sample Explore Modify Model Assess</td>
+<td>SAS, 모델링 중심</td>
+</tr>
+</tbody>
+</table></div>
+<p>빅데이터 방법론 5 ☞ PPADD<br />
+<strong>기획 Planning → 준비 Preparing → 분석 Analyzing → 시스템구현 Developing → 평가전개 Deploying</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>단계</th>
+<th>넣을 것 / 넣지 말 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기획</td>
+<td>SOW, 위험관리(회피·전이·완화·수용=회전완수), <strong>WBS는 계획 수립</strong></td>
+</tr>
+<tr>
+<td>준비</td>
+<td>수집·정제, 스토어 설계</td>
+</tr>
+<tr>
+<td>분석</td>
+<td>EDA, 모델, 검증·튜닝</td>
+</tr>
+<tr>
+<td>시스템구현</td>
+<td>운영 설계·구현·테스트</td>
+</tr>
+<tr>
+<td><strong>평가전개</strong></td>
+<td><strong>모델 운영 주기·재학습</strong> (분석 단계 아님 ★)</td>
+</tr>
+</tbody>
+</table></div>
+<p>계층: Phase(단계) → Task(태스크) → Step<br />
+함정: KDD 전처리↔변환 뒤집기, CRISP 평가↔전개 뒤집기</p>
+<p>개발모델: 폭포수 / 프로토타입 / 나선형(위험제거) / 애자일</p>
+<h3 id="3-5-모형화-모델링-특강">3-5. 모형화 ≠ 모델링 특강</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>모형화</strong></td>
+<td>변수 간 <strong>관계를 파악</strong></td>
+</tr>
+<tr>
+<td><strong>모델링</strong></td>
+<td><strong>수학적 함수식</strong>을 만듦</td>
+</tr>
+</tbody>
+</table></div>
+<p>출제: <strong>순서</strong> + 모형화 정의.</p>
+<p>데이터 확보 프로세스 가중치↓ / 데이터 분석 프로세스 가중치↑</p>
+<hr />
+<h2 id="4장-수집-저장-품질">4장. 수집 · 저장 · 품질</h2>
+<h3 id="4-1-수집-기술-Sqoop-vs-Open-API-vs-FTP-특강-이번회-예상">4-1. 수집 기술 — Sqoop vs Open API vs FTP 특강 이번회 예상</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기술</th>
+<th>대상</th>
+<th>특강 한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sqoop</strong></td>
+<td><strong>정형</strong>, RDBMS ↔ Hadoop</td>
+<td>정형 수집 소프트웨어로 기억</td>
+</tr>
+<tr>
+<td><strong>Open API</strong></td>
+<td>정형·반정형·비정형 <strong>모두</strong>, <strong>실시간 수집도 가능</strong></td>
+<td>“API는 정형만”이면 오답</td>
+</tr>
+<tr>
+<td><strong>FTP</strong></td>
+<td><strong>파일</strong> 전송 (CSV, 로그파일)</td>
+<td>파일 프로토콜. 실시간 로그 스트림 아님</td>
+</tr>
+<tr>
+<td>ETL</td>
+<td>추출변환적재</td>
+<td>저장소 적재 과정</td>
+</tr>
+<tr>
+<td>크롤링</td>
+<td>웹 공개 페이지</td>
+<td>화면 데이터</td>
+</tr>
+<tr>
+<td>Flume/Kafka</td>
+<td>로그·스트림</td>
+<td>FTP와 혼동 금지</td>
+</tr>
+<tr>
+<td>FGI</td>
+<td>소수 전문가 토의</td>
+<td>정성 ★</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="4-2-변환-전처리-포맷통일-후처리-특강">4-2. 변환 = 전처리 + 포맷통일 + 후처리 특강</h3>
+<p>여러 출처(API, JSON, RDB) → <strong>전처리로 일관 포맷</strong> → 저장 → <strong>후처리</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>전처리</strong></td>
+<td>정제, 결측·이상 처리, 형변환, 필터, 포맷 통일 <strong>이전·직전</strong> 작업</td>
+</tr>
+<tr>
+<td><strong>후처리</strong></td>
+<td>저장 이후 집계, 인덱싱, 압축, 파티션, 요약마트</td>
+</tr>
+</tbody>
+</table></div>
+<p>출제: 전처리에 해당하는 것 / 후처리에 해당하는 것.</p>
+<h3 id="4-3-데이터-품질-특강-100-빅분기-고유">4-3. 데이터 품질 특강 100% (빅분기 고유)</h3>
+<p>정형 품질 기준 <strong>5</strong> (특강: 거의 100% 정의 문제)<br />
+<strong>완전성, 유일성, 유효성, 일관성, 정확성</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기준</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>완전성</td>
+<td>필수값 누락 없이</td>
+</tr>
+<tr>
+<td>유일성</td>
+<td>동일 개체 중복 없이</td>
+</tr>
+<tr>
+<td>유효성</td>
+<td>정의된 규칙·허용범위 (형식, 코드) ★</td>
+</tr>
+<tr>
+<td>일관성</td>
+<td>시스템·항목 간 모순 없이</td>
+</tr>
+<tr>
+<td>정확성</td>
+<td>실제 세계와 일치</td>
+</tr>
+</tbody>
+</table></div>
+<p>(교재 확장 7에 최신성·접근성·보안성이 더해지기도 함. <strong>5가 특강 버전.</strong> 희소성은 품질 차원 아님)</p>
+<p><strong>진단 3단계</strong>: 대상 정의 → 진단 실시 → 결과 분석<br />
+<strong>개선 3단계</strong>: 계획 → 수행 → 통제</p>
+<h3 id="4-4-분산-파일-시스템-vs-DB-클러스터-특강-변별력">4-4. 분산 파일 시스템 vs DB 클러스터 특강 변별력</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>분산 파일 시스템</th>
+<th>DB 클러스터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>단위</td>
+<td><strong>파일·블록</strong></td>
+<td><strong>레코드·테이블</strong></td>
+</tr>
+<tr>
+<td>예</td>
+<td>GFS, <strong>HDFS</strong></td>
+<td>Oracle RAC, 병렬 DBMS</td>
+</tr>
+<tr>
+<td>강점</td>
+<td>초대규모, 처리율, 저비용</td>
+<td>질의·트랜잭션·일관성</td>
+</tr>
+<tr>
+<td>약점</td>
+<td>실시간·랜덤 I/O, 작은 파일</td>
+<td>비정형 초대용량에 비쌈</td>
+</tr>
+<tr>
+<td>처리</td>
+<td>배치 (MapReduce)</td>
+<td>SQL OLTP/OLAP</td>
+</tr>
+</tbody>
+</table></div>
+<p>대표 DFS: 구글 GFS, 하둡 HDFS</p>
+<h3 id="4-5-NoSQL-4유형-특강-마지막-변별력">4-5. NoSQL 4유형 특강 마지막 변별력</h3>
+<p>특징: 스키마 유연, 수평확장, BASE, 비조인 중심. 종류별 <strong>도구 매칭</strong>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>특징</th>
+<th>도구</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key-Value</td>
+<td>가장 단순, 캐시·세션</td>
+<td><strong>Redis</strong>, Memcached</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>열 단위, 압축·확장</td>
+<td><strong>HBase, Cassandra</strong>, BigTable</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>JSON 문서</td>
+<td><strong>MongoDB</strong>, CouchDB</td>
+</tr>
+<tr>
+<td>Graph</td>
+<td>노드-관계</td>
+<td><strong>Neo4j</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="척도-4종-2과목과-공유-1에서도-수집계획에-출제">척도 4종 (2과목과 공유, 1에서도 수집계획에 출제)</h2>
+<p>명목(구분) · 서열(순위) · 등간(절대0 없음, 온도℃) · 비율(절대0, 무게)</p>
+<hr />
+<h2 id="시험-직전-체크리스트-1과목">시험 직전 체크리스트 (1과목)</h2>
+<ol>
+<li>정형=스키마, 반정형=JSON/XML/메타데이터, 비정형=영상·SNS</li>
+<li><strong>RDB vs NoSQL vs HDFS</strong> — 실시간은 RDB, 배치는 HDFS, 유연확장은 NoSQL</li>
+<li>Lake = Schema-on-<strong>Read</strong> / DW = Schema-on-<strong>Write</strong> / ODS = 운영 임시통합 / DW 4특징에 확장성 X</li>
+<li>ETL 기능, MapReduce = 배치 + <strong>무공유</strong>. “공유 아키텍처”면 오답</li>
+<li>NameNode=메타, DataNode=블록. HDFS는 <strong>높은 처리율</strong>, 낮은 지연 아님</li>
+<li>계층: 알고리즘·시각화=소프트웨어 / YARN·스케줄=플랫폼 / 서버=인프라</li>
+<li>Spark=인메모리, Hive=SQL DW, Kafka=스트림, Sqoop=RDB↔하둡, Zookeeper=조정</li>
+<li>가명=복원가능·법적용 / 익명=복원불가·법미적용 / 데이터3법=개정신</li>
+<li>비식별 5 + <strong>세부기술</strong> (교환, 부분총계, 범위화, 잡음)</li>
+<li>품질 5: 완전·유일·유효·일관·정확 / 진단3 · 개선3</li>
+<li>Sqoop=정형, API=전유형+실시간가능, FTP=파일</li>
+<li>전처리 vs 후처리</li>
+<li>하향식=문제명확, 상향식=문제불명확+데이터출발, <strong>순서</strong></li>
+<li>CRISP: 업데데모평전 / 빅데이터: 기획-준비-분석-구현-전개 / 운영주기=전개</li>
+<li><strong>모형화 ≠ 모델링</strong></li>
+<li>집중/기능/분산, 소프트스킬, 준비도·성숙도 → 도입형·확산형</li>
+<li>거버넌스: 원칙·조직·프로세스 / 위기 통제 바꿔치기</li>
+<li>분석 4유형 묘사·진단·예측·처방 / ROI: 3V=비용, Value=효과</li>
+<li>학습유형 사례 + 준지도</li>
+<li>NoSQL 4종 도구 / DAS·NAS·SAN / GRANT=DCL</li>
+</ol>
+<hr />
+<h2 id="OX-응용-훈련-가리고-답하기">OX · 응용 훈련 (가리고 답하기)</h2>
+<p><strong>1.</strong> 가명정보는 추가 정보와 결합해도 절대 복원할 수 없다.</p>
+<details><summary>정답</summary>X — 복원 가능. 복원 불가 = 익명정보.</details>
+
+<p><strong>2.</strong> Data Lake는 Schema-on-Write, DW는 Schema-on-Read이다.</p>
+<details><summary>정답</summary>X — 반대. Lake=Read(일단 넣고 나중에 스키마), DW=Write.</details>
+
+<p><strong>3.</strong> HDFS는 낮은 응답 지연의 실시간 처리에 최적화되어 있다.</p>
+<details><summary>정답</summary>X — 높은 처리율·배치. 실시간은 Spark/Kafka 쪽.</details>
+
+<p><strong>4.</strong> MapReduce는 노드가 CPU·메모리·디스크를 공유하는 공유 아키텍처이다.</p>
+<details><summary>정답</summary>X — <strong>무공유 Shared Nothing</strong>.</details>
+
+<p><strong>5.</strong> Open API는 정형 데이터만 수집한다.</p>
+<details><summary>정답</summary>X — 정형·반정형·비정형, 실시간 수집도 가능.</details>
+
+<p><strong>6.</strong> JSON은 반정형이고, 키-값 쌍 텍스트이다.</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>7.</strong> 분석 대상을 알고 방법을 모르면 ‘통찰’이다.</p>
+<details><summary>정답</summary>X — 그건 <strong>솔루션</strong>. 통찰 = 대상 모름 + 방법 앎.</details>
+
+<p><strong>8.</strong> CRISP-DM의 첫 단계는 데이터 이해이다.</p>
+<details><summary>정답</summary>X — <strong>업무(비즈니스) 이해</strong>.</details>
+
+<p><strong>9.</strong> 모델 운영 주기·재학습 전략은 데이터 분석 단계에서 정한다.</p>
+<details><summary>정답</summary>X — <strong>평가 및 전개</strong> 단계.</details>
+
+<p><strong>10.</strong> 집중형 조직은 현업 요구에 즉각 대응하기 쉽다.</p>
+<details><summary>정답</summary>X — 분산형의 장점. 집중형은 병목.</details>
+
+<p><strong>11.</strong> DW Inmon 4특징: 주제지향, 통합, 시계열, 확장성.</p>
+<details><summary>정답</summary>X — 네 번째는 <strong>비휘발성</strong>. 확장성 아님.</details>
+
+<p><strong>12.</strong> 알고리즈미스트는 책임 원칙 훼손의 통제 방안이다.</p>
+<details><summary>정답</summary>X — <strong>데이터 오용</strong>의 통제. 책임원칙은 ‘실제 결과만 책임’.</details>
+
+<p><strong>13.</strong> Redis=키값, MongoDB=문서, HBase=컬럼, Neo4j=그래프.</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>14.</strong> 모형화는 수학적 함수식을 만드는 것이고, 모델링은 변수 관계 파악이다.</p>
+<details><summary>정답</summary>X — <strong>반대</strong>.</details>
+
+<p><strong>15.</strong> 정형 품질 5: 완전성·유일성·유효성·일관성·정확성.</p>
+<details><summary>정답</summary>O (특강 버전)</details>
+
+<p><strong>16.</strong> 하향식은 문제가 불명확할 때, 데이터에서 출발한다.</p>
+<details><summary>정답</summary>X — 그건 상향식. 하향식 = 문제 명확, 비즈니스 출발.</details>
+
+<p><strong>17.</strong> 시각화 알고리즘은 인프라스트럭처 계층이다.</p>
+<details><summary>정답</summary>X — <strong>소프트웨어</strong> 계층.</details>
+
+<p><strong>18.</strong> GRANT/REVOKE는 DML이다.</p>
+<details><summary>정답</summary>X — <strong>DCL</strong>.</details>
+
+<p><strong>19.</strong> k-익명성은 연결 공격을 방어한다.</p>
+<details><summary>정답</summary>O. l=동질성·배경지식, t=쏠림·유사성.</details>
+
+<p><strong>20.</strong> 연봉 4500만을 4000~5000만으로 바꾼 것은 마스킹이다.</p>
+<details><summary>정답</summary>X — <strong>범주화(범위화)</strong>.</details>
+
+<hr />
+<h2 id="암기-카드-출퇴근용">암기 카드 (출퇴근용)</h2>
+<pre><code>스키마=정형 / 메타=반정형 / 없음=비정형
+RDB=조인·ACID / NoSQL=수평·유연 / HDFS=배치·처리율
+Lake=온리드 / DW=온라이트 / ODS=운영임시
+NameNode=메타 / DataNode=블록 / MR=무공유
+개정신=데이터3법 / 가명=복원O·법O / 익명=복원X·법X
+업데데모평전=CRISP / PPADD=빅데이터방법론
+집기분=조직 / 원조프=거버넌스 / 도활확최=성숙도
+Sqoop=정형RDB / API=전유형+실시간 / FTP=파일
+품질5=완유유일정 / 진단=대진결 / 개선=계수통
+</code></pre>
+<blockquote>
+<p>더 긴 서술·법률 조문·기출 변형 70선은 상위 폴더 <code>[1과목_빅데이터_분석기획](../../1과목_빅데이터_분석기획.md)</code>, <code>[기출응용문제집](../../기출응용문제집.md)</code>.<br />
+웹: <code>웹/1과목.html</code></p>
+</blockquote>
+</main>
+</div>
+<footer class="site">김계철 8/25 특강 포인트 + 기존 정리·기출 반영. 옵시디언 md와 동일 내용.</footer>
+</body>
+</html>

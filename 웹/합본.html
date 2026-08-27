@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>합본 — 13회 빅분기 쪽집게</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">13회 빅분기 필기 쪽집게<small>2026.09</small></div><a href="index.html">홈</a><a href="합격전략.html">전략</a><a href="1과목.html">1 기획</a><a href="2과목.html">2 탐색</a><a href="3과목.html">3 모델링</a><a href="4과목.html">4 해석</a><a href="합본.html" class="active">합본·인쇄</a></header>
+<div class="layout">
+<nav class="toc"><strong>합본</strong>
+<a href="#part-1">합격 전략</a>
+<a href="#part-2">1과목 분석 기획</a>
+<a href="#part-3">2과목 탐색</a>
+<a href="#part-4">3과목 모델링</a>
+<a href="#part-5">4과목 결과 해석</a></nav>
+<main class="paper">
+<h1>13회 필기 쪽집게 합본</h1><p class="callout">인쇄: Ctrl+P → 여백 기본, 배경 그래픽 켜기. 특강 권고 회독 분량.</p>
+<h1 id="part-1">합격 전략</h1>
+<h1>13회 빅데이터분석기사 필기 — 쪽집게 합격전략</h1>
+<div class="callout abstract"><div class="callout-title">근거</div><p>2026-08-25 김계철 라이브 특강 + 기존 정리노트 4권 + 기출응용 70문항 + 10·11회 빈출 분석.
+<strong>시험: 2026년 9월 13회.</strong> 80문항 / 과목당 20문항 / <strong>48점 이상 + 과락 없음(과목당 8문항↑)</strong>.</p></div>
+
+<h2 id="이-노트를-옵시디언에-넣는-방법">이 노트를 옵시디언에 넣는 방법</h2>
+<ol>
+<li><code>정리노트/13회_쪽집게/</code> 폴더 전체를 볼트에 복사(또는 이 폴더를 볼트로 지정)</li>
+<li>그래프 뷰에서 <code>[1과목](#)</code> <code>[2과목](#)</code> <code>[3과목](#)</code> <code>[4과목](#)</code> 이 연결됨</li>
+<li>웹 공부: 같은 폴더의 <code>웹/index.html</code> 을 브라우저로 열기 (로컬, 서버 불필요)</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>파일</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="합격전략.html">00_합격전략_쪽집게</a></td>
+<td>전략·회독 계획·과목 간 교집합 (지금 이 파일)</td>
+</tr>
+<tr>
+<td><a href="#">1과목 분석기획</a></td>
+<td>전략 과목. 타깃 <strong>13~14문항</strong></td>
+</tr>
+<tr>
+<td><a href="#">2과목 탐색</a></td>
+<td>방어 과목. 1·2장으로 과락 방어, 타깃 <strong>11~12</strong></td>
+</tr>
+<tr>
+<td><a href="#">3과목 모델링</a></td>
+<td>방어 과목. 군집·앙상블이 전략, 타깃 <strong>11~12</strong></td>
+</tr>
+<tr>
+<td><a href="#">4과목 결과해석</a></td>
+<td>전략 과목. 타깃 <strong>13~14문항</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="1-합격-숫자-이것만-먼저-고정">1. 합격 숫자 — 이것만 먼저 고정</h2>
+<pre><code>80문항 중 48문항 이상  = 평균 60점
+과목당 최소 8문항      = 과락 방지
+현실 하한선            = 과목당 10문항 (10 아래로 떨어지면 48 맞추기 매우 어려움)
+</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>과목</th>
+<th>특강 포지션</th>
+<th>타깃</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 분석기획</strong></td>
+<td><strong>전략</strong></td>
+<td><strong>13~14</strong></td>
+<td>기출 반복·ADSP 교집합 큼, 예외 출제 적음</td>
+</tr>
+<tr>
+<td><strong>4 결과해석</strong></td>
+<td><strong>전략</strong></td>
+<td><strong>13~14</strong></td>
+<td>축이 3개뿐(평가지표·시각화·과적합). 유형 단순</td>
+</tr>
+<tr>
+<td><strong>2 탐색</strong></td>
+<td><strong>방어</strong></td>
+<td><strong>11~12</strong></td>
+<td>3장(추론통계)이 난이도 폭탄. 1·2장에서 선점</td>
+</tr>
+<tr>
+<td><strong>3 모델링</strong></td>
+<td><strong>방어</strong></td>
+<td><strong>11~12</strong></td>
+<td>기법마다 정의·차이점만. 군집·앙상블이 득점원</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout danger"><div class="callout-title">특강 한 줄</div><p><strong>1과목과 4과목을 하나의 과목처럼 묶어 회독하라.</strong> 2·3은 방어. 1·4에서 여유를 만들어야 2·3 난이도 스파이크를 버틴다.
+이번 주에 1·4를 못 끝내면 합격률이 크게 떨어진다.</p></div>
+
+<hr />
+<h2 id="2-시험의-출제-습관-빅분기-ADSP">2. 시험의 출제 습관 (빅분기 ≠ ADSP)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>ADSP</th>
+<th><strong>빅분기 필기</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>과목 수</td>
+<td>3</td>
+<td><strong>4</strong> (깊이보다 <strong>전 범위 회독</strong>)</td>
+</tr>
+<tr>
+<td>정의 문제</td>
+<td>~60%</td>
+<td><strong>~40%</strong></td>
+</tr>
+<tr>
+<td>옳지 않은 것(오답 고르기)</td>
+<td>20~30%</td>
+<td><strong>20~30% + 정의보다 어려움</strong></td>
+</tr>
+<tr>
+<td>난이도</td>
+<td>중간 많음</td>
+<td><strong>아주 쉽거나 아주 어려움. 중간이 거의 없음</strong></td>
+</tr>
+<tr>
+<td>기출 재반복</td>
+<td>높음</td>
+<td><strong>1과목은 높음, 2·3은 새 문항을 만들려 함</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout warning"><div class="callout-title">학습법 함정</div><p>모의고사·적중 문제에 시간 쏟지 마라. 빅분기는 <strong>새 문항</strong>을 만든다. <strong>개념을 한 번 더 보는 쪽이 오래 남는다.</strong>
+교재 200~300p를 들고 다니면 하루 2과목 회독이 불가능하다. <strong>요약은 절대 150p를 넘기지 말고, 가능하면 100p 이하, 특강 권고는 A4 50장.</strong></p></div>
+
+<p><strong>회독 가능 시간 가정 (특강)</strong><br />
+- 평일 최대 2~3시간<br />
+- 주말 몰아치기<br />
+- 이 시간에 1·2·3·4를 <strong>같은 주에 여러 번</strong> 보려면 분량이 짧아야 한다</p>
+<hr />
+<h2 id="3-과목-간-교집합-한-번-정리하면-두-과목-점수">3. 과목 간 교집합 — 한 번 정리하면 두 과목 점수</h2>
+<p>특강이 가장 강조한 것: <strong>같은 개념이 과목을 옮겨 다닌다.</strong> 여기서 회독 효율이 난다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>개념</th>
+<th>주력 과목</th>
+<th>겹치는 과목</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지도/비지도/강화/준지도</td>
+<td>1</td>
+<td>3</td>
+<td>사례 보고 고르기</td>
+</tr>
+<tr>
+<td>Ridge / Lasso / Elastic Net</td>
+<td><strong>2 임베디드</strong></td>
+<td><strong>4 규제</strong></td>
+<td>L1=변수선택, L2=축소만</td>
+</tr>
+<tr>
+<td>교차검증 K-fold·LOOCV·부트스트랩</td>
+<td>4 (세분)</td>
+<td>3 (분할)</td>
+<td>층화K-fold는 <strong>비율 유지</strong>, 불균형처리는 <strong>비율을 바꿈</strong></td>
+</tr>
+<tr>
+<td>경사하강법·학습률·모멘텀·AdaGrad·Adam</td>
+<td>4</td>
+<td>3 신경망</td>
+<td>4에서 끝내면 3은 패스 가능</td>
+</tr>
+<tr>
+<td>PCA vs 요인분석 vs SVD vs LDA</td>
+<td>2</td>
+<td>3 다변량은 가중치↓</td>
+<td>기준점은 항상 <strong>PCA</strong></td>
+</tr>
+<tr>
+<td>상자그림·히스토그램</td>
+<td>2</td>
+<td>4 시각화</td>
+<td>상자그림에 <strong>평균 없음·데이터 수 모름</strong></td>
+</tr>
+<tr>
+<td>히트맵 vs 트리맵, 카토그램</td>
+<td>2 고급탐색</td>
+<td><strong>4 정보시각화 3문항</strong></td>
+<td>히스토그램은 <strong>분포</strong> (관계 X)</td>
+</tr>
+<tr>
+<td>전진/후진/단계적</td>
+<td>2 래퍼</td>
+<td>3 회귀 변수선택</td>
+<td>2에서 했으면 3은 패스</td>
+</tr>
+<tr>
+<td>정규성 검정</td>
+<td>2 모수검정 가정</td>
+<td>4 적합도</td>
+<td>Shapiro, K-S, Q-Q (t-test 아님)</td>
+</tr>
+<tr>
+<td>과적합·Bias-Variance</td>
+<td><strong>3 상위키워드</strong></td>
+<td>4 진단</td>
+<td>과소=고편향, 과대=고분산</td>
+</tr>
+<tr>
+<td>개인정보 가명/익명</td>
+<td>1</td>
+<td>—</td>
+<td>가명=복원가능, 익명=법 미적용</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="4-특강이-찍은-이번-회-예상-우선순위">4. 특강이 찍은 이번 회 예상 (우선순위)</h2>
+<h3 id="1과목-반드시-50장-안에-넣을-것">1과목 — 반드시 50장 안에 넣을 것</h3>
+<ol>
+<li>정형(스키마) / 반정형(메타데이터) / 비정형</li>
+<li><strong>저장 방식 3분법: RDB vs NoSQL vs HDFS</strong> ← 변별력</li>
+<li>ETL, <strong>ODS</strong>, DW vs DM, <strong>Data Lake (Schema-on-Read) vs DW (Schema-on-Write)</strong></li>
+<li>분석 4유형(묘사·진단·예측·처방)</li>
+<li>조직(집중·분산·기능), 소프트 스킬, 준비도·성숙도 → 도입형/확산형</li>
+<li>거버넌스 구성요소</li>
+<li>에코시스템: Spark, Kafka, Zookeeper, Hive (인메모리 vs 디스크)</li>
+<li>계층: 소프트웨어 → 플랫폼 → 인프라 (빨간 키워드로 계층 맞추기)</li>
+<li>학습 유형 사례 + 준지도</li>
+<li>가명정보까지가 개인정보, 익명정보는 아님</li>
+<li>하향식/상향식 <strong>프로세스 순서</strong></li>
+<li>KDD / CRISP-DM / 빅데이터 방법론 단계·태스크</li>
+<li><strong>모형화(변수 관계) ≠ 모델링(함수식)</strong></li>
+<li><strong>Sqoop / Open API / FTP</strong> 차이 ← 이번 회 예상</li>
+<li>전처리 기술 vs 후처리 기술</li>
+<li><strong>비식별화 세분화</strong>(가명 3, 총계 4, 삭제·범주화·마스킹) ← 강력 예상</li>
+<li>정형 품질 기준 <strong>5가지</strong> (거의 100%)</li>
+<li>진단 3단계 + 개선 3단계</li>
+<li>HDFS NameNode vs DataNode, <strong>높은 처리율(배치)이지 낮은 지연(실시간)이 아님</strong></li>
+<li>분산파일시스템 vs DB 클러스터</li>
+<li>NoSQL 4종 + 도구 매칭</li>
+<li>MapReduce = <strong>무공유(Shared Nothing)</strong> 아키텍처</li>
+</ol>
+<h3 id="2과목-12장으로-방어-3장은-기본-개념만">2과목 — 1·2장으로 방어, 3장은 기본 개념만</h3>
+<ul>
+<li>전처리 4: 정제·통합·축소·변환</li>
+<li>정제 = 결측 + 노이즈 + 이상값 (처리 방법 각각)</li>
+<li><strong>래퍼(전진·후진·단계) vs 임베디드(Ridge/Lasso/Elastic)</strong> 100%</li>
+<li>PCA를 기준점으로 요인분석·SVD·LDA 차이만</li>
+<li>변환(분포를 바꿈) vs 스케일링(상대 크기) — <strong>MaxAbs·Robust가 변별</strong></li>
+<li>불균형 처리(비율을 <strong>바꿈</strong>) ≠ 층화 K-fold(비율을 <strong>유지</strong>)</li>
+<li>임계값 이동은 <strong>검정 단계</strong>, 학습 데이터에서 바꾸지 않음</li>
+<li>상관: 독립→공분산 0 / 스피어만=서열·비선형 가능</li>
+<li>상자그림으로 <strong>데이터 수·가설검정 불가</strong></li>
+<li>비정형: 토큰화·POS·스테밍·표제어만 (깊이 금지)</li>
+<li>3장: 모수/비모수, 표본추출 4, 척도 4, 조건부확률, 이산분포 기댓값·분산, CLT, 불편추정량, 신뢰구간 성질, 1·2종 오류</li>
+</ul>
+<h3 id="3과목-기법당-문장-3개를-넘기지-말-것">3과목 — 기법당 문장 3개를 넘기지 말 것</h3>
+<ul>
+<li><strong>Bias-Variance</strong>가 전 과목 상위 키워드</li>
+<li>사례 보고 분석법 고르기 (실기 3유형과 동일)</li>
+<li>회귀: 가정, ANOVA표로 F·R², 잔차 진단 (도구 출력 해석 문제는 안 나옴)</li>
+<li>로지스틱: 로짓 변환, 모형 유의성 = <strong>카이제곱</strong>, 오즈 해석</li>
+<li>의사결정나무: 불순도 3종, 비모수, 가지치기</li>
+<li>ANN+딥러닝 합쳐 2~3문항 (활성화함수, CNN/RNN/LSTM)</li>
+<li>SVM: C·하드/소프트 마진 / KNN: K↑ 경계 단순</li>
+<li><strong>군집이 전략</strong> (계층 vs 비계층, 덴드로그램, 병합 5, K-means vs DBSCAN vs SOM)</li>
+<li>연관규칙은 1문항·계산 가중치↓ / 시계열 약 2문항</li>
+<li>앙상블 1문항 이상: 배깅·부스팅·RF·스태킹 <strong>+ 부스팅 계열 이름</strong></li>
+<li>비모수 예상: 윌콕슨 부호순위(대응 t) / 윌콕슨 순위합(독립 t)</li>
+</ul>
+<h3 id="4과목-축이-3개-여기서-10문항">4과목 — 축이 3개, 여기서 10문항</h3>
+<ol>
+<li><strong>회귀/분류 평가지표</strong> 3~4문항</li>
+<li><strong>정보 시각화</strong> 3문항 + 인포그래픽 1</li>
+<li><strong>과적합 방지 4 + 교차검증 세분 + 경사하강/옵티마이저</strong><br />
+- 교차검증: K-fold, 층화, LOOCV, LPOCV, 몬테카를로, 부트스트랩<br />
+- 배치정규화: <strong>주목적은 학습 안정화</strong>, 부수적으로 과적합 방지 (기출된 함정)<br />
+- 하이퍼파라미터 탐색은 가중치↓ (그리드 vs 랜덤 vs 베이지안 정의만)<br />
+- 마지막 1문항: 모니터링·리모델링·운영 시 고려사항</li>
+</ol>
+<hr />
+<h2 id="5-남은-기간-회독-리듬">5. 남은 기간 회독 리듬</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>회독</th>
+<th>무엇</th>
+<th>시간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1회독</td>
+<td>이 폴더 1→4→2→3 순서. 형광(특강)만 밑줄</td>
+<td>주말 1일 + 평일 1일</td>
+</tr>
+<tr>
+<td>2회독</td>
+<td>과목 끝 <strong>직전 체크리스트</strong> + 함정 박스만</td>
+<td>평일 2일 (하루 2과목)</td>
+</tr>
+<tr>
+<td>3회독</td>
+<td><code>웹/index.html</code> 퀴즈 + 차이점 표만</td>
+<td>시험 전날</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>하루 루틴 (2시간)</strong><br />
+1. 40분: 전략 과목 하나 (1 또는 4)<br />
+2. 40분: 방어 과목 하나 (2 또는 3) — 해당 과목의 <strong>쉬운 장만</strong><br />
+3. 20분: 교집합 표 (Ridge, K-fold, 시각화, 학습유형)<br />
+4. 20분: 직전 체크리스트 OX</p>
+<hr />
+<h2 id="6-표기-규칙-전-과목-공통">6. 표기 규칙 (전 과목 공통)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기호</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>특강</strong></td>
+<td>8/25 라이브에서 형광·빨간색으로 찍은 포인트</td>
+</tr>
+<tr>
+<td><strong>100%</strong></td>
+<td>특강이 “반드시/거의 100%”라고 한 것</td>
+</tr>
+<tr>
+<td><strong>함정</strong></td>
+<td>옳지 않은 것 유형·바꿔치기 선지</td>
+</tr>
+<tr>
+<td><strong>교집합</strong></td>
+<td>다른 과목과 겹침. 한 번만 깊게</td>
+</tr>
+<tr>
+<td>★</td>
+<td>10·11회 등 실제 기출 확인</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout tip"><div class="callout-title">압축 원칙 (특강 원문)</div><p>기법마다 문장을 세 개 이상 쓰지 마라. <strong>특징 또는 다른 기법과의 차이점</strong>만.
+서술로 잔뜩 모으면 회독이 안 된다. <strong>키워드 → 차이점 두 줄</strong>이 전부다.</p></div>
+<h1 id="part-2">1과목 분석 기획</h1>
+<h1>1과목. 빅데이터 분석 기획</h1>
+<div class="callout danger"><div class="callout-title">특강 — 전략 과목</div><p>타깃 <strong>13~14 / 20</strong>. 깊이는 얕다. 정의만 알아도 11~12. <strong>저장 3분법·ODS/DW/Lake·비식별 세분·품질 5</strong>에서 +1~2를 만든다.
+ADSP/ADP 데이터 처리 기술과 문항이 겹친다. <strong>1과목 + <a href="4과목.html">4과목</a>을 한 과목처럼.</strong></p></div>
+
+<p><strong>이 과목의 고정 축 (특강: 3·4·7번은 항상 출제 구조)</strong><br />
+1. 데이터 구조 → 정형 / 반정형 / 비정형<br />
+2. 저장 방식 → RDB / NoSQL / HDFS<br />
+3. 저장소 흐름 → ETL · ODS · DW · DM · Data Lake</p>
+<p>시험은 정의 40% + <strong>옳지 않은 것 20~30%</strong>. 정의만 외우면 40%에서 멈춘다. <strong>차이점 한 줄</strong>을 같이 외워라.</p>
+<hr />
+<h2 id="1장-빅데이터의-이해">1장. 빅데이터의 이해</h2>
+<h3 id="1-1-데이터-vs-정보-DIKW">1-1. 데이터 vs 정보, DIKW ★</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>단계</th>
+<th>정의</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data</td>
+<td>가공 전 사실</td>
+<td>A대리점 100만, B 200만</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>패턴 인식</td>
+<td>A가 더 싸다</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>예측·활용</td>
+<td>A에서 사면 이득</td>
+</tr>
+<tr>
+<td>Wisdom</td>
+<td>창의적 판단</td>
+<td>A의 다른 제품도 쌀 것이다</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>데이터 = 객관적 사실 / 정보 = 의미 부여</li>
+<li>3V(가트너): Volume, Variety, Velocity → 5V: + Value, Veracity</li>
+<li>활용 3요소: 인력·자원(데이터)·기술 ☞ 인자기</li>
+<li>출현 배경 ★: 스마트폰, 저장비용↓, 클라우드, 하둡, IoT</li>
+<li><strong>함정</strong>: “직관적 의사결정의 중요성 증가”는 배경 아님 (데이터 기반이 핵심)</li>
+<li>단위: PB &lt; EB &lt; ZB &lt; YB ☞ 패엑제요</li>
+<li>SECI ☞ 공표연내: 공통화(암→암) · 표출화(암→형) · 연결화(형→형) · 내면화(형→암)</li>
+<li>가치 산정이 어려운 이유: 누가 언제 쓸지 모름 + 새 기법으로 무가치 데이터가 가치화</li>
+<li>변화 ☞ 전후양상: 전수조사, 사후처리, 양, 상관관계</li>
+</ul>
+<h3 id="1-2-정형-반정형-비정형-특강-100">1-2. 정형 · 반정형 · 비정형 특강 100%</h3>
+<div class="callout tip"><div class="callout-title">특강 키워드</div><p><strong>정형 = 스키마</strong> / <strong>반정형 = 메타데이터·태그</strong> / <strong>비정형 = 구조 없음</strong>
+반정형 종류를 묻는 문항이 대부분을 차지한다.</p></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>키워드</th>
+<th>예</th>
+<th>함정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정형</strong></td>
+<td>고정 스키마, 행·열, SQL</td>
+<td>RDB, CSV, ERP/CRM/SCM</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>반정형</strong></td>
+<td>스키마 없이 <strong>태그·메타데이터</strong></td>
+<td><strong>JSON, XML, HTML</strong>, 웹로그, RFID, 센서</td>
+<td>“구조 변경 불가”(X)</td>
+</tr>
+<tr>
+<td><strong>비정형</strong></td>
+<td>구조 없음</td>
+<td>이미지·영상·음성·SNS·자유텍스트</td>
+<td>전처리하면 정형화 가능(O)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>JSON ★: 자바스크립트 기반 키-값 쌍 텍스트</li>
+<li>정량(수치) vs 정성(언어·인터뷰 텍스트)</li>
+<li>내부 vs 외부, 가역 vs 불가역도 가끔</li>
+</ul>
+<h3 id="1-3-저장-방식-3분법-특강-변별력">1-3. 저장 방식 3분법 특강 변별력</h3>
+<div class="callout danger"><div class="callout-title">특강</div><p>RDB / NoSQL / Hadoop HDFS <strong>차이점이 1과목에서 13~14를 가르는 문항.</strong>
+디테일만 외우고 근본 차이를 놓치면 문항을 읽어도 이해가 안 된다.</p></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>RDB</strong></th>
+<th><strong>NoSQL</strong></th>
+<th><strong>HDFS (하둡)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스키마</td>
+<td>선정의, 엄격 (Schema-on-Write)</td>
+<td>유연·스키마리스</td>
+<td>파일 단위, 스키마 약함</td>
+</tr>
+<tr>
+<td>일관성</td>
+<td>ACID, 정규화</td>
+<td>BASE,  eventual</td>
+<td>복제 3벌, 내결함</td>
+</tr>
+<tr>
+<td>확장</td>
+<td>수직 확장 중심</td>
+<td>수평 확장</td>
+<td>노드 추가 수평 확장</td>
+</tr>
+<tr>
+<td>처리</td>
+<td>트랜잭션·조인</td>
+<td>단순 조회·대규모</td>
+<td><strong>배치</strong>, 높은 처리율</td>
+</tr>
+<tr>
+<td>실시간</td>
+<td>좋음 (OLTP)</td>
+<td>유형에 따라</td>
+<td><strong>부적합</strong> (파일 기반)</td>
+</tr>
+<tr>
+<td>데이터</td>
+<td>정형</td>
+<td>반정형·비정형 강점</td>
+<td>모든 원본 파일</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>함정 세트</strong><br />
+- HDFS를 “낮은 응답 지연(실시간)”이라고 하면 <strong>오답</strong>. 설계 목적은 <strong>높은 처리율(throughput), 배치</strong>.<br />
+- NoSQL = “SQL을 안 쓴다”가 아니라 <strong>Not Only SQL</strong> (비관계형 + 수평확장).<br />
+- RDB만의 특징: 조인·정규화·강결합 스키마·트랜잭션.</p>
+<h3 id="1-4-ETL-ODS-DW-DM-Data-Lake-특강-100">1-4. ETL · ODS · DW · DM · Data Lake 특강 100%</h3>
+<pre><code>OLTP(현업 운영) → ODS(운영 임시 통합) → ETL → DW(전사) → DM(부서) → OLAP/BI
+                              ↘ Data Lake(원본 그대로, 하둡/S3)
+</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>용어</th>
+<th>한 줄</th>
+<th>특강 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ETL</strong></td>
+<td>Extract → Transform → Load</td>
+<td>운영DB → DW. 추출·변환·적재 기능 정의</td>
+</tr>
+<tr>
+<td><strong>ODS</strong></td>
+<td>Operational Data Store. 현업 운영 저장소의 통합 중간층</td>
+<td>ADP와 동일 문항. <strong>이번 회 예상</strong></td>
+</tr>
+<tr>
+<td><strong>DW</strong></td>
+<td>전사 분석용. Inmon 4특징: <strong>주제지향·통합·시계열·비휘발성</strong></td>
+<td>함정: ‘확장성’은 4특징 아님</td>
+</tr>
+<tr>
+<td><strong>DM</strong></td>
+<td>부서·주제별 소규모 DW</td>
+<td>DW의 부분집합</td>
+</tr>
+<tr>
+<td><strong>Data Lake</strong></td>
+<td>정형~비정형 <strong>원본 포맷 그대로</strong></td>
+<td><strong>Schema-on-Read</strong></td>
+</tr>
+<tr>
+<td>DW</td>
+<td>구조를 먼저 만들고 저장</td>
+<td><strong>Schema-on-Write</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout tip"><div class="callout-title">특강 강력 예상</div><p>Lake = 포맷을 정하지 않고 가져온다 (<strong>스키마 온 리드</strong>).
+DW = 포맷을 만들어 놓고 저장 (<strong>스키마 온 라이트</strong>).</p></div>
+
+<p><strong>OLTP vs OLAP</strong><br />
+- OLTP = 거래 실시간 입력수정삭제 / OLAP = 다차원 대화식 분석<br />
+- OLAP 5연산: Roll-up, Drill-down, Slice, Dice, Pivot<br />
+- BI = 무슨 일이 있었나 / BA = 왜, 앞으로 어떻게<br />
+- 내부 DB 활용 예: ERP·CRM·SCM. 외부 SNS 분석은 내부 활용 아님 ★</p>
+<h3 id="1-5-SQL-분류">1-5. SQL 분류 ⚠</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>명령</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDL</td>
+<td>CREATE ALTER DROP TRUNCATE</td>
+<td>구조(틀)</td>
+</tr>
+<tr>
+<td>DML</td>
+<td>SELECT INSERT UPDATE DELETE</td>
+<td>내용물</td>
+</tr>
+<tr>
+<td><strong>DCL</strong></td>
+<td><strong>GRANT, REVOKE</strong></td>
+<td>권한</td>
+</tr>
+<tr>
+<td>TCL</td>
+<td>COMMIT ROLLBACK SAVEPOINT</td>
+<td>트랜잭션</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-6-분석-가치-4유형-특강">1-6. 분석 가치 4유형 특강</h3>
+<blockquote>
+<p>1·2·3·4번(쉬운 정의)은 누구나 맞춘다. <strong>5번이 나만의 변별.</strong></p>
+</blockquote>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>질문</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>묘사적 Descriptive</strong></td>
+<td>무슨 일이 일어났나</td>
+<td>대시보드, 리포트</td>
+</tr>
+<tr>
+<td><strong>진단적 Diagnostic</strong></td>
+<td>왜 일어났나</td>
+<td>드릴다운, 원인 분석</td>
+</tr>
+<tr>
+<td><strong>예측적 Predictive</strong></td>
+<td>무슨 일이 일어날까</td>
+<td>회귀, 분류, 시계열</td>
+</tr>
+<tr>
+<td><strong>처방적 Prescriptive</strong></td>
+<td>무엇을 해야 하나</td>
+<td>최적화, 추천 액션</td>
+</tr>
+</tbody>
+</table></div>
+<p>(특강 구어: “예방적”으로 들리기도 함 → 표준 용어는 <strong>예측적·처방적</strong>로 정리)</p>
+<h3 id="1-7-마이데이터-산업-흐름">1-7. 마이데이터 · 산업 흐름</h3>
+<p>처리(프로그래밍) → 통합(DBMS) → 분석(빅데이터) → 연결(API·오픈데이터) → 권리(<strong>마이데이터</strong>)<br />
+- 마이데이터: 정보주체가 본인 정보를 제3자에게 제공하게 하여 서비스를 받음<br />
+- 특강: 정의 문제 가중치는 떨어짐. 다만 <strong>프로세스 순서</strong>는 시험을 좋아한다.</p>
+<h3 id="1-8-조직-인력-특강-반복-출제">1-8. 조직 · 인력 특강 반복 출제</h3>
+<p><strong>분석 수행 주체 ☞ 집기분</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>구조</th>
+<th>장</th>
+<th>단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>집중형</strong></td>
+<td>독립 DSCoE가 전사 분석</td>
+<td>전문성·표준화</td>
+<td>현업 즉시 대응 느림, 병목</td>
+</tr>
+<tr>
+<td><strong>기능형</strong></td>
+<td>부서별 자체 분석, 전담조직 없음</td>
+<td>현업 이해</td>
+<td>전사 관점 부족, 수준 불균형</td>
+</tr>
+<tr>
+<td><strong>분산형</strong></td>
+<td>분석 인력을 현업에 배치</td>
+<td>실무 밀착·신속</td>
+<td>통합 관리 어려움</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>★ 집중형의 특징이 아닌 것 → “현업에 즉시 적용” (그건 분산형)</li>
+</ul>
+<p><strong>데이터 사이언티스트</strong><br />
+- 하드: 수학·통계·가설검정, 프로그래밍·모델링, 저장 구조<br />
+- <strong>소프트</strong>: 통찰(호기심·논리), 전달(스토리텔링·시각화), 협업<br />
+- 함정: “예산·채용 전담”은 역할 아님. 통계 모델 설계는 하드.</p>
+<p><strong>분석 준비도 vs 성숙도</strong> → 기업을 도입형/확산형 등 고유명사로 구분 특강</p>
+<p>준비도 6 ☞ IT문데기인파: 분석업무, 인력조직, 기법, 데이터, 문화, IT인프라<br />
+성숙도 4 ☞ 도활확최: 도입 → 활용 → 확산 → 최적화</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>준비도</th>
+<th>성숙도</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>준비형</td>
+<td>낮</td>
+<td>낮</td>
+<td>사전 준비</td>
+</tr>
+<tr>
+<td>정착형</td>
+<td>낮</td>
+<td>높</td>
+<td>제한 사용 중, 정착 필요</td>
+</tr>
+<tr>
+<td><strong>도입형</strong></td>
+<td>높</td>
+<td>낮</td>
+<td>조직 준비됨, 바로 도입</td>
+</tr>
+<tr>
+<td><strong>확산형</strong></td>
+<td>높</td>
+<td>높</td>
+<td>지속 확산</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-9-데이터-거버넌스-특강">1-9. 데이터 거버넌스 특강</h3>
+<ul>
+<li>3요소 ☞ 원조프: <strong>원칙, 조직, 프로세스</strong> (교재에 따라 4요소: + 기술/표준)</li>
+<li>관리 대상: 마스터데이터, 메타데이터, 데이터 사전</li>
+<li>분석 거버넌스 5: 조직, 프로세스, 시스템, 데이터, 교육·마인드</li>
+<li>위기 3과 통제 (바꿔치기 함정)</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>위기</th>
+<th>예</th>
+<th>통제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사생활 침해</td>
+<td>SNS 원치 않는 노출</td>
+<td>제공자 책임 → <strong>사용자 책임</strong></td>
+</tr>
+<tr>
+<td>책임 원칙 훼손</td>
+<td>예측만으로 체포·대출거부</td>
+<td><strong>실제 결과에 대해서만</strong> 책임</td>
+</tr>
+<tr>
+<td>데이터 오용</td>
+<td>결과 맹신·악용</td>
+<td>해석가능 알고리즘, <strong>알고리즈미스트</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>함정: 알고리즈미스트를 책임원칙 훼손의 통제라고 하면 X.</p>
+<hr />
+<h2 id="2장-빅데이터-기술-및-제도">2장. 빅데이터 기술 및 제도</h2>
+<h3 id="2-1-플랫폼-3계층-특강-최근-가중치-최고">2-1. 플랫폼 3계층 특강 (최근 가중치 최고)</h3>
+<p>수집 → 저장 → 처리분석 → 서비스시각화 를 한 환경에서.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>계층</th>
+<th>역할</th>
+<th>예</th>
+<th>빨간 키워드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>소프트웨어</strong></td>
+<td>수집·정제, 처리·분석, 사용자 서비스</td>
+<td>Kafka, Spark, Hive, BI, 알고리즘</td>
+<td>시각화·분석 알고리즘은 여기</td>
+</tr>
+<tr>
+<td><strong>플랫폼</strong></td>
+<td>데이터·자원 관리, 스케줄링, 프로파일링</td>
+<td>Hadoop, <strong>YARN</strong></td>
+<td>작업 스케줄</td>
+</tr>
+<tr>
+<td><strong>인프라</strong></td>
+<td>서버·스토리지·네트워크, 자원 배치</td>
+<td>서버, 디스크, 망</td>
+<td>물리 자원</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: 소프트 다음엔 플랫폼이 나올 타이밍. <strong>특징 문장으로 계층을 고르는 문항.</strong></p>
+<h3 id="2-2-하둡-코어-에코시스템-특강">2-2. 하둡 코어 + 에코시스템 특강</h3>
+<p><strong>코어</strong>: HDFS(저장) + MapReduce(처리) + YARN(자원) + Common</p>
+<h4>HDFS 특강 100%</h4>
+<ul>
+<li>구글 <strong>GFS를 모사한 클론</strong>. NameNode(마스터, <strong>메타데이터</strong>) + DataNode(슬레이브, <strong>블록 저장</strong>, 복제 기본 3)</li>
+<li>블록 크기 <strong>변경 가능</strong>. 대용량 특화 (소규모 파일에 부적합)</li>
+<li><strong>낮은 지연 시간보다 높은 처리율</strong>. 실시간 X, 배치 O</li>
+<li>내결함성 = 일부 노드 죽어도 복제본으로 계속 동작</li>
+</ul>
+<p><strong>NameNode vs DataNode 역할을 섞어 놓고 틀린 설명 찾기</strong> = 출제 포인트.</p>
+<h4>MapReduce 특강</h4>
+<ul>
+<li>Map(키값 변환) → Shuffle&amp;Sort(같은 키) → Reduce(집계)</li>
+<li><strong>무공유(Shared Nothing)</strong>: CPU·메모리·디스크가 노드마다 독립</li>
+<li>“공유 아키텍처”라고 쓰면 <strong>오답</strong></li>
+<li>디스크 기반 <strong>배치</strong>. 실시간·반복연산은 <strong>Spark(인메모리)</strong></li>
+</ul>
+<h4>에코시스템 — 정의만 짧게 특강</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>도구</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sqoop</strong></td>
+<td>RDBMS ↔ Hadoop <strong>정형</strong> 대량 전송</td>
+</tr>
+<tr>
+<td><strong>Flume</strong></td>
+<td>로그 수집·전송</td>
+</tr>
+<tr>
+<td><strong>Kafka</strong></td>
+<td>실시간 스트림 Pub/Sub</td>
+</tr>
+<tr>
+<td><strong>Spark</strong></td>
+<td>인메모리 고속 (배치+스트림+ML)</td>
+</tr>
+<tr>
+<td><strong>Hive</strong></td>
+<td>HiveQL, 하둡 위 DW</td>
+</tr>
+<tr>
+<td><strong>HBase</strong></td>
+<td>HDFS 위 컬럼 NoSQL, 랜덤 읽기쓰기</td>
+</tr>
+<tr>
+<td><strong>Zookeeper</strong></td>
+<td>분산 서버 조정(코디네이터)</td>
+</tr>
+<tr>
+<td>YARN</td>
+<td>클러스터 자원·스케줄</td>
+</tr>
+<tr>
+<td>Pig</td>
+<td>스크립트 ETL</td>
+</tr>
+</tbody>
+</table></div>
+<p>흐름: Kafka/Flume 수집 → HDFS/HBase 저장 → YARN 자원 → Spark/Hive/MR 처리<br />
+함정: HBase는 파일시스템이 아님. JDBC는 분석 도구 아님. Zookeeper ≠ 로그수집.</p>
+<h3 id="2-3-저장장치-DAS-NAS-SAN">2-3. 저장장치 DAS / NAS / SAN</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>연결</th>
+<th>단위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DAS</td>
+<td>서버 직접</td>
+<td>로컬 디스크</td>
+</tr>
+<tr>
+<td>NAS</td>
+<td>LAN</td>
+<td><strong>파일</strong> 공유</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td>전용망</td>
+<td><strong>블록</strong>, 고성능</td>
+</tr>
+</tbody>
+</table></div>
+<p>병렬 DBMS: 공유메모리 / 공유디스크 / <strong>Shared Nothing</strong></p>
+<h3 id="2-4-인공지능-학습-유형-특강-교집합-3과목_모델링_쪽집게">2-4. 인공지능 학습 유형 특강 교집합 → <a href="3과목.html">3과목_모델링_쪽집게</a></h3>
+<p>딥러닝 ⊂ 머신러닝 ⊂ 인공지능</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>라벨</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지도</td>
+<td>있음</td>
+<td>분류·회귀, 스팸, 집값</td>
+</tr>
+<tr>
+<td>비지도</td>
+<td>없음</td>
+<td>군집·차원축소·연관·이상탐지</td>
+</tr>
+<tr>
+<td><strong>준지도</strong></td>
+<td>일부만</td>
+<td>라벨 비용 클 때. <strong>정의 문제 가능</strong> 특강</td>
+</tr>
+<tr>
+<td>강화</td>
+<td>보상</td>
+<td>게임, 로봇, Q-러닝. “라벨로 규칙 학습”(X)</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: <strong>사례를 주고 학습 유형 고르기.</strong> 4과목에도 스침.</p>
+<p>전이학습: 사전학습 모델 재사용 / Fine-tuning / 지식증류<br />
+XAI, AutoML, MLOps, 생성형 AI 용어도 한 줄.</p>
+<h3 id="2-5-개인정보-특강">2-5. 개인정보 특강</h3>
+<blockquote>
+<p>개인정보 = <strong>가명정보까지</strong>. <strong>익명정보는 개인정보가 아니다.</strong> 익명 공개는 처벌 대상 아님.<br />
+다른 데이터와 결합해 식별 가능하면 법이 정하는 개인정보.<br />
+활용은 <strong>가급적 익명 원칙</strong>.</p>
+</blockquote>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>식별</th>
+<th>복원</th>
+<th>법</th>
+<th>활용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개인정보</td>
+<td>가능</td>
+<td>—</td>
+<td>적용</td>
+<td>동의</td>
+</tr>
+<tr>
+<td><strong>가명정보</strong></td>
+<td>추가정보 없으면 불가</td>
+<td><strong>추가정보로 복원 가능</strong></td>
+<td>적용</td>
+<td>통계·연구·공익은 동의 없이</td>
+</tr>
+<tr>
+<td>익명정보</td>
+<td>불가</td>
+<td><strong>복원 불가</strong></td>
+<td><strong>미적용</strong></td>
+<td>자유</td>
+</tr>
+</tbody>
+</table></div>
+<p>데이터 3법 ☞ 개정신: 개인정보보호법, 정보통신망법, 신용정보법 (위치정보법 X)<br />
+처리 원칙: 목적제한, <strong>최소수집</strong>, 목적외 제한, 정확성, 안전성, 목적달성 시 파기<br />
+함정: “최대한 오래 보관”(X)</p>
+<p>프라이버시 모델: k-익명성=연결공격 / l-다양성=동질성·배경지식 / t-근접성=쏠림·유사성<br />
+차등정보보호: 통계 결과에 <strong>확률적 노이즈</strong></p>
+<h3 id="2-6-비식별화-5기법-세분화-특강-강력예상">2-6. 비식별화 5기법 — 세분화 특강 강력예상</h3>
+<p>ADP보다 <strong>기사답게 세부 기술 정의</strong>가 나온다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기법</th>
+<th>한 줄 예</th>
+<th>세부 (암기)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>가명처리</strong></td>
+<td>홍길동35 → 임꺽정30</td>
+<td>휴리스틱 가명화, 암호화, 교환(셔플)</td>
+</tr>
+<tr>
+<td><strong>총계처리</strong></td>
+<td>개인키 → 평균 175</td>
+<td>부분총계, 라운딩, 재배열, 전체총계</td>
+</tr>
+<tr>
+<td><strong>데이터 삭제</strong></td>
+<td>주민번호 삭제</td>
+<td>식별자 삭제, 부분삭제, 레코드 삭제, 로컬삭제</td>
+</tr>
+<tr>
+<td><strong>범주화</strong></td>
+<td>35세 → 30~40세</td>
+<td>범위화, 제어 라운딩, 감추기</td>
+</tr>
+<tr>
+<td><strong>마스킹</strong></td>
+<td>홍길동 → 홍OO</td>
+<td>임의잡음, 공백·대체문자</td>
+</tr>
+</tbody>
+</table></div>
+<p>절차: 사전검토 → 비식별조치 → <strong>적정성평가(k·l·t)</strong> → 사후관리<br />
+함정: “총계처리는 재현성이 높아 항상 동일 결과”(X)</p>
+<hr />
+<h2 id="3장-데이터-분석-계획">3장. 데이터 분석 계획</h2>
+<h3 id="3-1-분석-기획-4유형">3-1. 분석 기획 4유형 ★</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>방법 앎</th>
+<th>방법 모름</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상 앎</td>
+<td><strong>최적화</strong></td>
+<td><strong>솔루션</strong></td>
+</tr>
+<tr>
+<td>대상 모름</td>
+<td><strong>통찰</strong></td>
+<td><strong>발견</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="3-2-마스터플랜-우선순위-ROI-4V-특강">3-2. 마스터플랜 우선순위 · ROI · 4V 특강</h3>
+<p>시급성(비즈니스 효과, Value) vs 난이도(투자비용, 3V: Volume Variety Velocity)<br />
+- 시급성 기준 순서: <strong>3 → 4 → 2</strong><br />
+- 난이도 기준 순서: <strong>3 → 1 → 2</strong><br />
+- ROI 관점: <strong>Volume·Variety·Velocity = 투자비용 / Value = 비즈니스 효과</strong></p>
+<p>분석 과제 위험 (4): 데이터 확보, 분석 기술, 분석 인력·조직, 범위·일정 등 — 정의 문항</p>
+<p>의사결정 저해: 고정관념, 편향, 프레이밍</p>
+<h3 id="3-3-하향식-vs-상향식-특강-가중치-높음">3-3. 하향식 vs 상향식 특강 가중치 높음</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>하향식 Top-down</th>
+<th>상향식 Bottom-up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>언제</td>
+<td><strong>문제가 명확</strong></td>
+<td><strong>문제가 불명확</strong>, 데이터에서 문제 정의</td>
+</tr>
+<tr>
+<td>출발</td>
+<td>비즈니스 문제</td>
+<td>데이터</td>
+</tr>
+<tr>
+<td>절차</td>
+<td>문제탐색 → 정의 → 해결방안 → 타당성</td>
+<td>What 관점 인식, 비지도와 친함</td>
+</tr>
+<tr>
+<td>특강</td>
+<td><strong>프로세스 순서</strong> 출제</td>
+<td><strong>프로세스 순서</strong> 출제</td>
+</tr>
+</tbody>
+</table></div>
+<p>혼합: 발산(상향)+수렴(하향) / 디자인싱킹: 공감→정의→아이디어→프로토타입→테스트<br />
+문제탐색: 비즈니스모델캔버스 5 (업무·제품·고객·규제감사·지원인프라, <strong>재무 없음</strong>)<br />
+거시: STEEP / 타당성: 경제·데이터·기술</p>
+<h3 id="3-4-분석-방법론-3-빅데이터-방법론-특강-핵심-축">3-4. 분석 방법론 3 + 빅데이터 방법론 특강 핵심 축</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법론</th>
+<th>순서</th>
+<th>키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KDD</strong></td>
+<td>선택 → 전처리 → 변환 → 마이닝 → 평가</td>
+<td>DB 지식발견</td>
+</tr>
+<tr>
+<td><strong>CRISP-DM</strong></td>
+<td><strong>업무이해 → 데이터이해 → 데이터준비 → 모델링 → 평가 → 전개</strong></td>
+<td>업데데모평전. 산업표준, 피드백</td>
+</tr>
+<tr>
+<td>SEMMA</td>
+<td>Sample Explore Modify Model Assess</td>
+<td>SAS, 모델링 중심</td>
+</tr>
+</tbody>
+</table></div>
+<p>빅데이터 방법론 5 ☞ PPADD<br />
+<strong>기획 Planning → 준비 Preparing → 분석 Analyzing → 시스템구현 Developing → 평가전개 Deploying</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>단계</th>
+<th>넣을 것 / 넣지 말 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기획</td>
+<td>SOW, 위험관리(회피·전이·완화·수용=회전완수), <strong>WBS는 계획 수립</strong></td>
+</tr>
+<tr>
+<td>준비</td>
+<td>수집·정제, 스토어 설계</td>
+</tr>
+<tr>
+<td>분석</td>
+<td>EDA, 모델, 검증·튜닝</td>
+</tr>
+<tr>
+<td>시스템구현</td>
+<td>운영 설계·구현·테스트</td>
+</tr>
+<tr>
+<td><strong>평가전개</strong></td>
+<td><strong>모델 운영 주기·재학습</strong> (분석 단계 아님 ★)</td>
+</tr>
+</tbody>
+</table></div>
+<p>계층: Phase(단계) → Task(태스크) → Step<br />
+함정: KDD 전처리↔변환 뒤집기, CRISP 평가↔전개 뒤집기</p>
+<p>개발모델: 폭포수 / 프로토타입 / 나선형(위험제거) / 애자일</p>
+<h3 id="3-5-모형화-모델링-특강">3-5. 모형화 ≠ 모델링 특강</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>모형화</strong></td>
+<td>변수 간 <strong>관계를 파악</strong></td>
+</tr>
+<tr>
+<td><strong>모델링</strong></td>
+<td><strong>수학적 함수식</strong>을 만듦</td>
+</tr>
+</tbody>
+</table></div>
+<p>출제: <strong>순서</strong> + 모형화 정의.</p>
+<p>데이터 확보 프로세스 가중치↓ / 데이터 분석 프로세스 가중치↑</p>
+<hr />
+<h2 id="4장-수집-저장-품질">4장. 수집 · 저장 · 품질</h2>
+<h3 id="4-1-수집-기술-Sqoop-vs-Open-API-vs-FTP-특강-이번회-예상">4-1. 수집 기술 — Sqoop vs Open API vs FTP 특강 이번회 예상</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기술</th>
+<th>대상</th>
+<th>특강 한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sqoop</strong></td>
+<td><strong>정형</strong>, RDBMS ↔ Hadoop</td>
+<td>정형 수집 소프트웨어로 기억</td>
+</tr>
+<tr>
+<td><strong>Open API</strong></td>
+<td>정형·반정형·비정형 <strong>모두</strong>, <strong>실시간 수집도 가능</strong></td>
+<td>“API는 정형만”이면 오답</td>
+</tr>
+<tr>
+<td><strong>FTP</strong></td>
+<td><strong>파일</strong> 전송 (CSV, 로그파일)</td>
+<td>파일 프로토콜. 실시간 로그 스트림 아님</td>
+</tr>
+<tr>
+<td>ETL</td>
+<td>추출변환적재</td>
+<td>저장소 적재 과정</td>
+</tr>
+<tr>
+<td>크롤링</td>
+<td>웹 공개 페이지</td>
+<td>화면 데이터</td>
+</tr>
+<tr>
+<td>Flume/Kafka</td>
+<td>로그·스트림</td>
+<td>FTP와 혼동 금지</td>
+</tr>
+<tr>
+<td>FGI</td>
+<td>소수 전문가 토의</td>
+<td>정성 ★</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="4-2-변환-전처리-포맷통일-후처리-특강">4-2. 변환 = 전처리 + 포맷통일 + 후처리 특강</h3>
+<p>여러 출처(API, JSON, RDB) → <strong>전처리로 일관 포맷</strong> → 저장 → <strong>후처리</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>전처리</strong></td>
+<td>정제, 결측·이상 처리, 형변환, 필터, 포맷 통일 <strong>이전·직전</strong> 작업</td>
+</tr>
+<tr>
+<td><strong>후처리</strong></td>
+<td>저장 이후 집계, 인덱싱, 압축, 파티션, 요약마트</td>
+</tr>
+</tbody>
+</table></div>
+<p>출제: 전처리에 해당하는 것 / 후처리에 해당하는 것.</p>
+<h3 id="4-3-데이터-품질-특강-100-빅분기-고유">4-3. 데이터 품질 특강 100% (빅분기 고유)</h3>
+<p>정형 품질 기준 <strong>5</strong> (특강: 거의 100% 정의 문제)<br />
+<strong>완전성, 유일성, 유효성, 일관성, 정확성</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기준</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>완전성</td>
+<td>필수값 누락 없이</td>
+</tr>
+<tr>
+<td>유일성</td>
+<td>동일 개체 중복 없이</td>
+</tr>
+<tr>
+<td>유효성</td>
+<td>정의된 규칙·허용범위 (형식, 코드) ★</td>
+</tr>
+<tr>
+<td>일관성</td>
+<td>시스템·항목 간 모순 없이</td>
+</tr>
+<tr>
+<td>정확성</td>
+<td>실제 세계와 일치</td>
+</tr>
+</tbody>
+</table></div>
+<p>(교재 확장 7에 최신성·접근성·보안성이 더해지기도 함. <strong>5가 특강 버전.</strong> 희소성은 품질 차원 아님)</p>
+<p><strong>진단 3단계</strong>: 대상 정의 → 진단 실시 → 결과 분석<br />
+<strong>개선 3단계</strong>: 계획 → 수행 → 통제</p>
+<h3 id="4-4-분산-파일-시스템-vs-DB-클러스터-특강-변별력">4-4. 분산 파일 시스템 vs DB 클러스터 특강 변별력</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>분산 파일 시스템</th>
+<th>DB 클러스터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>단위</td>
+<td><strong>파일·블록</strong></td>
+<td><strong>레코드·테이블</strong></td>
+</tr>
+<tr>
+<td>예</td>
+<td>GFS, <strong>HDFS</strong></td>
+<td>Oracle RAC, 병렬 DBMS</td>
+</tr>
+<tr>
+<td>강점</td>
+<td>초대규모, 처리율, 저비용</td>
+<td>질의·트랜잭션·일관성</td>
+</tr>
+<tr>
+<td>약점</td>
+<td>실시간·랜덤 I/O, 작은 파일</td>
+<td>비정형 초대용량에 비쌈</td>
+</tr>
+<tr>
+<td>처리</td>
+<td>배치 (MapReduce)</td>
+<td>SQL OLTP/OLAP</td>
+</tr>
+</tbody>
+</table></div>
+<p>대표 DFS: 구글 GFS, 하둡 HDFS</p>
+<h3 id="4-5-NoSQL-4유형-특강-마지막-변별력">4-5. NoSQL 4유형 특강 마지막 변별력</h3>
+<p>특징: 스키마 유연, 수평확장, BASE, 비조인 중심. 종류별 <strong>도구 매칭</strong>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>특징</th>
+<th>도구</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key-Value</td>
+<td>가장 단순, 캐시·세션</td>
+<td><strong>Redis</strong>, Memcached</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>열 단위, 압축·확장</td>
+<td><strong>HBase, Cassandra</strong>, BigTable</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>JSON 문서</td>
+<td><strong>MongoDB</strong>, CouchDB</td>
+</tr>
+<tr>
+<td>Graph</td>
+<td>노드-관계</td>
+<td><strong>Neo4j</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="척도-4종-2과목과-공유-1에서도-수집계획에-출제">척도 4종 (2과목과 공유, 1에서도 수집계획에 출제)</h2>
+<p>명목(구분) · 서열(순위) · 등간(절대0 없음, 온도℃) · 비율(절대0, 무게)</p>
+<hr />
+<h2 id="시험-직전-체크리스트-1과목">시험 직전 체크리스트 (1과목)</h2>
+<ol>
+<li>정형=스키마, 반정형=JSON/XML/메타데이터, 비정형=영상·SNS</li>
+<li><strong>RDB vs NoSQL vs HDFS</strong> — 실시간은 RDB, 배치는 HDFS, 유연확장은 NoSQL</li>
+<li>Lake = Schema-on-<strong>Read</strong> / DW = Schema-on-<strong>Write</strong> / ODS = 운영 임시통합 / DW 4특징에 확장성 X</li>
+<li>ETL 기능, MapReduce = 배치 + <strong>무공유</strong>. “공유 아키텍처”면 오답</li>
+<li>NameNode=메타, DataNode=블록. HDFS는 <strong>높은 처리율</strong>, 낮은 지연 아님</li>
+<li>계층: 알고리즘·시각화=소프트웨어 / YARN·스케줄=플랫폼 / 서버=인프라</li>
+<li>Spark=인메모리, Hive=SQL DW, Kafka=스트림, Sqoop=RDB↔하둡, Zookeeper=조정</li>
+<li>가명=복원가능·법적용 / 익명=복원불가·법미적용 / 데이터3법=개정신</li>
+<li>비식별 5 + <strong>세부기술</strong> (교환, 부분총계, 범위화, 잡음)</li>
+<li>품질 5: 완전·유일·유효·일관·정확 / 진단3 · 개선3</li>
+<li>Sqoop=정형, API=전유형+실시간가능, FTP=파일</li>
+<li>전처리 vs 후처리</li>
+<li>하향식=문제명확, 상향식=문제불명확+데이터출발, <strong>순서</strong></li>
+<li>CRISP: 업데데모평전 / 빅데이터: 기획-준비-분석-구현-전개 / 운영주기=전개</li>
+<li><strong>모형화 ≠ 모델링</strong></li>
+<li>집중/기능/분산, 소프트스킬, 준비도·성숙도 → 도입형·확산형</li>
+<li>거버넌스: 원칙·조직·프로세스 / 위기 통제 바꿔치기</li>
+<li>분석 4유형 묘사·진단·예측·처방 / ROI: 3V=비용, Value=효과</li>
+<li>학습유형 사례 + 준지도</li>
+<li>NoSQL 4종 도구 / DAS·NAS·SAN / GRANT=DCL</li>
+</ol>
+<hr />
+<h2 id="OX-응용-훈련-가리고-답하기">OX · 응용 훈련 (가리고 답하기)</h2>
+<p><strong>1.</strong> 가명정보는 추가 정보와 결합해도 절대 복원할 수 없다.</p>
+<details><summary>정답</summary>X — 복원 가능. 복원 불가 = 익명정보.</details>
+
+<p><strong>2.</strong> Data Lake는 Schema-on-Write, DW는 Schema-on-Read이다.</p>
+<details><summary>정답</summary>X — 반대. Lake=Read(일단 넣고 나중에 스키마), DW=Write.</details>
+
+<p><strong>3.</strong> HDFS는 낮은 응답 지연의 실시간 처리에 최적화되어 있다.</p>
+<details><summary>정답</summary>X — 높은 처리율·배치. 실시간은 Spark/Kafka 쪽.</details>
+
+<p><strong>4.</strong> MapReduce는 노드가 CPU·메모리·디스크를 공유하는 공유 아키텍처이다.</p>
+<details><summary>정답</summary>X — <strong>무공유 Shared Nothing</strong>.</details>
+
+<p><strong>5.</strong> Open API는 정형 데이터만 수집한다.</p>
+<details><summary>정답</summary>X — 정형·반정형·비정형, 실시간 수집도 가능.</details>
+
+<p><strong>6.</strong> JSON은 반정형이고, 키-값 쌍 텍스트이다.</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>7.</strong> 분석 대상을 알고 방법을 모르면 ‘통찰’이다.</p>
+<details><summary>정답</summary>X — 그건 <strong>솔루션</strong>. 통찰 = 대상 모름 + 방법 앎.</details>
+
+<p><strong>8.</strong> CRISP-DM의 첫 단계는 데이터 이해이다.</p>
+<details><summary>정답</summary>X — <strong>업무(비즈니스) 이해</strong>.</details>
+
+<p><strong>9.</strong> 모델 운영 주기·재학습 전략은 데이터 분석 단계에서 정한다.</p>
+<details><summary>정답</summary>X — <strong>평가 및 전개</strong> 단계.</details>
+
+<p><strong>10.</strong> 집중형 조직은 현업 요구에 즉각 대응하기 쉽다.</p>
+<details><summary>정답</summary>X — 분산형의 장점. 집중형은 병목.</details>
+
+<p><strong>11.</strong> DW Inmon 4특징: 주제지향, 통합, 시계열, 확장성.</p>
+<details><summary>정답</summary>X — 네 번째는 <strong>비휘발성</strong>. 확장성 아님.</details>
+
+<p><strong>12.</strong> 알고리즈미스트는 책임 원칙 훼손의 통제 방안이다.</p>
+<details><summary>정답</summary>X — <strong>데이터 오용</strong>의 통제. 책임원칙은 ‘실제 결과만 책임’.</details>
+
+<p><strong>13.</strong> Redis=키값, MongoDB=문서, HBase=컬럼, Neo4j=그래프.</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>14.</strong> 모형화는 수학적 함수식을 만드는 것이고, 모델링은 변수 관계 파악이다.</p>
+<details><summary>정답</summary>X — <strong>반대</strong>.</details>
+
+<p><strong>15.</strong> 정형 품질 5: 완전성·유일성·유효성·일관성·정확성.</p>
+<details><summary>정답</summary>O (특강 버전)</details>
+
+<p><strong>16.</strong> 하향식은 문제가 불명확할 때, 데이터에서 출발한다.</p>
+<details><summary>정답</summary>X — 그건 상향식. 하향식 = 문제 명확, 비즈니스 출발.</details>
+
+<p><strong>17.</strong> 시각화 알고리즘은 인프라스트럭처 계층이다.</p>
+<details><summary>정답</summary>X — <strong>소프트웨어</strong> 계층.</details>
+
+<p><strong>18.</strong> GRANT/REVOKE는 DML이다.</p>
+<details><summary>정답</summary>X — <strong>DCL</strong>.</details>
+
+<p><strong>19.</strong> k-익명성은 연결 공격을 방어한다.</p>
+<details><summary>정답</summary>O. l=동질성·배경지식, t=쏠림·유사성.</details>
+
+<p><strong>20.</strong> 연봉 4500만을 4000~5000만으로 바꾼 것은 마스킹이다.</p>
+<details><summary>정답</summary>X — <strong>범주화(범위화)</strong>.</details>
+
+<hr />
+<h2 id="암기-카드-출퇴근용">암기 카드 (출퇴근용)</h2>
+<pre><code>스키마=정형 / 메타=반정형 / 없음=비정형
+RDB=조인·ACID / NoSQL=수평·유연 / HDFS=배치·처리율
+Lake=온리드 / DW=온라이트 / ODS=운영임시
+NameNode=메타 / DataNode=블록 / MR=무공유
+개정신=데이터3법 / 가명=복원O·법O / 익명=복원X·법X
+업데데모평전=CRISP / PPADD=빅데이터방법론
+집기분=조직 / 원조프=거버넌스 / 도활확최=성숙도
+Sqoop=정형RDB / API=전유형+실시간 / FTP=파일
+품질5=완유유일정 / 진단=대진결 / 개선=계수통
+</code></pre>
+<blockquote>
+<p>더 긴 서술·법률 조문·기출 변형 70선은 상위 폴더 <code>[1과목_빅데이터_분석기획](../../1과목_빅데이터_분석기획.md)</code>, <code>[기출응용문제집](../../기출응용문제집.md)</code>.<br />
+웹: <code>웹/1과목.html</code></p>
+</blockquote>
+<h1 id="part-3">2과목 탐색</h1>
+<h1>2과목. 빅데이터 탐색</h1>
+<div class="callout warning"><div class="callout-title">특강 — 방어 과목 · 과락 위험</div><p>타깃 <strong>11~12</strong>. 과락이 잘 나는 과목. <strong>1장·2장은 난이도 낮고 유형 한정 → 여기서 선점.</strong> 3장 추론통계는 경우의 수가 많아 난이도를 올릴 수 있다.
+3장은 <strong>기본 개념에 충실</strong>. 기출 재반복률이 높지 않으니 기출만 파지 말고 <strong>정의</strong>.
+층화추출·척도 4종·1·2종오류·p-value는 <strong>절대 놓치지 말 것</strong> (특강 마무리).</p></div>
+
+<p>이 과목 전체 = 전처리 4영역 <strong>정제 · 통합 · 축소 · 변환</strong> 을 펼친 것.</p>
+<hr />
+<h2 id="1장-데이터-전처리-반드시-득점">1장. 데이터 전처리 — 반드시 득점</h2>
+<h3 id="1-1-전처리-4영역-특강-100-정의">1-1. 전처리 4영역 특강 100% 정의</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>영역</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정제 Cleaning</strong></td>
+<td>결측, 노이즈, 이상값</td>
+</tr>
+<tr>
+<td><strong>통합 Integration</strong></td>
+<td>여러 소스 결합, 엔티티 식별, 중복 제거</td>
+</tr>
+<tr>
+<td><strong>축소 Reduction</strong></td>
+<td>변수선택, 차원축소, 표본추출, 이산화</td>
+</tr>
+<tr>
+<td><strong>변환 Transformation</strong></td>
+<td>정규화·스케일링, 로그 등 분포 변환, 집계</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-2-정제-결측-노이즈-이상값-특강">1-2. 정제 = 결측 + 노이즈 + 이상값 특강</h3>
+<h4>결측</h4>
+<p>유형 3 (출제 빈도 낮음): MCAR(완전무작위) / MAR(다른 변수 관련) / MNAR(그 값 자체)</p>
+<p><strong>처리 — 출제 포인트는 여기</strong><br />
+| | 내용 | 주의 |<br />
+|---|---|---|<br />
+| <strong>삭제법</strong> | 완전삭제(행 제거), 변수 삭제 | 손실·편향. “항상 즉시 제거”(X) |<br />
+| <strong>대치법</strong> | 평균·중앙·최빈, 회귀대치, Hot-Deck(현 자료), Cold-Deck(외부), KNN, <strong>다중대치</strong>(여러 셋 만들어 통합) | 다중대치 = 제거가 아님 |</p>
+<h4>노이즈 감소 5 특강 난이도↑</h4>
+<ol>
+<li><strong>구간화(Binning)</strong> 2. <strong>회귀</strong> 3. <strong>군집화</strong> 4. <strong>결합 검사</strong>(컴퓨터+인간) 5. <strong>평활(이동평균 등)</strong><br />
+- ★ 11회: 노이즈 제거 = 스무딩</li>
+</ol>
+<h4>이상값</h4>
+<ul>
+<li>자연적 vs 인위적. <strong>무조건 제거는 오답.</strong> 삭제 / 변환·범주화 / 대체 가능</li>
+<li>탐지: 상자그림, <strong>ESD</strong>(평균±3σ), IQR(Q1−1.5IQR ~ Q3+1.5IQR), Z-score, DBSCAN, <strong>마할라노비스</strong>(다변량, 상관 반영)</li>
+</ul>
+<p><strong>상자그림이 하는 것 / 못 하는 것</strong> 특강 교집합 <a href="4과목.html">4과목_결과해석_쪽집게</a><br />
+- 가능: 5수 요약, 이상치, 산포, <strong>왜도 추정</strong><br />
+- 불가: <strong>데이터 개수</strong>, <strong>가설검정·통계적 유의성</strong>, <strong>평균 표시</strong></p>
+<h3 id="1-3-변수-선택-래퍼-vs-임베디드-특강-100">1-3. 변수 선택 — 래퍼 vs 임베디드 특강 100%</h3>
+<p>차원의 저주: 차원 &gt; 표본 → 희소, 과적합, 연산↑, 해석↓</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>내용</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter</td>
+<td>모형과 무관, 통계량으로 걸러냄</td>
+<td>상관, 카이제곱, 정보이득</td>
+</tr>
+<tr>
+<td><strong>Wrapper 래퍼</strong></td>
+<td>모형 성능으로 변수 부분집합 탐색</td>
+<td><strong>전진 · 후진 · 단계적</strong></td>
+</tr>
+<tr>
+<td><strong>Embedded 임베디드</strong></td>
+<td>학습 과정에 선택 내장</td>
+<td><strong>Ridge, Lasso, Elastic Net</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>전진: 없음→하나씩 추가 / 후진: 전부→하나씩 제거 / 단계: 추가·제거 반복<br />
+- 3과목 회귀 변수선택과 <strong>교집합</strong>. 여기서 끝냈으면 3은 패스.</p>
+<p><strong>임베디드 = 4과목 규제와 교집합</strong> 특강</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>페널티</th>
+<th>계수 0?</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ridge L2</td>
+<td>Σw²</td>
+<td>안 됨 (축소만)</td>
+<td>다중공선, 분산↓</td>
+</tr>
+<tr>
+<td><strong>Lasso L1</strong></td>
+<td>Σ|w|</td>
+<td><strong>정확히 0 → 변수선택</strong></td>
+<td>희소 모델</td>
+</tr>
+<tr>
+<td>Elastic Net</td>
+<td>L1+L2</td>
+<td>일부 0</td>
+<td>상관 높은 변수 그룹</td>
+</tr>
+</tbody>
+</table></div>
+<p>문항: 수식·설명을 주고 Ridge냐 Lasso냐. <strong>순번 따라 돌아가며 출제.</strong></p>
+<h3 id="1-4-차원축소-기준점은-항상-PCA-특강">1-4. 차원축소 — 기준점은 항상 PCA 특강</h3>
+<p>PCA: 원변수를 <strong>보존하지 않음</strong>. 상관 높은 변동을 <strong>주성분(최대분산 축, 직교, 비지도)</strong> 으로.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>vs PCA</th>
+<th>차이 한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>요인분석 FA</strong></td>
+<td>PCA=변동 큰 축 / FA=<strong>공통 잠재요인</strong></td>
+</tr>
+<tr>
+<td><strong>SVD</strong></td>
+<td>PCA는 <strong>정방</strong>(공분산) 분해 / SVD는 <strong>비정방도</strong> 가능 ★ 반복</td>
+</tr>
+<tr>
+<td><strong>LDA</strong></td>
+<td>PCA=비지도·분산최대 / LDA=<strong>지도·클래스 분리 최대</strong></td>
+</tr>
+<tr>
+<td>래퍼 변수선택</td>
+<td>원변수 <strong>선택</strong>(보존) / PCA는 <strong>변환</strong>(비보존)</td>
+</tr>
+</tbody>
+</table></div>
+<p>기타: t-SNE·UMAP(시각화), MDS(거리보존), 오토인코더, ICA<br />
+주성분 개수: 누적기여율 70~90%, 스크리 엘보, 고유값≥1 — 3과도 약하게 겹침(가중치↓)</p>
+<h3 id="1-5-파생변수-vs-요약변수">1-5. 파생변수 vs 요약변수</h3>
+<p>| 요약변수 | 수집 정보를 종합, 재활용 높음 | 1개월 총구매액 |<br />
+| 파생변수 | 의미 부여해 <strong>새로 만듦</strong>, 논리 타당성 | 구매등급, 최근1년 평균구매 ★ |</p>
+<p>사례 주고 “파생변수인가?” 가능.</p>
+<h3 id="1-6-변환-vs-스케일링-특강-실기와-직결">1-6. 변환 vs 스케일링 특강 — 실기와 직결</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>무엇을 바꾸나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>변환</strong></td>
+<td><strong>분포 자체</strong> (비대칭 → 대칭, 분산 안정)</td>
+</tr>
+<tr>
+<td><strong>스케일링</strong></td>
+<td><strong>상대적 크기</strong> (단위 통일). 분포 모양은 대체로 유지</td>
+</tr>
+</tbody>
+</table></div>
+<p>이상값이 있으면 스케일만으로 부족할 수 있고, 비대칭이면 변환이 필요.</p>
+<h4>분포 변환</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>효과</th>
+<th>주의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>로그</strong></td>
+<td>오른쪽 꼬리를 <strong>오른쪽으로 덜 끌리게</strong>(강도 큼)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>제곱근</strong></td>
+<td>같은 방향, <strong>강도 약함</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>지수·제곱</td>
+<td>왼쪽 꼬리 보정</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Box-Cox</strong></td>
+<td>정규성·분산안정</td>
+<td><strong>양수만</strong>. 음수면 오답 보기. λ=0 로그, 0.5 제곱근</td>
+</tr>
+<tr>
+<td>역수</td>
+<td>왜도 보정</td>
+<td><strong>순서 방향이 뒤집힘</strong> ★</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: 설명을 주고 로그 vs 제곱근 vs 지수 고르기. 실기는 Box-Cox 안 씀(이론만).</p>
+<p>구간화: 연속→구간. 비선형 패턴 파악 쉬움 (1세,2세 vs 10대,20대)</p>
+<h4>인코딩</h4>
+<p>| 레이블 | 0,1,2… | 순서 없는 범주에 크기 오해 |<br />
+| <strong>더미</strong> | 0/1, <strong>기준범주 1열 탈락</strong> | 회귀 해석용. 기준 대비 차이 |<br />
+| <strong>원핫</strong> | 범주마다 열, 기준 안 없앰 | 차원 폭증. 파이썬 모델링 필수 |<br />
+| 타깃 | 타깃 평균 | 누수 |<br />
+| 오디널 | 순서 보존 정수 | |</p>
+<p>특강: 더미 = 원핫과 비슷하나 <strong>기준값이 없어져 해석이 달라짐.</strong> 정의만 출제.</p>
+<h4>스케일링 4종 특강 100% — 3·4번째가 변별</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>범위/결과</th>
+<th>이상값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min-Max</td>
+<td>0~1</td>
+<td><strong>매우 민감</strong> (너무 잘 알려 최근엔 덜)</td>
+</tr>
+<tr>
+<td>Standard (Z)</td>
+<td>평균0, 분산1</td>
+<td>민감</td>
+</tr>
+<tr>
+<td><strong>MaxAbs</strong></td>
+<td>[-1,1], 0 기준 최대절대값</td>
+<td>희소 행렬에 유리</td>
+</tr>
+<tr>
+<td><strong>Robust</strong></td>
+<td>중앙값·IQR</td>
+<td><strong>이상값에 강함</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>수식·범위·정의를 체크. 선형 스케일은 <strong>피어슨 상관을 안 바꿈</strong>. 로그 등 비선형은 바꿈.</p>
+<h3 id="1-7-불균형-데이터-특강">1-7. 불균형 데이터 특강</h3>
+<p>타깃 비율이 다를 때 <strong>가상으로 비율을 바꿈</strong>.</p>
+<div class="callout warning"><div class="callout-title">특강 혼동 금지</div><p><strong>층화 K-fold</strong> (<a href="4과목.html">4과목</a>): 원래 비율을 폴드마다 <strong>유지</strong>
+<strong>불균형 처리</strong>(여기): 비율을 <strong>바꿈</strong></p></div>
+
+<p>| 언더 | 다수 클래스 줄임 | 정보 <strong>손실</strong>, 대용량에 유리 |<br />
+| 오버 | 소수 늘림 | <strong>과적합</strong> |<br />
+| SMOTE | 소수 <strong>합성 생성</strong> (단순복제 X) | |<br />
+| <strong>임계값 이동</strong> | 분류 컷오프를 옮김 | <strong>검정(추론) 단계</strong>. 학습 데이터 비율을 직접 바꾸지 않음 특강 |</p>
+<p>세부 기법(SMOTE 변형 등) 출제확률↓. 오버/언더 장단 + 임계값 시점만.</p>
+<hr />
+<h2 id="2장-데이터-탐색-이-과목의-득점-코어-특강">2장. 데이터 탐색 — 이 과목의 득점 코어 특강</h2>
+<p>3장 난이도를 대비하려면 <strong>여기서 틀리면 안 된다.</strong></p>
+<p>EDA(탐색, 기술통계) vs CDA(확증, 가설검정·추론)</p>
+<p>EDA 4원칙 ☞ 저잔재현: 저항성, 잔차, 재표현, 현시성</p>
+<h3 id="2-1-기초-통계량">2-1. 기초 통계량</h3>
+<p>중심: 산술 ≥ 기하 ≥ 조화 / 중앙값은 <strong>순서만</strong> 보므로 이상치에 강함 / 최빈은 범주형도<br />
+산포: 범위, 분산, SD, IQR, <strong>CV=SD/평균</strong> (단위 다른 집단 비교)<br />
+<strong>왜도&gt;0 오른쪽 꼬리: 최빈 &lt; 중앙 &lt; 평균</strong> (“평균은 꼬리를 따라간다”) ★매회<br />
+첨도: 정규=3 (excess는 0)<br />
+왜도·첨도 = 연속형 전용</p>
+<h3 id="2-1b-상관-특강-매회-1문항">2-1b. 상관 특강 — 매회 1문항</h3>
+<p>상관 = 두 변수의 <strong>강도 + 방향</strong>. 다변량이지만 탐색에도 위치.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>공분산 Cov</th>
+<th>피어슨 r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>범위</td>
+<td><strong>−∞ ~ +∞</strong></td>
+<td>−1~1</td>
+</tr>
+<tr>
+<td></td>
+<td>단위에 민감</td>
+<td>표준화한 공분산</td>
+</tr>
+<tr>
+<td></td>
+<td>독립이면 <strong>반드시 0</strong></td>
+<td>구간척도↑, <strong>선형</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>특강 포인트</strong><br />
+- 독립 → Cov=0 (O) / Cov=0 → 독립 (X, 비선형 가능)<br />
+- 피어슨: 구간·비율, 선형, <strong>이상치 민감</strong><br />
+- <strong>스피어만</strong>: 서열. 구간·비율을 <strong>순위화</strong> 가능. <strong>비선형(단조)도</strong> 포착 ★ 전부 출제 포인트<br />
+- 상관 크기만으로 <strong>통계적 유의성 불가 → 가설검정</strong> 필요<br />
+- 켄달 τ도 순위 기반</p>
+<h3 id="2-2-시각적-탐색">2-2. 시각적 탐색</h3>
+<p><strong>히스토그램</strong>: 계급(bin)이 좁으면 들쭉날쭉, 넓으면 패턴 소실 — 해석 문항<br />
+<strong>상자그림</strong>: 위 1-2절<br />
+고급(4과목과 중복, 정의만): 단계구분도, <strong>카토그램</strong>, 조건플롯, 평행좌표<br />
+- 다변량 시각 해석(PCA 바이플롯 읽기 등)은 가중치↓</p>
+<h3 id="2-3-비정형-탐색-특강-용어만-깊이-금지">2-3. 비정형 탐색 특강 — 용어만, 깊이 금지</h3>
+<p>한때 3~4문항으로 과락 발생 → 이후 가중치↓. <strong>실기 주대상도 아님.</strong></p>
+<p>전처리 용어만:<br />
+- 토큰화(Tokenizing)<br />
+- POS 태깅(품사)<br />
+- <strong>스테밍(Stemming)</strong>: 기계적 접사 제거<br />
+- <strong>표제어 추출(Lemmatization)</strong>: 사전 기반 원형</p>
+<p>불용어, 정규화 정도까지. 임베딩·토픽모델로 확장하지 말 것.</p>
+<hr />
+<h2 id="3장-통계기법-기본-개념만-특강">3장. 통계기법 — 기본 개념만 특강</h2>
+<h3 id="3-1-모수-vs-비모수-100">3-1. 모수 vs 비모수 100%</h3>
+<p>| 모수 | 특정 분포(정규 등) 가정, <strong>평균·분산</strong>으로 확률 |<br />
+| <strong>비모수</strong> | 분포 가정 없음, <strong>서열·순위</strong>. 평균·분산 개념을 안 씀 |</p>
+<h3 id="3-2-표본추출-4-척도-4-특강-100-틀리면-심각">3-2. 표본추출 4 · 척도 4 특강 100% — 틀리면 심각</h3>
+<p>| 단순무작위 | 전체에서 랜덤 |<br />
+| 계통 | 일정 간격 k |<br />
+| <strong>층화</strong> | 층 나누고 <strong>각 층에서</strong> 추출. <strong>층 내 동질, 층 간 이질</strong> |<br />
+| <strong>집락(군집)</strong> | 군집 <strong>통째로</strong>. <strong>군집 내 이질, 군집 간 동질</strong> |</p>
+<p>비확률: 편의, 판단, 할당, 눈덩이, 자기선택</p>
+<p>척도: 명목 / 서열 / 등간(절대0 없음) / 비율(절대0)</p>
+<h3 id="3-3-조건부-확률-베이즈">3-3. 조건부 확률 · 베이즈</h3>
+<p>P(A|B)=P(A∩B)/P(B)<br />
+<strong>독립이면</strong> P(A∩B)=P(A)P(B), P(A|B)=P(A) — 교집합 계산이 다름 특강<br />
+배반 ≠ 독립<br />
+베이즈: P(A|B)=P(B|A)P(A)/P(B) — 초기엔 많이, <strong>최근 가중치↓</strong>. 유도 관계만.</p>
+<h3 id="3-4-확률분포-정의-기댓값분산-특강-빅분기-특징">3-4. 확률분포 — 정의 + 기댓값·분산 특강 (빅분기 특징)</h3>
+<p>ADSP는 특징 구분 / <strong>빅분기는 E, V 수식까지</strong></p>
+<p><strong>이산</strong><br />
+| | 상황 | E | V |<br />
+|---|---|---|---|<br />
+| 베르누이 | 1회 성공실패 | p | p(1−p) |<br />
+| 이항 B(n,p) | n회 성공횟수 | <strong>np</strong> | <strong>np(1−p)</strong> |<br />
+| 기하 | 첫 성공까지 횟수 | 1/p | |<br />
+| 초기하 | <strong>비복원</strong> 성공횟수 | | 시행 간 <strong>비독립</strong> |<br />
+| 포아송 | 단위시간 발생횟수 | <strong>λ</strong> | <strong>λ</strong> |</p>
+<p><strong>연속</strong>: 정규 / t(꼬리 두꺼움, df↑→정규) / χ²(모분산, 적합도) / F(분산비, ANOVA)</p>
+<p>기댓값 성질 ★: E(aX+b)=aE(X)+b, <strong>V(aX+b)=a²V(X)</strong><br />
+독립이면 V(X±Y)=V(X)+V(Y) (빼도 더함)</p>
+<p><strong>CLT 100% (오답으로)</strong><br />
+- 모집단이 <strong>정규일 필요 없음</strong><br />
+- <strong>표본평균의 분포</strong> (표본분산의 분포 아님)<br />
+- n 충분히 크면 표본평균 ~ 정규 근사 → 모수적 검정 가능<br />
+- E(X̄)=μ, V(X̄)=σ²/n, SE=σ/√n</p>
+<h3 id="3-5-추정">3-5. 추정</h3>
+<p><strong>불편추정량</strong>: 한 번 구한 표본평균이 모평균과 같다는 뜻이 <strong>아님</strong>.<br />
+<strong>표본평균의 기댓값이 모평균과 같을 때</strong> = 불편. 특강 (오답 고르기용으로 정의를 정확히)</p>
+<p>좋은 추정량 ☞ 불효일충: 불편, 효율(분산 작을수록, “분산 0”은 함정), 일치, 충족<br />
+표본분산 n−1: 불편추정<br />
+MSE = Var + Bias²</p>
+<p><strong>구간추정</strong><br />
+- 점추정은 오류 큼 → 구간 + <strong>반드시 신뢰수준 명시</strong><br />
+- 95%의 의미: 같은 방법으로 100번 중 95번 <strong>모수를 포함</strong>. <strong>확률이 아님</strong> (모수는 상수)<br />
+- 신뢰수준↑ → 구간 <strong>넓어짐</strong> / 표본 n↑ → 구간 <strong>좁아짐</strong><br />
+- n을 4배로 → 구간 폭은 약 <strong>1/2</strong> (√n)<br />
+- z: 90% 1.645 / 95% 1.96 / 99% 2.576<br />
+- 모분산 알면 z, 모르면 t(df=n−1)<br />
+- 계산은 과거 회차 선까지. 확장 금지 특강</p>
+<h3 id="3-6-가설검정-특강-실기-3유형과-동일">3-6. 가설검정 특강 · 실기 3유형과 동일</h3>
+<ul>
+<li>검정 대상은 <strong>귀무가설</strong>. 반박 근거 있으면 기각, 없으면 <strong>기각하지 못함</strong> ≠ 귀무가 참</li>
+<li>H0: 같다·차이없다 / H1: 입증할 주장</li>
+<li>단측: 크다·작다·증가·감소 / 양측: 같지 않다</li>
+<li>α = 1종 허용 = P(참인 H0 기각)</li>
+<li>β = 2종 = P(거짓 H0 채택)</li>
+<li>검정력 = 1−β</li>
+<li><strong>p &lt; α → H0 기각</strong></li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>H0 참</th>
+<th>H0 거짓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기각</td>
+<td>1종 α</td>
+<td>검정력</td>
+</tr>
+<tr>
+<td>미기각</td>
+<td>OK</td>
+<td>2종 β</td>
+</tr>
+</tbody>
+</table></div>
+<p>모수적 검정의 가정 1호 = <strong>정규성</strong>. 확인: Shapiro, K-S, Q-Q, Jarque-Bera, 히스토그램<br />
+- t: 단일 / <strong>대응</strong>(같은 대상 전후) / <strong>독립 두 집단</strong><br />
+- 3집단↑ 평균 = ANOVA / 분산비교 = F / 범주 = χ²</p>
+<p>정규성 방법이 1·2·3·4로 제시됨 → “상위 키워드는 모수검정 가정”으로 묶어라 특강</p>
+<h3 id="3-7-비모수-3과목-예상과-연결">3-7. 비모수 (3과목 예상과 연결)</h3>
+<p>대응 t ↔ <strong>윌콕슨 부호순위</strong> 특강 예상<br />
+독립 t ↔ <strong>윌콕슨 순위합</strong>(만-휘트니) 특강 예상<br />
+3집단 ↔ 크러스칼-월리스 / 반복측정 ↔ 프리드먼</p>
+<hr />
+<h2 id="시험-직전-체크리스트-2과목">시험 직전 체크리스트 (2과목)</h2>
+<ol>
+<li>전처리 4: 정제·통합·축소·변환 / 정제=결측·노이즈·이상</li>
+<li>결측: 삭제 vs 대치 / 노이즈 5 / 이상값 무조건 제거 X</li>
+<li><strong>래퍼=전진후진단계 / 임베디드=Ridge Lasso Elastic</strong></li>
+<li>PCA 기준: FA=공통요인, SVD=비정방, LDA=지도</li>
+<li>변환=분포, 스케일=크기 / 로그&gt;제곱근 강도 / Box-Cox 음수 X</li>
+<li>스케일 변별: <strong>MaxAbs, Robust</strong> / 이상값에 Robust</li>
+<li>더미는 기준열 탈락 / 원핫은 전체 열</li>
+<li>불균형=비율 변경 ≠ 층화K-fold=비율 유지 / 임계값=검정단계</li>
+<li>왜도&gt;0: 최빈&lt;중앙&lt;평균 / 상자그림에 평균·n·가설검정 없음</li>
+<li>독립→Cov0 / 피어슨=선형·이상치민감 / <strong>스피어만=서열·비선형</strong></li>
+<li>모수=분포가정+평균분산 / 비모수=서열, 평균분산 없음</li>
+<li>층화=층내동질 / 집락=군집내이질 / 척도 4</li>
+<li>독립일 때 교집합=곱 / 베르누이·이항 E,V / 포아송 E=V=λ / 초기하=비복원</li>
+<li>CLT: 모집단 정규 불필요, <strong>표본평균</strong>의 분포</li>
+<li>불편 = E(추정량)=모수 (한 번 값이 같다가 아님)</li>
+<li>신뢰수준↑ 구간↑ / n↑ 구간↓ / 95%는 확률이 아님</li>
+<li>1종=억울한 기각 / 2종=범인 놓침 / p&lt;α 기각 / 단측 vs 양측</li>
+<li>비정형: 토큰·POS·스테밍·표제어만</li>
+</ol>
+<hr />
+<h2 id="계산-OX-훈련">계산 · OX 훈련</h2>
+<p><strong>1.</strong> 소득이 낮을수록 소득 문항 무응답 → 결측 유형은?</p>
+<details><summary>정답</summary>MNAR (값 자체와 관련)</details>
+
+<p><strong>2.</strong> Q1=40, Q3=60. IQR 이상값 하한·상한?</p>
+<details><summary>정답</summary>IQR=20 → 40−30=<strong>10</strong>, 60+30=<strong>90</strong></details>
+
+<p><strong>3.</strong> 왜도&gt;0일 때 최빈·중앙·평균 크기 순서</p>
+<details><summary>정답</summary>최빈 < 중앙 < 평균</details>
+
+<p><strong>4.</strong> 독립이면 공분산 0? 공분산 0이면 독립?</p>
+<details><summary>정답</summary>앞 O, 뒤 X</details>
+
+<p><strong>5.</strong> X~B(100, 0.2)의 평균과 분산</p>
+<details><summary>정답</summary>E=20, V=16</details>
+
+<p><strong>6.</strong> n=36, x̄=50, σ=12, 95% CI (z=1.96)</p>
+<details><summary>정답</summary>SE=2 → 50±3.92 → <strong>(46.08, 53.92)</strong></details>
+
+<p><strong>7.</strong> 표본을 4배로 하면 신뢰구간 폭은?</p>
+<details><summary>정답</summary>약 <strong>1/2</strong> (√n)</details>
+
+<p><strong>8.</strong> 95% 신뢰구간 = 모수가 그 안에 있을 확률 95% ?</p>
+<details><summary>정답</summary>X. 모수는 상수. ‘같은 방법 100번 중 95번 포함’.</details>
+
+<p><strong>9.</strong> 불편추정량 = 이번에 구한 x̄가 μ와 같다?</p>
+<details><summary>정답</summary>X. <strong>E(x̄)=μ</strong></details>
+
+<p><strong>10.</strong> 층화 vs 집락 한 줄</p>
+<details><summary>정답</summary>층화: 층내 동질·각 층 추출 / 집락: 군집내 이질·통째</details>
+
+<p><strong>11.</strong> 로그 vs 제곱근 vs Box-Cox 음수</p>
+<details><summary>정답</summary>로그가 강도 큼. Box-Cox는 <strong>양수만</strong>.</details>
+
+<p><strong>12.</strong> Min-Max와 Robust 중 이상값에 강한 것</p>
+<details><summary>정답</summary><strong>Robust</strong> (중앙값·IQR)</details>
+
+<p><strong>13.</strong> 불균형 오버샘플링 vs 층화 K-fold</p>
+<details><summary>정답</summary>오버는 비율을 <strong>바꿈</strong>. 층화K-fold는 <strong>유지</strong>.</details>
+
+<p><strong>14.</strong> 임계값 이동은 학습 단계에서 한다?</p>
+<details><summary>정답</summary>X — <strong>검정(추론) 단계</strong></details>
+
+<p><strong>15.</strong> 상자그림으로 표본 수 n을 알 수 있다?</p>
+<details><summary>정답</summary>X. 평균·가설검정도 불가.</details>
+
+<p><strong>16.</strong> 스피어만은 구간척도만, 선형만?</p>
+<details><summary>정답</summary>X. <strong>서열</strong>, 단조 비선형도.</details>
+
+<p><strong>17.</strong> CLT는 모집단이 정규분포여야 한다? 표본분산의 분포?</p>
+<details><summary>정답</summary>둘 다 X. 모집단 분포 무관, <strong>표본평균</strong>의 분포.</details>
+
+<p><strong>18.</strong> V(X−Y) (독립) = V(X)−V(Y) ?</p>
+<details><summary>정답</summary>X. <strong>V(X)+V(Y)</strong></details>
+
+<p><strong>19.</strong> p=0.03, α=0.05 → H0?</p>
+<details><summary>정답</summary><strong>기각</strong></details>
+
+<p><strong>20.</strong> PCA는 정방만, SVD는 비정방도?</p>
+<details><summary>정답</summary>O (공분산 PCA 기준)</details>
+
+<p><strong>21.</strong> Lasso는 계수를 0에 가깝게만 하고 0으로 만들지는 못한다?</p>
+<details><summary>정답</summary>X — 그건 Ridge. Lasso는 <strong>정확히 0</strong>.</details>
+
+<p><strong>22.</strong> 더미변수는 원핫과 달리 기준 범주 열이 빠진다?</p>
+<details><summary>정답</summary>O</details>
+
+<hr />
+<h2 id="암기-카드">암기 카드</h2>
+<pre><code>정제=결측·노이즈·이상 / 전처리4=정통축변
+래퍼=전후단 / 임베디드=릿지라소엘라
+PCA=최대분산·비지도 / FA=공통요인 / SVD=비정방 / LDA=지도
+변환=분포 / 스케일=크기 / Robust·MaxAbs가 변별
+로그&gt;제곱근 / Box-Cox 양수
+오버=과적합 / 언더=정보손실 / 임계값=검정단계
+왜도+ : 최빈&lt;중앙&lt;평균
+독립→Cov0 / 스피어만=서열+비선형
+층화=층내동질 / 집락=군집내이질
+CLT=표본평균, 모집단 정규 불필요
+불편=E(θ̂)=θ / n↑구간↓ / 신뢰수준↑구간↑
+1종=α 억울 / 2종=β 놓침
+대응t↔윌콕슨부호순위 / 독립t↔순위합
+</code></pre>
+<h1 id="part-4">3과목 모델링</h1>
+<h1>3과목. 빅데이터 모델링</h1>
+<div class="callout warning"><div class="callout-title">특강 — 방어 과목, 다만 **군집은 전략**</div><p>타깃 <strong>11~12</strong>. 기법마다 <strong>정의 + 어디에 쓰나 + 차이점</strong>. 문장 3개 넘기지 말 것.
+빅분기 특징: <strong>사례를 주고 무슨 분석을 할지 고르기</strong> (실기 3유형과 같음). ANOVA vs ANCOVA vs 이원분산 등.
+전통 통계(분산분석 등)를 빼고 머신러닝·딥러닝의 <strong>상위 키워드는 전부 과적합·복잡도·하이퍼파라미터.</strong>
+교차검증은 <a href="4과목.html">4과목</a>에서 끝냈으면 여기 패스. 래퍼 변수선택도 <a href="2과목.html">2과목</a>에서 끝냈으면 패스.</p></div>
+
+<hr />
+<h2 id="0-이-과목을-관통하는-한-장-특강-가장-중요">0. 이 과목을 관통하는 한 장 특강 가장 중요</h2>
+<p>복잡도(x) vs 오차(y): 왼쪽 과소적합(Underfitting) / 오른쪽 과대적합(Overfitting) / 가운데 Optimum</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>과소 Underfitting</th>
+<th>과대 Overfitting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bias</td>
+<td><strong>높음</strong></td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>Variance</td>
+<td>낮음</td>
+<td><strong>높음</strong></td>
+</tr>
+<tr>
+<td>훈련오차</td>
+<td>높음</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>검증오차</td>
+<td>높음</td>
+<td><strong>재상승</strong></td>
+</tr>
+<tr>
+<td>의미</td>
+<td>너무 단순, 일반화 못 함</td>
+<td>훈련만 잘 맞고 <strong>일반화 불가</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Ridge/Lasso는 Bias와 Variance를 <strong>같이</strong> 보고 규제하는 방법 (2·4와 연결).</p>
+<p><strong>데이터 분할</strong><br />
+- Train: 학습 / <strong>Validation: 과대·과소 조정, 하이퍼파라미터</strong> (핵심) / Test: 최종, 학습 금지<br />
+- Train+Val = 학습에 관여</p>
+<p>구축 절차(가로·세로 순서 출제): 목표 → 데이터 → EDA → 전처리 → 모델링 → 평가 → 전개</p>
+<p>R vs Python은 시험 당일 선택. 필기에 도구 문제는 안 나옴. <strong>특정 도구 출력 해석 문제도 안 나옴</strong> (R·파이썬 둘 다 보므로).</p>
+<hr />
+<h2 id="1-회귀분석-가정-ANOVA표">1. 회귀분석 — 가정 + ANOVA표</h2>
+<p>모수적. 가정 1순위 특강. 해석 문제 = “R 출력 읽기”가 아니라 아래.</p>
+<p><strong>가정 ☞ 선등정독</strong>: 선형성, 등분산, 정규성(잔차), 독립성<br />
+잔차 분석으로 확인. 위반 시:<br />
+- 선형성 위반 → 변환, 다항, 비선형<br />
+- 등분산 위반 → 가중회귀, 변환, 로버스트<br />
+- 독립성 위반(자기상관) → DW 통계, 시계열 모형<br />
+- 정규성 → 2과목 정규성 검정</p>
+<p><strong>ANOVA표로 묻는 것</strong> 특강</p>
+<pre><code>SST = SSR + SSE
+R² = SSR/SST = 1 − SSE/SST
+자유도: 회귀 p / 잔차 n−p−1 / 전체 n−1
+MSR=SSR/p, MSE=SSE/(n−p−1), F=MSR/MSE
+</code></pre>
+<ul>
+<li><strong>모형 전체 유의성 = F</strong> (H0: 모든 β=0)</li>
+<li><strong>개별 계수 유의성 = t</strong></li>
+<li>표에서 <strong>R²를 계산할 수 있는가</strong></li>
+</ul>
+<p>다중공선성: VIF≥10, 변수 제거·PCA·Ridge<br />
+수정 R²: 변수 수 벌점, 다중회귀 비교용<br />
+AIC/BIC <strong>작을수록</strong>, 상대 비교. “AIC로 계수 유의성 검정”(X)<br />
+전진/후진은 2과목 래퍼와 동일 → 패스 가능</p>
+<hr />
+<h2 id="2-로지스틱-회귀-차이점만-특강">2. 로지스틱 회귀 — 차이점만 특강</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>선형회귀</th>
+<th>로지스틱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>연속, 평균 변화량 해석</td>
+<td><strong>0/1 이진</strong>. 곡선이라 선형 해석 불가</td>
+</tr>
+<tr>
+<td>변환</td>
+<td>—</td>
+<td>오즈 p/(1−p) → <strong>로짓 log(오즈)</strong> 로 −∞~∞ 선형화</td>
+</tr>
+<tr>
+<td>모형 유의성</td>
+<td>F</td>
+<td><strong>카이제곱(우도비)</strong> 특강</td>
+</tr>
+<tr>
+<td>개별 계수</td>
+<td>t</td>
+<td>Wald</td>
+</tr>
+<tr>
+<td>가정</td>
+<td>선등정독</td>
+<td>정규성 가정 없음. <strong>선형 로짓</strong> 등</td>
+</tr>
+</tbody>
+</table></div>
+<p>계수 β: x +1 → 오즈가 <strong>e^β 배</strong>. β&lt;0이면 사건 확률↓<br />
+더 확장하지 말 것. 기법당 문장 3개.</p>
+<p>카이제곱 교차표 자유도 (r−1)(c−1)<br />
+범주형 3검정 — 아래 11절.</p>
+<hr />
+<h2 id="3-의사결정나무-특강-출제하기-좋은-파트">3. 의사결정나무 특강 출제하기 좋은 파트</h2>
+<ul>
+<li>끝마디 = 규칙. 끝마디↑ → 복잡도↑ → <strong>과적합</strong> → <strong>가지치기·정지규칙</strong></li>
+<li>재귀 분할, 원칙: <strong>순수도 증가 = 불순도 감소</strong></li>
+<li><strong>불순도 지표는 나무 안에 없고 따로 3종</strong> 특강</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>지표</th>
+<th>알고리즘</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지니 1−Σp²</td>
+<td>CART</td>
+</tr>
+<tr>
+<td>엔트로피 −Σp log₂p (정보이득)</td>
+<td>C4.5/C5.0</td>
+</tr>
+<tr>
+<td>χ²</td>
+<td>CHAID</td>
+</tr>
+</tbody>
+</table></div>
+<p>작아지는 방향으로 분할. “엔트로피 커지는 방향”(X)<br />
+<strong>비모수 모형</strong> 특강<br />
+장: 해석, 전처리 부담 적음(전혀 불필요는 과장) / 단: 과적합, 불안정</p>
+<hr />
+<h2 id="4-인공신경망-딥러닝-특강-100-23문항">4. 인공신경망 · 딥러닝 특강 100% (2~3문항)</h2>
+<p>ANN + 후반 딥러닝을 <strong>꼭 내려고 함.</strong> ANN 2 + DL 1 또는 반대.</p>
+<ul>
+<li>인간 뉴런 모사. <strong>가중치=중요도, bias</strong>. 학습 = 가중치·편향 조정</li>
+<li><strong>활성화함수</strong>: 선형을 비선형으로. 강력 출제</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>함수</th>
+<th>범위</th>
+<th>포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시그모이드</td>
+<td>0~1</td>
+<td><strong>이진 분류 출력</strong>. 양끝 평평 → <strong>기울기 소실</strong></td>
+</tr>
+<tr>
+<td>Tanh</td>
+<td>−1~1</td>
+<td>역시 소실</td>
+</tr>
+<tr>
+<td><strong>ReLU</strong> max(0,x)</td>
+<td>0~∞</td>
+<td>소실 <strong>완화</strong>. Dying ReLU</td>
+</tr>
+<tr>
+<td>Softmax</td>
+<td>합1</td>
+<td><strong>다중분류 출력</strong></td>
+</tr>
+<tr>
+<td>항등</td>
+<td>—</td>
+<td>회귀 출력</td>
+</tr>
+</tbody>
+</table></div>
+<p>경사하강·학습률은 4과목 교집합 → 거기서 끝났으면 패스.</p>
+<p>장단: 비선형·성능 / 해석↓·과적합·데이터·계산<br />
+배치정규화: 주목적 <strong>학습 안정화</strong>, 부수 <strong>과적합 완화</strong> (4과목 기출 함정과 동일)</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>DL</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNN</td>
+<td>이미지. Conv(특징) → Pool(축소) → FC</td>
+</tr>
+<tr>
+<td>RNN</td>
+<td>순차. <strong>장기 의존(장기 기억 소실)</strong> 문제</td>
+</tr>
+<tr>
+<td><strong>LSTM</strong></td>
+<td>그 문제를 게이트로 완화 (Forget/Input/Output)</td>
+</tr>
+<tr>
+<td>GRU</td>
+<td>게이트 2 (Reset/Update)</td>
+</tr>
+<tr>
+<td>오토인코더</td>
+<td>입력층-병목-복원, 비지도, 구조 출제</td>
+</tr>
+<tr>
+<td>GAN</td>
+<td>생성자 vs 판별자</td>
+</tr>
+</tbody>
+</table></div>
+<p>Transformer/BERT/GPT는 흐름만: Seq2Seq 정보손실 → Attention → Transformer 병렬<br />
+필기에서 구조·역할 위주.</p>
+<hr />
+<h2 id="5-SVM-KNN">5. SVM · KNN</h2>
+<p><strong>SVM</strong><br />
+- 선형·비선형 모두. 비선형 = <strong>커널</strong><br />
+- 상위 키워드: 복잡도 조절 하이퍼파라미터<br />
+- <strong>C(cost)↑</strong> → 오차 엄격, 경계 복잡, 과적합 쪽<br />
+- <strong>하드 마진</strong>: 오차 0 목표, 노이즈에 취약 / <strong>소프트 마진</strong>: 슬랙으로 일부 허용<br />
+- 마진 최대 초평면, 서포트벡터 = 경계 최근접 점</p>
+<p><strong>KNN</strong><br />
+- 분류·회귀 모두. Lazy. 이상값에 취약 → 실무는 RF를 더 씀<br />
+- <strong>K = 하이퍼파라미터</strong>. <strong>K↑ 경계 단순(과소) / K↓ 경계 복잡(과대)</strong> 특강<br />
+- 거리 기반 → 스케일링 필수</p>
+<p><strong>나이브 베이즈</strong>: 베이즈 + <strong>입력변수 독립 가정</strong>. 독립 아니면 성능↓. 출제 가능성↓, 가정만.</p>
+<hr />
+<h2 id="6-연관규칙-1문항-계산-가중치-특강">6. 연관규칙 — 1문항, 계산 가중치↓ 특강</h2>
+<p>지지도 P(A∩B) / 신뢰도 P(B|A) / 향상도 P(A∩B)/(P(A)P(B))<br />
+향상도 &gt;1 양의 관계, =1 독립, &lt;1 음<br />
+신뢰도만 높다고 유용하지 않음 (B가 원래 많이 팔리면)</p>
+<p><strong>장단 꼭</strong> (늘 출제)<br />
+- 장: 조건→결과 명확, 목적변수 불필요, 실무 이해 쉬움<br />
+- 단: 품목 증가 시 계산 폭발, 인과 아님, 희귀 중요규칙 놓칠 수 있음</p>
+<hr />
+<h2 id="7-군집분석-3과목-전략-특강">7. 군집분석 — 3과목 전략 특강</h2>
+<p>비지도. <strong>상위 개념 = 군집 수를 누가 정하는가</strong> (지도학습의 과적합에 해당).</p>
+<h3 id="계층적-vs-비계층적분할적">계층적 vs 비계층적(분할적)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>계층적</th>
+<th>비계층적(분할, 비계층)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>관계</td>
+<td><strong>수직</strong> (트리)</td>
+<td><strong>수평</strong></td>
+</tr>
+<tr>
+<td>군집 수</td>
+<td>나중에 덴드로그램으로</td>
+<td>보통 <strong>사전 지정</strong>(K-means)</td>
+</tr>
+<tr>
+<td>그래프</td>
+<td><strong>덴드로그램만 계층에 있음</strong>. Y=군집 간 거리</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>방향</td>
+<td>병합(작은→큰) / 분할(큰→작은)</td>
+<td>한 레벨</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강 100%: 덴드로그램에 <strong>수평선</strong> 그어 교차하는 수직선 수 = 군집 수.</p>
+<p>병합 연결 5 (많이 출제): 단일(최단) · 완전(최장) · 평균 · 중심 · <strong>와드(군집내 분산 증가 최소)</strong><br />
+거리: 유클리드, 맨하튼, 마할라노비스(이상값·상관, 정의), 자카드(범주, 연속거리 아님)</p>
+<p>계층 vs 비계층 <strong>장단 거의 매회</strong><br />
+- 계층: 시각적, K 사전 불필요 / 대용량 느림, 한번 병합이면 되돌리기 어려움<br />
+- 비계층: 대용량 빠름 / K 지정, 초기값, 구형 가정(K-means)</p>
+<h3 id="K-means">K-means</h3>
+<ul>
+<li><strong>분석자가 K 지정</strong>. 자동 결정 아님</li>
+<li>순서: K → 초기 중심 → 할당 → 중심 갱신 → 반복</li>
+<li>K 결정: <strong>엘보(WCSS)</strong>, 실루엣. (PCA의 주성분 수 결정과 같은 비지도 논리)</li>
+<li>장: 단순·빠름 / 단: 구형, 이상치 민감, 초기값, K 필요</li>
+</ul>
+<h3 id="DBSCAN-밀도">DBSCAN (밀도)</h3>
+<ul>
+<li><strong>K 지정 안 함</strong> 특강 포인트</li>
+<li>임의 모양, 노이즈를 이상치로. K-means가 구형에서 약할 때</li>
+</ul>
+<h3 id="SOM-자기조직화도">SOM 자기조직화도</h3>
+<ul>
+<li>ANN 계열 <strong>비지도</strong>. 시험은 <strong>지도학습 ANN과 비교 + 구조</strong></li>
+<li>구조: <strong>입력층 + 경쟁층</strong>, 뉴런 전부 <strong>완전연결</strong></li>
+<li>역전파 없음(승자독식)</li>
+</ul>
+<hr />
+<h2 id="8-범주형-자료분석-실기-3유형-특강">8. 범주형 자료분석 — 실기 3유형 특강</h2>
+<p>세 검정을 <strong>표로 구분</strong>. 깊이(통계량 유도)는 시간 대비 비추천.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>적합도</th>
+<th>독립성</th>
+<th>동질성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>질문</td>
+<td>관측 분포가 이론 분포와 같나</td>
+<td>두 <strong>변수</strong>가 독립인가</td>
+<td>두 <strong>집단</strong>의 분포가 같나</td>
+</tr>
+<tr>
+<td>표</td>
+<td>1원</td>
+<td>교차표</td>
+<td>교차표 (표본이 집단별)</td>
+</tr>
+<tr>
+<td>통계량</td>
+<td>χ²</td>
+<td>χ²</td>
+<td>χ² (계산 비슷, <strong>설계·가설이 다름</strong>)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="9-다변량-이-과목-가중치-특강">9. 다변량 — 이 과목 가중치↓ 특강</h2>
+<p>PCA 등은 <strong>2과목 차원축소에서 이미</strong>. 3과목 재등장은 가점 낮음.<br />
+알아두면: ANOVA(3집단 평균) / 이원(요인 2) / ANCOVA(공변량) / MANOVA(종속 여러 개) / 정준상관(두 변수집합)</p>
+<p>사례형: “매장 유형(범주)과 온도(연속)가 매출에” → ANCOVA 쪽 등.</p>
+<hr />
+<h2 id="10-시계열-약-2문항-특강">10. 시계열 — 약 2문항 특강</h2>
+<p>정상성 3: 평균 일정, 분산 일정, 자기공분산은 시차에만<br />
+비정상 → 이상값 제거, <strong>차분</strong>(추세), <strong>로그</strong>(분산), 안정화<br />
+지수평활: <strong>최근 자료에 큰 가중치</strong> Ŷₜ₊₁ = αYₜ + (1−α)Ŷₜ<br />
+분해: 추세 · 계절 · 순환 · 불규칙</p>
+<p>| AR | 과거 <strong>값</strong> | PACF 절단 |<br />
+| MA | 과거 <strong>백색잡음</strong>의 선형결합 특강 | ACF 절단 |<br />
+| ARIMA(p,d,q) | d=차분 | 비정상 불가(X) — 차분 후 가능 |<br />
+| 백색잡음 | 평균0·분산일정·자기상관0 | 잔차 진단 |</p>
+<p>ACF/PACF로 AR·MA 식별은 ADSP에서 최근 나옴. 특강은 <strong>거기까지 요구 안 함.</strong> 위 표만.</p>
+<hr />
+<h2 id="11-앙상블-특강-무조건-1문항">11. 앙상블 특강 무조건 1문항↑</h2>
+<p>정의 + <strong>추가 부스팅 계열 이름</strong>까지 (ADSP보다 한 단계 깊게).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>방식</th>
+<th>효과</th>
+<th>병렬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>배깅</td>
+<td>부트스트랩 <strong>복원추출</strong>, 독립 학습 후 투표/평균</td>
+<td><strong>분산↓</strong> 과적합 완화</td>
+<td>O</td>
+</tr>
+<tr>
+<td><strong>랜덤포레스트</strong></td>
+<td>배깅 + 트리 + <strong>변수 무작위</strong></td>
+<td>이상치·과적합에 강</td>
+<td>O</td>
+</tr>
+<tr>
+<td>부스팅</td>
+<td><strong>오분류 가중, 순차</strong></td>
+<td><strong>편향↓</strong> 성능↑, 이상치 민감</td>
+<td>X</td>
+</tr>
+<tr>
+<td>스태킹</td>
+<td>베이스 예측 → 메타 모델</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>부스팅 계열: AdaBoost, GBM, <strong>XGBoost</strong>(규제·빠름), LightGBM, CatBoost<br />
+한 번도 안 뽑힐 확률 ≈ 36.8% (배깅)</p>
+<hr />
+<h2 id="12-비모수-매칭-특강-이번회-예상">12. 비모수 매칭 특강 이번회 예상</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>모수</th>
+<th>비모수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대응 t</td>
+<td><strong>윌콕슨 부호순위</strong></td>
+</tr>
+<tr>
+<td>독립 2표본 t</td>
+<td><strong>윌콕슨 순위합</strong> (만-휘트니 U)</td>
+</tr>
+<tr>
+<td>1표본 t</td>
+<td>부호검정, 윌콕슨 부호</td>
+</tr>
+<tr>
+<td>ANOVA</td>
+<td>크러스칼-월리스</td>
+</tr>
+<tr>
+<td>반복측정 ANOVA</td>
+<td>프리드먼</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="시험-직전-체크리스트-3과목">시험 직전 체크리스트 (3과목)</h2>
+<ol>
+<li>과소=고Bias / 과대=고Variance / Val의 역할=복잡도 조정</li>
+<li>회귀 가정 선등정독 / F=모형, t=계수 / ANOVA표로 R²</li>
+<li>로지스틱: 로짓, 모형유의성 <strong>χ²</strong>, 오즈 e^β</li>
+<li>나무: 불순도 3, 가지치기=과적합방지, <strong>비모수</strong></li>
+<li>활성함수: 이진시그모이드, 다중소프트맥스, ReLU=소실완화</li>
+<li>CNN=이미지, RNN=장기의존문제, LSTM이 해결</li>
+<li>SVM: C·하드/소프트 / KNN: K↑단순</li>
+<li>연관: 지신향 + 장단, 계산 가중치↓</li>
+<li>계층=덴드로그램·수직 / K-means=K지정 엘보 / DBSCAN=K안함 / SOM=입력+경쟁 완전연결</li>
+<li>적합도·독립성·동질성 표</li>
+<li>정상성 3, 차분=추세, 로그=분산, MA=백색잡음 결합</li>
+<li>배깅=분산·병렬 / 부스팅=편향·순차 / RF=배깅+변수랜덤 / XGBoost 이름</li>
+<li>윌콕슨 부호순위=대응, 순위합=독립 t</li>
+<li>사례형 분석법 고르기 / 도구 출력 해석은 안 나옴</li>
+</ol>
+<hr />
+<h2 id="계산-OX-훈련">계산 · OX 훈련</h2>
+<p><strong>1.</strong> SST=500, SSE=125 → R²</p>
+<details><summary>정답</summary>1−125/500=<strong>0.75</strong></details>
+
+<p><strong>2.</strong> n=15, p=3 → 잔차 자유도</p>
+<details><summary>정답</summary>15−3−1=<strong>11</strong></details>
+
+<p><strong>3.</strong> 로지스틱 β=0.7 → 오즈 몇 배?</p>
+<details><summary>정답</summary><strong>e^0.7 ≈ 2.01배</strong></details>
+
+<p><strong>4.</strong> 로지스틱 모형 전체 유의성 검정 통계량은 t?</p>
+<details><summary>정답</summary>X — <strong>카이제곱(우도비)</strong>. t/Wald는 개별 계수.</details>
+
+<p><strong>5.</strong> 노드 A4 B1 지니</p>
+<details><summary>정답</summary>1−(0.8)²−(0.2)²=<strong>0.32</strong></details>
+
+<p><strong>6.</strong> 나무는 엔트로피가 커지는 방향으로 분할한다?</p>
+<details><summary>정답</summary>X — <strong>작아지는</strong>(불순도 감소) 방향. 비모수.</details>
+
+<p><strong>7.</strong> A 40, B 50, A∩B 30, n=100. A→B 신뢰도·향상도</p>
+<details><summary>정답</summary>신뢰도 0.3/0.4=<strong>0.75</strong>, 향상도 0.3/(0.4×0.5)=<strong>1.5</strong></details>
+
+<p><strong>8.</strong> K-means는 군집 수를 자동 결정한다?</p>
+<details><summary>정답</summary>X. <strong>분석자가 K</strong>. 자동에 가까운 건 DBSCAN.</details>
+
+<p><strong>9.</strong> DBSCAN은 K를 지정한다?</p>
+<details><summary>정답</summary>X. <strong>지정 안 함</strong>, 밀도, 임의 모양.</details>
+
+<p><strong>10.</strong> SOM은 입력층+은닉층+출력층+역전파?</p>
+<details><summary>정답</summary>X. <strong>입력층+경쟁층</strong>, 완전연결, 역전파 없음.</details>
+
+<p><strong>11.</strong> KNN에서 K를 키우면 경계가 복잡해진다?</p>
+<details><summary>정답</summary>X. K↑ <strong>단순</strong>(과소), K↓ 복잡(과대).</details>
+
+<p><strong>12.</strong> SVM C를 키우면 소프트해진다?</p>
+<details><summary>정답</summary>X. C↑ 오차에 <strong>엄격</strong>, 경계 복잡, 과적합 쪽.</details>
+
+<p><strong>13.</strong> 과소적합 = 저편향 고분산?</p>
+<details><summary>정답</summary>X. 과소=<strong>고편향 저분산</strong>. 과대=저편향 고분산.</details>
+
+<p><strong>14.</strong> MA 모형 = 백색잡음의 선형결합?</p>
+<details><summary>정답</summary>O. AR=과거 값.</details>
+
+<p><strong>15.</strong> 비정상 시계열은 ARIMA 불가?</p>
+<details><summary>정답</summary>X. <strong>차분(I)</strong> 후 가능.</details>
+
+<p><strong>16.</strong> 배깅은 편향을 줄이고 순차 학습한다?</p>
+<details><summary>정답</summary>X. 배깅=<strong>분산↓·병렬</strong>. 편향↓·순차=부스팅.</details>
+
+<p><strong>17.</strong> 대응 t의 비모수는 윌콕슨 순위합?</p>
+<details><summary>정답</summary>X. 대응=<strong>부호순위</strong>. 순위합=독립 t.</details>
+
+<p><strong>18.</strong> 시그모이드는 기울기 소실을 완화한다?</p>
+<details><summary>정답</summary>X. 소실을 <strong>유발</strong>. 완화는 ReLU.</details>
+
+<p><strong>19.</strong> 다중분류 출력층 = 소프트맥스, 이진 = 시그모이드</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>20.</strong> RNN의 장기 의존 문제를 LSTM이 완화한다</p>
+<details><summary>정답</summary>O</details>
+
+<hr />
+<h2 id="사례-기법-초간단">사례 → 기법 초간단</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>사례</th>
+<th>기법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>집값(연속) 예측, 광고비 영향</td>
+<td>선형회귀</td>
+</tr>
+<tr>
+<td>이탈 여부 0/1</td>
+<td>로지스틱</td>
+</tr>
+<tr>
+<td>규칙으로 설명 가능한 대출 심사</td>
+<td>의사결정나무</td>
+</tr>
+<tr>
+<td>이미지 불량 탐지</td>
+<td>CNN</td>
+</tr>
+<tr>
+<td>다음 단어·센서 시퀀스</td>
+<td>RNN/LSTM</td>
+</tr>
+<tr>
+<td>장바구니 A면 B</td>
+<td>연관규칙</td>
+</tr>
+<tr>
+<td>고객 세그먼트, 라벨 없음</td>
+<td>군집</td>
+</tr>
+<tr>
+<td>구형이 아닌 밀도 덩어리+노이즈</td>
+<td>DBSCAN</td>
+</tr>
+<tr>
+<td>어제까지로 내일 매출</td>
+<td>시계열 ARIMA/지수평활</td>
+</tr>
+<tr>
+<td>성능 끌어올리기, 트리 여러 개</td>
+<td>RF/부스팅</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="암기-카드">암기 카드</h2>
+<pre><code>Bias고=과소 / Variance고=과대 / Val=튜닝
+F=모형유의 / t=계수 / VIF≥10
+로짓=log(p/(1-p)) / 로지스틱유의=χ² / 오즈=e^β
+지니·엔트로피·χ² / 작아지는 방향 / 나무=비모수
+ReLU=소실완화 / Softmax=다중 / LSTM=장기의존
+K↑단순 / C↑복잡 / 커널=비선형SVM
+지신향 / 향상도1=독립
+계층=덴드로그램 / Kmeans=K지정 / DBSCAN=K안함 / SOM=경쟁층
+적합도·독립성·동질성
+차분=추세 / 로그=분산 / MA=백색잡음
+배깅분산병렬 / 부스팅편향순차 / RF=배깅+변수랜덤
+부호순위=대응t / 순위합=독립t
+</code></pre>
+<h1 id="part-5">4과목 결과 해석</h1>
+<h1>4과목. 빅데이터 결과 해석</h1>
+<div class="callout danger"><div class="callout-title">특강 — 두 번째 전략 과목</div><p>타깃 <strong>13~14</strong>. <a href="1과목.html">1과목</a>과 <strong>한 묶음으로 회독.</strong>
+축이 3개뿐이라 유형이 단순하다. <strong>이 3축이 문항의 약 50%(10문항).</strong>
+1. 회귀·분류 <strong>평가지표</strong> (3~4문항)
+2. <strong>정보 시각화</strong> (3문항) + 인포그래픽 (1)
+3. <strong>과적합 방지</strong> + 교차검증 세분 + 최적화
+회귀 진단(잔차 등)은 3과목 회귀를 했으면 패스.
+하이퍼파라미터 그리드/랜덤/베이지안은 가중치↓, 정의만. 실기는 40초 오버 시 감점이라 튜닝을 거의 안 함.</p></div>
+
+<p><strong>모형 평가의 목적 = 일반화 가능성.</strong> 학습 데이터와 평가 데이터에서 <strong>같은 성능</strong>이 나올 때 일반화 가능.</p>
+<hr />
+<h2 id="1장-분석-모형-평가">1장. 분석 모형 평가</h2>
+<h3 id="1-1-회귀-평가지표-특강-정의-매칭">1-1. 회귀 평가지표 특강 정의 매칭</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>지표</th>
+<th>식</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSE</td>
+<td>평균 (y−ŷ)²</td>
+<td>큰 오차에 민감</td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td>√MSE</td>
+<td>y와 단위 같음</td>
+</tr>
+<tr>
+<td>MAE</td>
+<td>평균 |y−ŷ|</td>
+<td>이상치에 MSE보다 강</td>
+</tr>
+<tr>
+<td>MAPE</td>
+<td>평균 |(y−ŷ)/y| ×100</td>
+<td>% , y=0 주의</td>
+</tr>
+<tr>
+<td>R²</td>
+<td>1−SSE/SST</td>
+<td>0~1, 상대 설명력</td>
+</tr>
+</tbody>
+</table></div>
+<p>문항: 정의를 주고 이름 고르기 / 회귀 지표 vs 분류 지표 섞어 놓기.</p>
+<h3 id="1-2-분류-평가지표-혼동행렬-특강-34문항">1-2. 분류 평가지표 · 혼동행렬 특강 3~4문항</h3>
+<pre><code>              예측 P    예측 N
+실제 P         TP        FN
+실제 N         FP        TN
+</code></pre>
+<p>T/F = 맞/틀림, P/N = <strong>예측</strong> 방향.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>지표</th>
+<th>식</th>
+<th>언제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정확도 Accuracy</td>
+<td>(TP+TN)/전체</td>
+<td>불균형이면 왜곡</td>
+</tr>
+<tr>
+<td><strong>정밀도 Precision</strong></td>
+<td>TP/(TP+FP)</td>
+<td>FP가 치명 (스팸, 무고)</td>
+</tr>
+<tr>
+<td><strong>재현율 Recall</strong></td>
+<td>TP/(TP+FN)</td>
+<td>FN이 치명 (암, 사기 놓침)</td>
+</tr>
+<tr>
+<td>특이도 Specificity</td>
+<td>TN/(TN+FP)</td>
+<td></td>
+</tr>
+<tr>
+<td>F1</td>
+<td>2PR/(P+R)</td>
+<td>정밀·재현 조화평균</td>
+</tr>
+<tr>
+<td>F-β</td>
+<td>β&gt;1 재현 중시</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>재현율 = 민감도 = TPR = Hit Rate<br />
+FPR = FP/(FP+TN) = 1−특이도<br />
+정밀 ↔ 재현 <strong>트레이드오프</strong> (임계값)</p>
+<p><strong>ROC</strong>: x=FPR, y=TPR(재현). <strong>AUC 1에 가까울수록 우수</strong> (0.5=무작위)<br />
+함정: AUC 0.5가 우수(X) / ROC로 혼동행렬 원숫자 직접 산출(X)</p>
+<p>이익도표·리프트: 상위 등급 반응 배율</p>
+<h3 id="1-3-군집-평가-3과목-연계">1-3. 군집 평가 (3과목 연계)</h3>
+<p>실루엣 (b−a)/max(a,b), −1~1, 응집+분리<br />
+엘보: WCSS가 완만해지는 K</p>
+<h3 id="1-4-교차검증-세분-특강-100-여기가-주력">1-4. 교차검증 세분 특강 100% — 여기가 주력</h3>
+<p>3과목은 분할 개념, <strong>4과목은 K-fold를 쪼갠다.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Holdout</td>
+<td>한 번 분할</td>
+</tr>
+<tr>
+<td><strong>K-fold</strong></td>
+<td>K개 폴드, K번 돌아가며 검증</td>
+</tr>
+<tr>
+<td><strong>층화 Stratified K-fold</strong></td>
+<td>각 폴드에 <strong>타깃 비율 유지</strong> (불균형 처리와 다름!)</td>
+</tr>
+<tr>
+<td><strong>LOOCV</strong></td>
+<td>K=n, 1개만 검증. 계산 큼, 편향 작음</td>
+</tr>
+<tr>
+<td><strong>LPOCV</strong></td>
+<td>P개를 검증으로 남김 (Leave-P-Out)</td>
+</tr>
+<tr>
+<td><strong>몬테카를로 CV</strong></td>
+<td>무작위 분할을 여러 번 (ShuffleSplit)</td>
+</tr>
+<tr>
+<td><strong>부트스트랩</strong></td>
+<td><strong>복원추출</strong>로 표본 재구성. 단순 랜덤 복원 특강</td>
+</tr>
+</tbody>
+</table></div>
+<p>층화 K-fold ≠ <a href="2과목.html">2과목</a> 불균형 오버/언더 (비율을 바꿈)</p>
+<h3 id="1-5-과적합-방지-4-배치정규화-함정-특강">1-5. 과적합 방지 4 + 배치정규화 함정 특강</h3>
+<p>커리큘럼에 <strong>명시된 4가지</strong> (개별·묶음 모두 출제):<br />
+1. <strong>데이터 증강·증가</strong><br />
+2. <strong>모형 단순화</strong> (층·노드·나무깊이↓)<br />
+3. <strong>규제 Regularization</strong> (L1/L2, 가중치 감소) ← <strong>2과목 임베디드와 교집합</strong><br />
+4. <strong>드롭아웃</strong> (학습 시 뉴런 랜덤 비활성, <strong>추론 시 전부 사용</strong>)</p>
+<p>보조: 조기종료(검증오차 반등 시 중단), 교차검증<br />
+<strong>에포크를 늘리는 것 = 과적합 유발</strong> (방지책 아님)</p>
+<div class="callout warning"><div class="callout-title">기출 함정 — 배치정규화</div><p>주목적 = <strong>학습 안정화</strong>(내부 공변량 이동 완화).
+정규화 효과로 <strong>부수적으로</strong> 과적합도 줄어들 수 있다.
+“과적합 방지 4가지” 목록에는 없어도 <strong>정답이 된 문항이 있다.</strong></p></div>
+
+<p>규제 복습: Ridge=L2 축소만 / Lasso=L1 계수0 변수선택 / Elastic=혼합</p>
+<h3 id="1-6-파라미터-vs-하이퍼파라미터-특강">1-6. 파라미터 vs 하이퍼파라미터 특강</h3>
+<p>| 파라미터 | 모델이 학습으로 <strong>내부 결정</strong> | 가중치 w, bias, 회귀계수 |<br />
+| <strong>하이퍼파라미터</strong> | <strong>학습 전에 분석자가 설정</strong> | 학습률, 층수, K, C, 드롭아웃율, 에포크, 배치 |</p>
+<h3 id="1-7-경사하강법-옵티마이저-특강-변별력-난이도-줄-곳">1-7. 경사하강법 · 옵티마이저 특강 변별력 (난이도 줄 곳)</h3>
+<p>W ← W − α ∂Loss/∂W<br />
+- 학습률 α 큼: 발산·진동 / 작음: 느림<br />
+- 전체 데이터라 느림 → 확률적 등장</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>데이터</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Batch GD</td>
+<td><strong>전체</strong></td>
+<td>안정, 느림, 메모리</td>
+</tr>
+<tr>
+<td>Mini-batch</td>
+<td>쪼갠 묶음</td>
+<td>실무 표준</td>
+</tr>
+<tr>
+<td><strong>SGD</strong></td>
+<td><strong>한 개(또는 랜덤 하나)</strong></td>
+<td>빠름, 진동, 지역해 탈출에 유리</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>SGD 개량 — 기울기 기준 vs 학습률 기준</strong> 특강 최소 암기<br />
+| 모멘텀 | <strong>이전 기울기 관성</strong> (기울기 쪽) |<br />
+| <strong>AdaGrad</strong> | 파라미터별 학습률, 누적제곱 → 학습률이 <strong>점점 감소</strong> (학습률 쪽) |<br />
+| RMSProp | 기울기 제곱의 <strong>지수이동평균</strong>으로 학습률 |<br />
+| <strong>Adam</strong> | <strong>모멘텀 + RMSProp</strong> |</p>
+<p>특강: 적어도 모멘텀 · AdaGrad · Adam. 그 아래도 출제 가능하나 우선 셋.<br />
+비볼록에서 항상 전역 최소(X).</p>
+<p>하이퍼 탐색 (가중치↓): 그리드=전수·느림 / 랜덤=임의 / 베이지안=과거 경험으로 유망 영역.</p>
+<p>이 파라미터들로 <strong>복잡도 vs 성능 안정성</strong>을 조절.</p>
+<p>정규성 검정은 평가 파트에도: Shapiro, K-S, Q-Q (t-test는 정규성 검정 아님)</p>
+<hr />
+<h2 id="2장-분석-결과-시각화-3문항-인포-1-특강">2장. 분석 결과 시각화 — 3문항 + 인포 1 특강</h2>
+<p>정보시각화 축: <strong>시간 · 분포 · 공간 · 관계 · 비교</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>목적</th>
+<th>대표</th>
+<th>함정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시간</td>
+<td>변화, x=시간</td>
+<td>선, 영역, 계단</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>분포</strong></td>
+<td>모양·구성</td>
+<td><strong>히스토그램</strong>, 박스, 파이, 바이올린, <strong>트리맵</strong></td>
+<td>히스토그램을 관계에 넣기</td>
+</tr>
+<tr>
+<td>관계</td>
+<td>변수 간</td>
+<td><strong>산점도, 버블, 히트맵</strong>, 산점행렬</td>
+<td></td>
+</tr>
+<tr>
+<td>비교</td>
+<td>다변수 프로파일</td>
+<td>스타차트(방사), 체르노프, 평행좌표, 히트맵</td>
+<td></td>
+</tr>
+<tr>
+<td>공간</td>
+<td>지도</td>
+<td>단계구분도(등치지역), 등치선, <strong>카토그램</strong>, 버블맵</td>
+<td>산점도는 공간 아님</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>히트맵 vs 트리맵</strong> 특강 꼭<br />
+| 히트맵 | 행렬 칸의 <strong>색</strong>으로 값. 상관·혼동행렬 |<br />
+| 트리맵 | <strong>면적(+색)</strong> 으로 계층 비율. 음수 불가 |</p>
+<p>기타<br />
+- 버블: 산점도 + 제3변수를 <strong>원 크기</strong><br />
+- 카토그램: 값에 따라 지역 <strong>면적 왜곡</strong><br />
+- 스타차트: 3개↑ 변수 균형<br />
+- 박스플롯: 평균 없음<br />
+- 로그 스케일: 지수적 증가<br />
+- 시각화는 축 조작으로 왜곡 가능</p>
+<p><strong>인포그래픽 1문항 고정</strong> 특강<br />
+- Information + Graphic. <strong>설득</strong>이 목적. 일반인 메시지<br />
+- Raw data 탐색·패턴 발견 목적 아님. 데이터시각화와 동일(X). 미학 우선(X)<br />
+- 유형 8~10: 지도, 도표, 타임라인, 스토리, 만화, 비교, 흐름, 숫자강조 등<br />
+- 단순·명확·가독 / 오컴의 면도날</p>
+<p>2과목 고급탐색(조건플롯, 평행좌표, 단계구분도)과 중복 → 한 번만 외우기.</p>
+<hr />
+<h2 id="3장-전개-모니터링-리모델링-1문항-특강">3장. 전개 · 모니터링 · 리모델링 — 1문항 특강</h2>
+<p>모형을 만들어도 끝이 아니다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>키워드</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>전개 시 고려</td>
+<td>운영 환경, 배치 주기, 책임자, 입출력 슬롯, 윤리·개인정보</td>
+</tr>
+<tr>
+<td><strong>모니터링</strong></td>
+<td>성능 드리프트, 데이터 분포 변화, 지연·오류율</td>
+</tr>
+<tr>
+<td>조심</td>
+<td>학습 데이터 누수, 라벨 지연, 개념 변화(concept drift)</td>
+</tr>
+<tr>
+<td><strong>리모델링</strong></td>
+<td>새 데이터·새 알고리즘으로 재학습·교체. 운영 주기 정의는 1과목 전개 단계와 연결</td>
+</tr>
+</tbody>
+</table></div>
+<p>ROI, NPV, IRR, TCO: 비즈니스 기여. 한 줄만.<br />
+PCA 해석(누적기여율, 스크리)은 2·3과 공유.</p>
+<hr />
+<h2 id="시험-직전-체크리스트-4과목">시험 직전 체크리스트 (4과목)</h2>
+<ol>
+<li>평가 목적 = <strong>일반화</strong> (train≈test 성능)</li>
+<li>회귀: MSE RMSE MAE MAPE R² 정의 매칭</li>
+<li>정밀도=TP/(TP+FP), 재현=TP/(TP+FN)=민감도=TPR, F1=조화평균</li>
+<li>불균형 → 정확도 믿지 말 것 / FN치명=재현 / FP치명=정밀</li>
+<li>ROC: x=FPR y=TPR, AUC↑좋음</li>
+<li>K-fold 세분: 층화=비율유지, LOOCV, LPOCV, 몬테카를로, 부트스트랩=복원</li>
+<li>과적합 방지 4: 데이터·단순화·규제·드롭아웃 / 에포크↑는 유발</li>
+<li>배치정규화=안정화가 본업, 과적합은 부수</li>
+<li>규제: L1 선택 / L2 축소 — 2과목 임베디드와 같음</li>
+<li>파라미터=학습, 하이퍼=분석자 사전 설정</li>
+<li>GD: Batch 전체 / Mini / SGD 샘플 / 학습률 크기</li>
+<li>모멘텀=관성, AdaGrad=학습률 감소, Adam=모멘텀+RMSProp</li>
+<li>시각화 3문항: <strong>히스토그램=분포</strong>, 히트맵≠트리맵, 카토그램=면적왜곡</li>
+<li>인포그래픽=설득, 탐색 아님</li>
+<li>모니터링·리모델링·고려사항 1문항</li>
+<li>그리드=전수느림, 랜덤, 베이지안=과거경험 (가중치↓)</li>
+</ol>
+<hr />
+<h2 id="계산-OX-훈련">계산 · OX 훈련</h2>
+<p><strong>1.</strong> TP40 FN10 FP20 TN30. 재현율·정밀도·정확도</p>
+<details><summary>정답</summary>재현 40/50=<strong>0.80</strong>, 정밀 40/60≈<strong>0.67</strong>, 정확 70/100=<strong>0.70</strong></details>
+
+<p><strong>2.</strong> F1 = 2PR/(P+R). P=0.67 R=0.80이면?</p>
+<details><summary>정답</summary>≈ <strong>0.73</strong></details>
+
+<p><strong>3.</strong> 암 진단에서 놓치면 안 될 때 올릴 지표</p>
+<details><summary>정답</summary><strong>재현율(민감도)</strong> — FN 감소</details>
+
+<p><strong>4.</strong> ROC의 x축은 재현율이다?</p>
+<details><summary>정답</summary>X. x=<strong>FPR</strong>, y=TPR(재현).</details>
+
+<p><strong>5.</strong> AUC 0.5에 가까울수록 우수?</p>
+<details><summary>정답</summary>X. <strong>1</strong>에 가까울수록. 0.5=무작위.</details>
+
+<p><strong>6.</strong> 층화 K-fold는 타깃 비율을 바꿔 균형을 맞춘다?</p>
+<details><summary>정답</summary>X. <strong>원래 비율 유지</strong>. 바꾸는 건 오버/언더.</details>
+
+<p><strong>7.</strong> LOOCV는 K=n이다. LPOCV는?</p>
+<details><summary>정답</summary>한 번에 <strong>P개</strong>를 검증으로 남김.</details>
+
+<p><strong>8.</strong> 부트스트랩은 비복원 추출이다?</p>
+<details><summary>정답</summary>X. <strong>복원</strong> 추출.</details>
+
+<p><strong>9.</strong> 드롭아웃은 예측(추론) 때도 뉴런을 끈다?</p>
+<details><summary>정답</summary>X. <strong>학습 때만</strong>. 추론은 전부 사용.</details>
+
+<p><strong>10.</strong> 에포크를 늘리는 것은 과적합 방지책이다?</p>
+<details><summary>정답</summary>X. <strong>유발</strong>.</details>
+
+<p><strong>11.</strong> 배치정규화의 주목적은 과적합 방지?</p>
+<details><summary>정답</summary>X. <strong>학습 안정화</strong>. 과적합은 부수.</details>
+
+<p><strong>12.</strong> 가중치 w는 하이퍼파라미터?</p>
+<details><summary>정답</summary>X. <strong>파라미터</strong>(학습). 학습률·층수는 하이퍼.</details>
+
+<p><strong>13.</strong> SGD는 전체 데이터로 1회만 업데이트한다?</p>
+<details><summary>정답</summary>X. 그건 Batch GD. SGD는 샘플마다.</details>
+
+<p><strong>14.</strong> Adam = 모멘텀 + AdaGrad 누적제곱?</p>
+<details><summary>정답</summary>대략 <strong>모멘텀 + RMSProp</strong>. AdaGrad는 학습률이 너무 줄어드는 문제 → RMSProp이 보완.</details>
+
+<p><strong>15.</strong> 히스토그램은 관계 시각화이다?</p>
+<details><summary>정답</summary>X. <strong>분포</strong>. 관계는 산점·히트맵·버블.</details>
+
+<p><strong>16.</strong> 트리맵은 색으로 행렬을, 히트맵은 면적으로 계층을 나타낸다?</p>
+<details><summary>정답</summary>X. <strong>반대</strong>. 히트맵=색 행렬, 트리맵=면적 계층.</details>
+
+<p><strong>17.</strong> 인포그래픽의 목적은 Raw 데이터에서 패턴을 탐색하는 것이다?</p>
+<details><summary>정답</summary>X. <strong>일반인 설득형 메시지</strong>.</details>
+
+<p><strong>18.</strong> 과대적합 = 훈련오차↓ 검증오차 재상승 = 저편향 고분산</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>19.</strong> 그리드 서치는 이전 실험 결과를 보고 유망 구간만 본다?</p>
+<details><summary>정답</summary>X. 그건 베이지안. 그리드=<strong>전수</strong>.</details>
+
+<p><strong>20.</strong> 카토그램은 값에 따라 지도 면적을 왜곡한다</p>
+<details><summary>정답</summary>O</details>
+
+<hr />
+<h2 id="시각화-3초-매칭">시각화 3초 매칭</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>보고 싶은 것</th>
+<th>차트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시간 추세</td>
+<td>선그래프</td>
+</tr>
+<tr>
+<td>분포·구간 빈도</td>
+<td>히스토그램</td>
+</tr>
+<tr>
+<td>이상치·사분위</td>
+<td>박스플롯</td>
+</tr>
+<tr>
+<td>두 연속 상관</td>
+<td>산점도</td>
+</tr>
+<tr>
+<td>세 변수(크기 포함)</td>
+<td>버블</td>
+</tr>
+<tr>
+<td>상관 행렬</td>
+<td>히트맵</td>
+</tr>
+<tr>
+<td>구성비+계층</td>
+<td>트리맵</td>
+</tr>
+<tr>
+<td>지역 통계</td>
+<td>단계구분도</td>
+</tr>
+<tr>
+<td>지역 크기 강조</td>
+<td>카토그램</td>
+</tr>
+<tr>
+<td>다변수 프로파일</td>
+<td>스타차트, 평행좌표, 체르노프</td>
+</tr>
+<tr>
+<td>설득 포스터</td>
+<td>인포그래픽</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="암기-카드">암기 카드</h2>
+<pre><code>일반화=train≈test
+정밀=예측P의 질 / 재현=실제P의 커버 / F1=조화
+ROC: x=FPR y=TPR / AUC→1
+층화K=비율유지 / LOOCV / LPOCV / 몬테카를로 / 부트=복원
+방지4=데이터·단순·규제·드롭아웃
+BN=안정화(본) + 과적합(부)
+L1선택 L2축소 / w=파라미터 / lr=하이퍼
+Batch전체 / Mini / SGD하나 / 모멘텀관성 / AdaGrad lr↓ / Adam합
+히스토그램=분포 / 히트맵≠트리맵 / 인포=설득
+모니터·리모델링 1문항
+</code></pre>
+</main>
+</div>
+<footer class="site">김계철 8/25 특강 포인트 + 기존 정리·기출 반영. 옵시디언 md와 동일 내용.</footer>
+</body>
+</html>

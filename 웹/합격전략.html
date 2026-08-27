@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>합격 전략 — 13회 빅분기 쪽집게</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">13회 빅분기 필기 쪽집게<small>2026.09</small></div><a href="index.html">홈</a><a href="합격전략.html" class="active">전략</a><a href="1과목.html">1 기획</a><a href="2과목.html">2 탐색</a><a href="3과목.html">3 모델링</a><a href="4과목.html">4 해석</a><a href="합본.html">합본·인쇄</a></header>
+<div class="layout">
+<nav class="toc"><strong>이 페이지</strong>
+<a class="h2" href="#이-노트를-옵시디언에-넣는-방법">이 노트를 옵시디언에 넣는 방법</a>
+<a class="h2" href="#1-합격-숫자-이것만-먼저-고정">1. 합격 숫자 — 이것만 먼저 고정</a>
+<a class="h2" href="#2-시험의-출제-습관-빅분기-ADSP">2. 시험의 출제 습관 (빅분기 ≠ ADSP)</a>
+<a class="h2" href="#3-과목-간-교집합-한-번-정리하면-두-과목-점수">3. 과목 간 교집합 — 한 번 정리하면 두 과목 점수</a>
+<a class="h2" href="#4-특강이-찍은-이번-회-예상-우선순위">4. 특강이 찍은 이번 회 예상 (우선순위)</a>
+<a class="h3" href="#1과목-반드시-50장-안에-넣을-것">1과목 — 반드시 50장 안에 넣을 것</a>
+<a class="h3" href="#2과목-12장으로-방어-3장은-기본-개념만">2과목 — 1·2장으로 방어, 3장은 기본 개념만</a>
+<a class="h3" href="#3과목-기법당-문장-3개를-넘기지-말-것">3과목 — 기법당 문장 3개를 넘기지 말 것</a>
+<a class="h3" href="#4과목-축이-3개-여기서-10문항">4과목 — 축이 3개, 여기서 10문항</a>
+<a class="h2" href="#5-남은-기간-회독-리듬">5. 남은 기간 회독 리듬</a>
+<a class="h2" href="#6-표기-규칙-전-과목-공통">6. 표기 규칙 (전 과목 공통)</a></nav>
+<main class="paper">
+<h1>13회 빅데이터분석기사 필기 — 쪽집게 합격전략</h1>
+<div class="callout abstract"><div class="callout-title">근거</div><p>2026-08-25 김계철 라이브 특강 + 기존 정리노트 4권 + 기출응용 70문항 + 10·11회 빈출 분석.
+<strong>시험: 2026년 9월 13회.</strong> 80문항 / 과목당 20문항 / <strong>48점 이상 + 과락 없음(과목당 8문항↑)</strong>.</p></div>
+
+<h2 id="이-노트를-옵시디언에-넣는-방법">이 노트를 옵시디언에 넣는 방법</h2>
+<ol>
+<li><code>정리노트/13회_쪽집게/</code> 폴더 전체를 볼트에 복사(또는 이 폴더를 볼트로 지정)</li>
+<li>그래프 뷰에서 <code>[1과목](#)</code> <code>[2과목](#)</code> <code>[3과목](#)</code> <code>[4과목](#)</code> 이 연결됨</li>
+<li>웹 공부: 같은 폴더의 <code>웹/index.html</code> 을 브라우저로 열기 (로컬, 서버 불필요)</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>파일</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="합격전략.html">00_합격전략_쪽집게</a></td>
+<td>전략·회독 계획·과목 간 교집합 (지금 이 파일)</td>
+</tr>
+<tr>
+<td><a href="#">1과목 분석기획</a></td>
+<td>전략 과목. 타깃 <strong>13~14문항</strong></td>
+</tr>
+<tr>
+<td><a href="#">2과목 탐색</a></td>
+<td>방어 과목. 1·2장으로 과락 방어, 타깃 <strong>11~12</strong></td>
+</tr>
+<tr>
+<td><a href="#">3과목 모델링</a></td>
+<td>방어 과목. 군집·앙상블이 전략, 타깃 <strong>11~12</strong></td>
+</tr>
+<tr>
+<td><a href="#">4과목 결과해석</a></td>
+<td>전략 과목. 타깃 <strong>13~14문항</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="1-합격-숫자-이것만-먼저-고정">1. 합격 숫자 — 이것만 먼저 고정</h2>
+<pre><code>80문항 중 48문항 이상  = 평균 60점
+과목당 최소 8문항      = 과락 방지
+현실 하한선            = 과목당 10문항 (10 아래로 떨어지면 48 맞추기 매우 어려움)
+</code></pre>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>과목</th>
+<th>특강 포지션</th>
+<th>타깃</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 분석기획</strong></td>
+<td><strong>전략</strong></td>
+<td><strong>13~14</strong></td>
+<td>기출 반복·ADSP 교집합 큼, 예외 출제 적음</td>
+</tr>
+<tr>
+<td><strong>4 결과해석</strong></td>
+<td><strong>전략</strong></td>
+<td><strong>13~14</strong></td>
+<td>축이 3개뿐(평가지표·시각화·과적합). 유형 단순</td>
+</tr>
+<tr>
+<td><strong>2 탐색</strong></td>
+<td><strong>방어</strong></td>
+<td><strong>11~12</strong></td>
+<td>3장(추론통계)이 난이도 폭탄. 1·2장에서 선점</td>
+</tr>
+<tr>
+<td><strong>3 모델링</strong></td>
+<td><strong>방어</strong></td>
+<td><strong>11~12</strong></td>
+<td>기법마다 정의·차이점만. 군집·앙상블이 득점원</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout danger"><div class="callout-title">특강 한 줄</div><p><strong>1과목과 4과목을 하나의 과목처럼 묶어 회독하라.</strong> 2·3은 방어. 1·4에서 여유를 만들어야 2·3 난이도 스파이크를 버틴다.
+이번 주에 1·4를 못 끝내면 합격률이 크게 떨어진다.</p></div>
+
+<hr />
+<h2 id="2-시험의-출제-습관-빅분기-ADSP">2. 시험의 출제 습관 (빅분기 ≠ ADSP)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>ADSP</th>
+<th><strong>빅분기 필기</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>과목 수</td>
+<td>3</td>
+<td><strong>4</strong> (깊이보다 <strong>전 범위 회독</strong>)</td>
+</tr>
+<tr>
+<td>정의 문제</td>
+<td>~60%</td>
+<td><strong>~40%</strong></td>
+</tr>
+<tr>
+<td>옳지 않은 것(오답 고르기)</td>
+<td>20~30%</td>
+<td><strong>20~30% + 정의보다 어려움</strong></td>
+</tr>
+<tr>
+<td>난이도</td>
+<td>중간 많음</td>
+<td><strong>아주 쉽거나 아주 어려움. 중간이 거의 없음</strong></td>
+</tr>
+<tr>
+<td>기출 재반복</td>
+<td>높음</td>
+<td><strong>1과목은 높음, 2·3은 새 문항을 만들려 함</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout warning"><div class="callout-title">학습법 함정</div><p>모의고사·적중 문제에 시간 쏟지 마라. 빅분기는 <strong>새 문항</strong>을 만든다. <strong>개념을 한 번 더 보는 쪽이 오래 남는다.</strong>
+교재 200~300p를 들고 다니면 하루 2과목 회독이 불가능하다. <strong>요약은 절대 150p를 넘기지 말고, 가능하면 100p 이하, 특강 권고는 A4 50장.</strong></p></div>
+
+<p><strong>회독 가능 시간 가정 (특강)</strong><br />
+- 평일 최대 2~3시간<br />
+- 주말 몰아치기<br />
+- 이 시간에 1·2·3·4를 <strong>같은 주에 여러 번</strong> 보려면 분량이 짧아야 한다</p>
+<hr />
+<h2 id="3-과목-간-교집합-한-번-정리하면-두-과목-점수">3. 과목 간 교집합 — 한 번 정리하면 두 과목 점수</h2>
+<p>특강이 가장 강조한 것: <strong>같은 개념이 과목을 옮겨 다닌다.</strong> 여기서 회독 효율이 난다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>개념</th>
+<th>주력 과목</th>
+<th>겹치는 과목</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지도/비지도/강화/준지도</td>
+<td>1</td>
+<td>3</td>
+<td>사례 보고 고르기</td>
+</tr>
+<tr>
+<td>Ridge / Lasso / Elastic Net</td>
+<td><strong>2 임베디드</strong></td>
+<td><strong>4 규제</strong></td>
+<td>L1=변수선택, L2=축소만</td>
+</tr>
+<tr>
+<td>교차검증 K-fold·LOOCV·부트스트랩</td>
+<td>4 (세분)</td>
+<td>3 (분할)</td>
+<td>층화K-fold는 <strong>비율 유지</strong>, 불균형처리는 <strong>비율을 바꿈</strong></td>
+</tr>
+<tr>
+<td>경사하강법·학습률·모멘텀·AdaGrad·Adam</td>
+<td>4</td>
+<td>3 신경망</td>
+<td>4에서 끝내면 3은 패스 가능</td>
+</tr>
+<tr>
+<td>PCA vs 요인분석 vs SVD vs LDA</td>
+<td>2</td>
+<td>3 다변량은 가중치↓</td>
+<td>기준점은 항상 <strong>PCA</strong></td>
+</tr>
+<tr>
+<td>상자그림·히스토그램</td>
+<td>2</td>
+<td>4 시각화</td>
+<td>상자그림에 <strong>평균 없음·데이터 수 모름</strong></td>
+</tr>
+<tr>
+<td>히트맵 vs 트리맵, 카토그램</td>
+<td>2 고급탐색</td>
+<td><strong>4 정보시각화 3문항</strong></td>
+<td>히스토그램은 <strong>분포</strong> (관계 X)</td>
+</tr>
+<tr>
+<td>전진/후진/단계적</td>
+<td>2 래퍼</td>
+<td>3 회귀 변수선택</td>
+<td>2에서 했으면 3은 패스</td>
+</tr>
+<tr>
+<td>정규성 검정</td>
+<td>2 모수검정 가정</td>
+<td>4 적합도</td>
+<td>Shapiro, K-S, Q-Q (t-test 아님)</td>
+</tr>
+<tr>
+<td>과적합·Bias-Variance</td>
+<td><strong>3 상위키워드</strong></td>
+<td>4 진단</td>
+<td>과소=고편향, 과대=고분산</td>
+</tr>
+<tr>
+<td>개인정보 가명/익명</td>
+<td>1</td>
+<td>—</td>
+<td>가명=복원가능, 익명=법 미적용</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="4-특강이-찍은-이번-회-예상-우선순위">4. 특강이 찍은 이번 회 예상 (우선순위)</h2>
+<h3 id="1과목-반드시-50장-안에-넣을-것">1과목 — 반드시 50장 안에 넣을 것</h3>
+<ol>
+<li>정형(스키마) / 반정형(메타데이터) / 비정형</li>
+<li><strong>저장 방식 3분법: RDB vs NoSQL vs HDFS</strong> ← 변별력</li>
+<li>ETL, <strong>ODS</strong>, DW vs DM, <strong>Data Lake (Schema-on-Read) vs DW (Schema-on-Write)</strong></li>
+<li>분석 4유형(묘사·진단·예측·처방)</li>
+<li>조직(집중·분산·기능), 소프트 스킬, 준비도·성숙도 → 도입형/확산형</li>
+<li>거버넌스 구성요소</li>
+<li>에코시스템: Spark, Kafka, Zookeeper, Hive (인메모리 vs 디스크)</li>
+<li>계층: 소프트웨어 → 플랫폼 → 인프라 (빨간 키워드로 계층 맞추기)</li>
+<li>학습 유형 사례 + 준지도</li>
+<li>가명정보까지가 개인정보, 익명정보는 아님</li>
+<li>하향식/상향식 <strong>프로세스 순서</strong></li>
+<li>KDD / CRISP-DM / 빅데이터 방법론 단계·태스크</li>
+<li><strong>모형화(변수 관계) ≠ 모델링(함수식)</strong></li>
+<li><strong>Sqoop / Open API / FTP</strong> 차이 ← 이번 회 예상</li>
+<li>전처리 기술 vs 후처리 기술</li>
+<li><strong>비식별화 세분화</strong>(가명 3, 총계 4, 삭제·범주화·마스킹) ← 강력 예상</li>
+<li>정형 품질 기준 <strong>5가지</strong> (거의 100%)</li>
+<li>진단 3단계 + 개선 3단계</li>
+<li>HDFS NameNode vs DataNode, <strong>높은 처리율(배치)이지 낮은 지연(실시간)이 아님</strong></li>
+<li>분산파일시스템 vs DB 클러스터</li>
+<li>NoSQL 4종 + 도구 매칭</li>
+<li>MapReduce = <strong>무공유(Shared Nothing)</strong> 아키텍처</li>
+</ol>
+<h3 id="2과목-12장으로-방어-3장은-기본-개념만">2과목 — 1·2장으로 방어, 3장은 기본 개념만</h3>
+<ul>
+<li>전처리 4: 정제·통합·축소·변환</li>
+<li>정제 = 결측 + 노이즈 + 이상값 (처리 방법 각각)</li>
+<li><strong>래퍼(전진·후진·단계) vs 임베디드(Ridge/Lasso/Elastic)</strong> 100%</li>
+<li>PCA를 기준점으로 요인분석·SVD·LDA 차이만</li>
+<li>변환(분포를 바꿈) vs 스케일링(상대 크기) — <strong>MaxAbs·Robust가 변별</strong></li>
+<li>불균형 처리(비율을 <strong>바꿈</strong>) ≠ 층화 K-fold(비율을 <strong>유지</strong>)</li>
+<li>임계값 이동은 <strong>검정 단계</strong>, 학습 데이터에서 바꾸지 않음</li>
+<li>상관: 독립→공분산 0 / 스피어만=서열·비선형 가능</li>
+<li>상자그림으로 <strong>데이터 수·가설검정 불가</strong></li>
+<li>비정형: 토큰화·POS·스테밍·표제어만 (깊이 금지)</li>
+<li>3장: 모수/비모수, 표본추출 4, 척도 4, 조건부확률, 이산분포 기댓값·분산, CLT, 불편추정량, 신뢰구간 성질, 1·2종 오류</li>
+</ul>
+<h3 id="3과목-기법당-문장-3개를-넘기지-말-것">3과목 — 기법당 문장 3개를 넘기지 말 것</h3>
+<ul>
+<li><strong>Bias-Variance</strong>가 전 과목 상위 키워드</li>
+<li>사례 보고 분석법 고르기 (실기 3유형과 동일)</li>
+<li>회귀: 가정, ANOVA표로 F·R², 잔차 진단 (도구 출력 해석 문제는 안 나옴)</li>
+<li>로지스틱: 로짓 변환, 모형 유의성 = <strong>카이제곱</strong>, 오즈 해석</li>
+<li>의사결정나무: 불순도 3종, 비모수, 가지치기</li>
+<li>ANN+딥러닝 합쳐 2~3문항 (활성화함수, CNN/RNN/LSTM)</li>
+<li>SVM: C·하드/소프트 마진 / KNN: K↑ 경계 단순</li>
+<li><strong>군집이 전략</strong> (계층 vs 비계층, 덴드로그램, 병합 5, K-means vs DBSCAN vs SOM)</li>
+<li>연관규칙은 1문항·계산 가중치↓ / 시계열 약 2문항</li>
+<li>앙상블 1문항 이상: 배깅·부스팅·RF·스태킹 <strong>+ 부스팅 계열 이름</strong></li>
+<li>비모수 예상: 윌콕슨 부호순위(대응 t) / 윌콕슨 순위합(독립 t)</li>
+</ul>
+<h3 id="4과목-축이-3개-여기서-10문항">4과목 — 축이 3개, 여기서 10문항</h3>
+<ol>
+<li><strong>회귀/분류 평가지표</strong> 3~4문항</li>
+<li><strong>정보 시각화</strong> 3문항 + 인포그래픽 1</li>
+<li><strong>과적합 방지 4 + 교차검증 세분 + 경사하강/옵티마이저</strong><br />
+- 교차검증: K-fold, 층화, LOOCV, LPOCV, 몬테카를로, 부트스트랩<br />
+- 배치정규화: <strong>주목적은 학습 안정화</strong>, 부수적으로 과적합 방지 (기출된 함정)<br />
+- 하이퍼파라미터 탐색은 가중치↓ (그리드 vs 랜덤 vs 베이지안 정의만)<br />
+- 마지막 1문항: 모니터링·리모델링·운영 시 고려사항</li>
+</ol>
+<hr />
+<h2 id="5-남은-기간-회독-리듬">5. 남은 기간 회독 리듬</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>회독</th>
+<th>무엇</th>
+<th>시간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1회독</td>
+<td>이 폴더 1→4→2→3 순서. 형광(특강)만 밑줄</td>
+<td>주말 1일 + 평일 1일</td>
+</tr>
+<tr>
+<td>2회독</td>
+<td>과목 끝 <strong>직전 체크리스트</strong> + 함정 박스만</td>
+<td>평일 2일 (하루 2과목)</td>
+</tr>
+<tr>
+<td>3회독</td>
+<td><code>웹/index.html</code> 퀴즈 + 차이점 표만</td>
+<td>시험 전날</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>하루 루틴 (2시간)</strong><br />
+1. 40분: 전략 과목 하나 (1 또는 4)<br />
+2. 40분: 방어 과목 하나 (2 또는 3) — 해당 과목의 <strong>쉬운 장만</strong><br />
+3. 20분: 교집합 표 (Ridge, K-fold, 시각화, 학습유형)<br />
+4. 20분: 직전 체크리스트 OX</p>
+<hr />
+<h2 id="6-표기-규칙-전-과목-공통">6. 표기 규칙 (전 과목 공통)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>기호</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>특강</strong></td>
+<td>8/25 라이브에서 형광·빨간색으로 찍은 포인트</td>
+</tr>
+<tr>
+<td><strong>100%</strong></td>
+<td>특강이 “반드시/거의 100%”라고 한 것</td>
+</tr>
+<tr>
+<td><strong>함정</strong></td>
+<td>옳지 않은 것 유형·바꿔치기 선지</td>
+</tr>
+<tr>
+<td><strong>교집합</strong></td>
+<td>다른 과목과 겹침. 한 번만 깊게</td>
+</tr>
+<tr>
+<td>★</td>
+<td>10·11회 등 실제 기출 확인</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout tip"><div class="callout-title">압축 원칙 (특강 원문)</div><p>기법마다 문장을 세 개 이상 쓰지 마라. <strong>특징 또는 다른 기법과의 차이점</strong>만.
+서술로 잔뜩 모으면 회독이 안 된다. <strong>키워드 → 차이점 두 줄</strong>이 전부다.</p></div>
+</main>
+</div>
+<footer class="site">김계철 8/25 특강 포인트 + 기존 정리·기출 반영. 옵시디언 md와 동일 내용.</footer>
+</body>
+</html>

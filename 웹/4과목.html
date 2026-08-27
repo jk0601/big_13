@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4과목 결과 해석 — 13회 빅분기 쪽집게</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">13회 빅분기 필기 쪽집게<small>2026.09</small></div><a href="index.html">홈</a><a href="합격전략.html">전략</a><a href="1과목.html">1 기획</a><a href="2과목.html">2 탐색</a><a href="3과목.html">3 모델링</a><a href="4과목.html" class="active">4 해석</a><a href="합본.html">합본·인쇄</a></header>
+<div class="layout">
+<nav class="toc"><strong>이 페이지</strong>
+<a class="h2" href="#1장-분석-모형-평가">1장. 분석 모형 평가</a>
+<a class="h3" href="#1-1-회귀-평가지표-특강-정의-매칭">1-1. 회귀 평가지표 특강 정의 매칭</a>
+<a class="h3" href="#1-2-분류-평가지표-혼동행렬-특강-34문항">1-2. 분류 평가지표 · 혼동행렬 특강 3~4문항</a>
+<a class="h3" href="#1-3-군집-평가-3과목-연계">1-3. 군집 평가 (3과목 연계)</a>
+<a class="h3" href="#1-4-교차검증-세분-특강-100-여기가-주력">1-4. 교차검증 세분 특강 100% — 여기가 주력</a>
+<a class="h3" href="#1-5-과적합-방지-4-배치정규화-함정-특강">1-5. 과적합 방지 4 + 배치정규화 함정 특강</a>
+<a class="h3" href="#1-6-파라미터-vs-하이퍼파라미터-특강">1-6. 파라미터 vs 하이퍼파라미터 특강</a>
+<a class="h3" href="#1-7-경사하강법-옵티마이저-특강-변별력-난이도-줄-곳">1-7. 경사하강법 · 옵티마이저 특강 변별력 (난이도 줄 곳)</a>
+<a class="h2" href="#2장-분석-결과-시각화-3문항-인포-1-특강">2장. 분석 결과 시각화 — 3문항 + 인포 1 특강</a>
+<a class="h2" href="#3장-전개-모니터링-리모델링-1문항-특강">3장. 전개 · 모니터링 · 리모델링 — 1문항 특강</a>
+<a class="h2" href="#시험-직전-체크리스트-4과목">시험 직전 체크리스트 (4과목)</a>
+<a class="h2" href="#계산-OX-훈련">계산 · OX 훈련</a>
+<a class="h2" href="#시각화-3초-매칭">시각화 3초 매칭</a>
+<a class="h2" href="#암기-카드">암기 카드</a></nav>
+<main class="paper">
+<h1>4과목. 빅데이터 결과 해석</h1>
+<div class="callout danger"><div class="callout-title">특강 — 두 번째 전략 과목</div><p>타깃 <strong>13~14</strong>. <a href="1과목.html">1과목</a>과 <strong>한 묶음으로 회독.</strong>
+축이 3개뿐이라 유형이 단순하다. <strong>이 3축이 문항의 약 50%(10문항).</strong>
+1. 회귀·분류 <strong>평가지표</strong> (3~4문항)
+2. <strong>정보 시각화</strong> (3문항) + 인포그래픽 (1)
+3. <strong>과적합 방지</strong> + 교차검증 세분 + 최적화
+회귀 진단(잔차 등)은 3과목 회귀를 했으면 패스.
+하이퍼파라미터 그리드/랜덤/베이지안은 가중치↓, 정의만. 실기는 40초 오버 시 감점이라 튜닝을 거의 안 함.</p></div>
+
+<p><strong>모형 평가의 목적 = 일반화 가능성.</strong> 학습 데이터와 평가 데이터에서 <strong>같은 성능</strong>이 나올 때 일반화 가능.</p>
+<hr />
+<h2 id="1장-분석-모형-평가">1장. 분석 모형 평가</h2>
+<h3 id="1-1-회귀-평가지표-특강-정의-매칭">1-1. 회귀 평가지표 특강 정의 매칭</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>지표</th>
+<th>식</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSE</td>
+<td>평균 (y−ŷ)²</td>
+<td>큰 오차에 민감</td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td>√MSE</td>
+<td>y와 단위 같음</td>
+</tr>
+<tr>
+<td>MAE</td>
+<td>평균 |y−ŷ|</td>
+<td>이상치에 MSE보다 강</td>
+</tr>
+<tr>
+<td>MAPE</td>
+<td>평균 |(y−ŷ)/y| ×100</td>
+<td>% , y=0 주의</td>
+</tr>
+<tr>
+<td>R²</td>
+<td>1−SSE/SST</td>
+<td>0~1, 상대 설명력</td>
+</tr>
+</tbody>
+</table></div>
+<p>문항: 정의를 주고 이름 고르기 / 회귀 지표 vs 분류 지표 섞어 놓기.</p>
+<h3 id="1-2-분류-평가지표-혼동행렬-특강-34문항">1-2. 분류 평가지표 · 혼동행렬 특강 3~4문항</h3>
+<pre><code>              예측 P    예측 N
+실제 P         TP        FN
+실제 N         FP        TN
+</code></pre>
+<p>T/F = 맞/틀림, P/N = <strong>예측</strong> 방향.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>지표</th>
+<th>식</th>
+<th>언제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정확도 Accuracy</td>
+<td>(TP+TN)/전체</td>
+<td>불균형이면 왜곡</td>
+</tr>
+<tr>
+<td><strong>정밀도 Precision</strong></td>
+<td>TP/(TP+FP)</td>
+<td>FP가 치명 (스팸, 무고)</td>
+</tr>
+<tr>
+<td><strong>재현율 Recall</strong></td>
+<td>TP/(TP+FN)</td>
+<td>FN이 치명 (암, 사기 놓침)</td>
+</tr>
+<tr>
+<td>특이도 Specificity</td>
+<td>TN/(TN+FP)</td>
+<td></td>
+</tr>
+<tr>
+<td>F1</td>
+<td>2PR/(P+R)</td>
+<td>정밀·재현 조화평균</td>
+</tr>
+<tr>
+<td>F-β</td>
+<td>β&gt;1 재현 중시</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>재현율 = 민감도 = TPR = Hit Rate<br />
+FPR = FP/(FP+TN) = 1−특이도<br />
+정밀 ↔ 재현 <strong>트레이드오프</strong> (임계값)</p>
+<p><strong>ROC</strong>: x=FPR, y=TPR(재현). <strong>AUC 1에 가까울수록 우수</strong> (0.5=무작위)<br />
+함정: AUC 0.5가 우수(X) / ROC로 혼동행렬 원숫자 직접 산출(X)</p>
+<p>이익도표·리프트: 상위 등급 반응 배율</p>
+<h3 id="1-3-군집-평가-3과목-연계">1-3. 군집 평가 (3과목 연계)</h3>
+<p>실루엣 (b−a)/max(a,b), −1~1, 응집+분리<br />
+엘보: WCSS가 완만해지는 K</p>
+<h3 id="1-4-교차검증-세분-특강-100-여기가-주력">1-4. 교차검증 세분 특강 100% — 여기가 주력</h3>
+<p>3과목은 분할 개념, <strong>4과목은 K-fold를 쪼갠다.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Holdout</td>
+<td>한 번 분할</td>
+</tr>
+<tr>
+<td><strong>K-fold</strong></td>
+<td>K개 폴드, K번 돌아가며 검증</td>
+</tr>
+<tr>
+<td><strong>층화 Stratified K-fold</strong></td>
+<td>각 폴드에 <strong>타깃 비율 유지</strong> (불균형 처리와 다름!)</td>
+</tr>
+<tr>
+<td><strong>LOOCV</strong></td>
+<td>K=n, 1개만 검증. 계산 큼, 편향 작음</td>
+</tr>
+<tr>
+<td><strong>LPOCV</strong></td>
+<td>P개를 검증으로 남김 (Leave-P-Out)</td>
+</tr>
+<tr>
+<td><strong>몬테카를로 CV</strong></td>
+<td>무작위 분할을 여러 번 (ShuffleSplit)</td>
+</tr>
+<tr>
+<td><strong>부트스트랩</strong></td>
+<td><strong>복원추출</strong>로 표본 재구성. 단순 랜덤 복원 특강</td>
+</tr>
+</tbody>
+</table></div>
+<p>층화 K-fold ≠ <a href="2과목.html">2과목</a> 불균형 오버/언더 (비율을 바꿈)</p>
+<h3 id="1-5-과적합-방지-4-배치정규화-함정-특강">1-5. 과적합 방지 4 + 배치정규화 함정 특강</h3>
+<p>커리큘럼에 <strong>명시된 4가지</strong> (개별·묶음 모두 출제):<br />
+1. <strong>데이터 증강·증가</strong><br />
+2. <strong>모형 단순화</strong> (층·노드·나무깊이↓)<br />
+3. <strong>규제 Regularization</strong> (L1/L2, 가중치 감소) ← <strong>2과목 임베디드와 교집합</strong><br />
+4. <strong>드롭아웃</strong> (학습 시 뉴런 랜덤 비활성, <strong>추론 시 전부 사용</strong>)</p>
+<p>보조: 조기종료(검증오차 반등 시 중단), 교차검증<br />
+<strong>에포크를 늘리는 것 = 과적합 유발</strong> (방지책 아님)</p>
+<div class="callout warning"><div class="callout-title">기출 함정 — 배치정규화</div><p>주목적 = <strong>학습 안정화</strong>(내부 공변량 이동 완화).
+정규화 효과로 <strong>부수적으로</strong> 과적합도 줄어들 수 있다.
+“과적합 방지 4가지” 목록에는 없어도 <strong>정답이 된 문항이 있다.</strong></p></div>
+
+<p>규제 복습: Ridge=L2 축소만 / Lasso=L1 계수0 변수선택 / Elastic=혼합</p>
+<h3 id="1-6-파라미터-vs-하이퍼파라미터-특강">1-6. 파라미터 vs 하이퍼파라미터 특강</h3>
+<p>| 파라미터 | 모델이 학습으로 <strong>내부 결정</strong> | 가중치 w, bias, 회귀계수 |<br />
+| <strong>하이퍼파라미터</strong> | <strong>학습 전에 분석자가 설정</strong> | 학습률, 층수, K, C, 드롭아웃율, 에포크, 배치 |</p>
+<h3 id="1-7-경사하강법-옵티마이저-특강-변별력-난이도-줄-곳">1-7. 경사하강법 · 옵티마이저 특강 변별력 (난이도 줄 곳)</h3>
+<p>W ← W − α ∂Loss/∂W<br />
+- 학습률 α 큼: 발산·진동 / 작음: 느림<br />
+- 전체 데이터라 느림 → 확률적 등장</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>데이터</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Batch GD</td>
+<td><strong>전체</strong></td>
+<td>안정, 느림, 메모리</td>
+</tr>
+<tr>
+<td>Mini-batch</td>
+<td>쪼갠 묶음</td>
+<td>실무 표준</td>
+</tr>
+<tr>
+<td><strong>SGD</strong></td>
+<td><strong>한 개(또는 랜덤 하나)</strong></td>
+<td>빠름, 진동, 지역해 탈출에 유리</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>SGD 개량 — 기울기 기준 vs 학습률 기준</strong> 특강 최소 암기<br />
+| 모멘텀 | <strong>이전 기울기 관성</strong> (기울기 쪽) |<br />
+| <strong>AdaGrad</strong> | 파라미터별 학습률, 누적제곱 → 학습률이 <strong>점점 감소</strong> (학습률 쪽) |<br />
+| RMSProp | 기울기 제곱의 <strong>지수이동평균</strong>으로 학습률 |<br />
+| <strong>Adam</strong> | <strong>모멘텀 + RMSProp</strong> |</p>
+<p>특강: 적어도 모멘텀 · AdaGrad · Adam. 그 아래도 출제 가능하나 우선 셋.<br />
+비볼록에서 항상 전역 최소(X).</p>
+<p>하이퍼 탐색 (가중치↓): 그리드=전수·느림 / 랜덤=임의 / 베이지안=과거 경험으로 유망 영역.</p>
+<p>이 파라미터들로 <strong>복잡도 vs 성능 안정성</strong>을 조절.</p>
+<p>정규성 검정은 평가 파트에도: Shapiro, K-S, Q-Q (t-test는 정규성 검정 아님)</p>
+<hr />
+<h2 id="2장-분석-결과-시각화-3문항-인포-1-특강">2장. 분석 결과 시각화 — 3문항 + 인포 1 특강</h2>
+<p>정보시각화 축: <strong>시간 · 분포 · 공간 · 관계 · 비교</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>유형</th>
+<th>목적</th>
+<th>대표</th>
+<th>함정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시간</td>
+<td>변화, x=시간</td>
+<td>선, 영역, 계단</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>분포</strong></td>
+<td>모양·구성</td>
+<td><strong>히스토그램</strong>, 박스, 파이, 바이올린, <strong>트리맵</strong></td>
+<td>히스토그램을 관계에 넣기</td>
+</tr>
+<tr>
+<td>관계</td>
+<td>변수 간</td>
+<td><strong>산점도, 버블, 히트맵</strong>, 산점행렬</td>
+<td></td>
+</tr>
+<tr>
+<td>비교</td>
+<td>다변수 프로파일</td>
+<td>스타차트(방사), 체르노프, 평행좌표, 히트맵</td>
+<td></td>
+</tr>
+<tr>
+<td>공간</td>
+<td>지도</td>
+<td>단계구분도(등치지역), 등치선, <strong>카토그램</strong>, 버블맵</td>
+<td>산점도는 공간 아님</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>히트맵 vs 트리맵</strong> 특강 꼭<br />
+| 히트맵 | 행렬 칸의 <strong>색</strong>으로 값. 상관·혼동행렬 |<br />
+| 트리맵 | <strong>면적(+색)</strong> 으로 계층 비율. 음수 불가 |</p>
+<p>기타<br />
+- 버블: 산점도 + 제3변수를 <strong>원 크기</strong><br />
+- 카토그램: 값에 따라 지역 <strong>면적 왜곡</strong><br />
+- 스타차트: 3개↑ 변수 균형<br />
+- 박스플롯: 평균 없음<br />
+- 로그 스케일: 지수적 증가<br />
+- 시각화는 축 조작으로 왜곡 가능</p>
+<p><strong>인포그래픽 1문항 고정</strong> 특강<br />
+- Information + Graphic. <strong>설득</strong>이 목적. 일반인 메시지<br />
+- Raw data 탐색·패턴 발견 목적 아님. 데이터시각화와 동일(X). 미학 우선(X)<br />
+- 유형 8~10: 지도, 도표, 타임라인, 스토리, 만화, 비교, 흐름, 숫자강조 등<br />
+- 단순·명확·가독 / 오컴의 면도날</p>
+<p>2과목 고급탐색(조건플롯, 평행좌표, 단계구분도)과 중복 → 한 번만 외우기.</p>
+<hr />
+<h2 id="3장-전개-모니터링-리모델링-1문항-특강">3장. 전개 · 모니터링 · 리모델링 — 1문항 특강</h2>
+<p>모형을 만들어도 끝이 아니다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>키워드</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>전개 시 고려</td>
+<td>운영 환경, 배치 주기, 책임자, 입출력 슬롯, 윤리·개인정보</td>
+</tr>
+<tr>
+<td><strong>모니터링</strong></td>
+<td>성능 드리프트, 데이터 분포 변화, 지연·오류율</td>
+</tr>
+<tr>
+<td>조심</td>
+<td>학습 데이터 누수, 라벨 지연, 개념 변화(concept drift)</td>
+</tr>
+<tr>
+<td><strong>리모델링</strong></td>
+<td>새 데이터·새 알고리즘으로 재학습·교체. 운영 주기 정의는 1과목 전개 단계와 연결</td>
+</tr>
+</tbody>
+</table></div>
+<p>ROI, NPV, IRR, TCO: 비즈니스 기여. 한 줄만.<br />
+PCA 해석(누적기여율, 스크리)은 2·3과 공유.</p>
+<hr />
+<h2 id="시험-직전-체크리스트-4과목">시험 직전 체크리스트 (4과목)</h2>
+<ol>
+<li>평가 목적 = <strong>일반화</strong> (train≈test 성능)</li>
+<li>회귀: MSE RMSE MAE MAPE R² 정의 매칭</li>
+<li>정밀도=TP/(TP+FP), 재현=TP/(TP+FN)=민감도=TPR, F1=조화평균</li>
+<li>불균형 → 정확도 믿지 말 것 / FN치명=재현 / FP치명=정밀</li>
+<li>ROC: x=FPR y=TPR, AUC↑좋음</li>
+<li>K-fold 세분: 층화=비율유지, LOOCV, LPOCV, 몬테카를로, 부트스트랩=복원</li>
+<li>과적합 방지 4: 데이터·단순화·규제·드롭아웃 / 에포크↑는 유발</li>
+<li>배치정규화=안정화가 본업, 과적합은 부수</li>
+<li>규제: L1 선택 / L2 축소 — 2과목 임베디드와 같음</li>
+<li>파라미터=학습, 하이퍼=분석자 사전 설정</li>
+<li>GD: Batch 전체 / Mini / SGD 샘플 / 학습률 크기</li>
+<li>모멘텀=관성, AdaGrad=학습률 감소, Adam=모멘텀+RMSProp</li>
+<li>시각화 3문항: <strong>히스토그램=분포</strong>, 히트맵≠트리맵, 카토그램=면적왜곡</li>
+<li>인포그래픽=설득, 탐색 아님</li>
+<li>모니터링·리모델링·고려사항 1문항</li>
+<li>그리드=전수느림, 랜덤, 베이지안=과거경험 (가중치↓)</li>
+</ol>
+<hr />
+<h2 id="계산-OX-훈련">계산 · OX 훈련</h2>
+<p><strong>1.</strong> TP40 FN10 FP20 TN30. 재현율·정밀도·정확도</p>
+<details><summary>정답</summary>재현 40/50=<strong>0.80</strong>, 정밀 40/60≈<strong>0.67</strong>, 정확 70/100=<strong>0.70</strong></details>
+
+<p><strong>2.</strong> F1 = 2PR/(P+R). P=0.67 R=0.80이면?</p>
+<details><summary>정답</summary>≈ <strong>0.73</strong></details>
+
+<p><strong>3.</strong> 암 진단에서 놓치면 안 될 때 올릴 지표</p>
+<details><summary>정답</summary><strong>재현율(민감도)</strong> — FN 감소</details>
+
+<p><strong>4.</strong> ROC의 x축은 재현율이다?</p>
+<details><summary>정답</summary>X. x=<strong>FPR</strong>, y=TPR(재현).</details>
+
+<p><strong>5.</strong> AUC 0.5에 가까울수록 우수?</p>
+<details><summary>정답</summary>X. <strong>1</strong>에 가까울수록. 0.5=무작위.</details>
+
+<p><strong>6.</strong> 층화 K-fold는 타깃 비율을 바꿔 균형을 맞춘다?</p>
+<details><summary>정답</summary>X. <strong>원래 비율 유지</strong>. 바꾸는 건 오버/언더.</details>
+
+<p><strong>7.</strong> LOOCV는 K=n이다. LPOCV는?</p>
+<details><summary>정답</summary>한 번에 <strong>P개</strong>를 검증으로 남김.</details>
+
+<p><strong>8.</strong> 부트스트랩은 비복원 추출이다?</p>
+<details><summary>정답</summary>X. <strong>복원</strong> 추출.</details>
+
+<p><strong>9.</strong> 드롭아웃은 예측(추론) 때도 뉴런을 끈다?</p>
+<details><summary>정답</summary>X. <strong>학습 때만</strong>. 추론은 전부 사용.</details>
+
+<p><strong>10.</strong> 에포크를 늘리는 것은 과적합 방지책이다?</p>
+<details><summary>정답</summary>X. <strong>유발</strong>.</details>
+
+<p><strong>11.</strong> 배치정규화의 주목적은 과적합 방지?</p>
+<details><summary>정답</summary>X. <strong>학습 안정화</strong>. 과적합은 부수.</details>
+
+<p><strong>12.</strong> 가중치 w는 하이퍼파라미터?</p>
+<details><summary>정답</summary>X. <strong>파라미터</strong>(학습). 학습률·층수는 하이퍼.</details>
+
+<p><strong>13.</strong> SGD는 전체 데이터로 1회만 업데이트한다?</p>
+<details><summary>정답</summary>X. 그건 Batch GD. SGD는 샘플마다.</details>
+
+<p><strong>14.</strong> Adam = 모멘텀 + AdaGrad 누적제곱?</p>
+<details><summary>정답</summary>대략 <strong>모멘텀 + RMSProp</strong>. AdaGrad는 학습률이 너무 줄어드는 문제 → RMSProp이 보완.</details>
+
+<p><strong>15.</strong> 히스토그램은 관계 시각화이다?</p>
+<details><summary>정답</summary>X. <strong>분포</strong>. 관계는 산점·히트맵·버블.</details>
+
+<p><strong>16.</strong> 트리맵은 색으로 행렬을, 히트맵은 면적으로 계층을 나타낸다?</p>
+<details><summary>정답</summary>X. <strong>반대</strong>. 히트맵=색 행렬, 트리맵=면적 계층.</details>
+
+<p><strong>17.</strong> 인포그래픽의 목적은 Raw 데이터에서 패턴을 탐색하는 것이다?</p>
+<details><summary>정답</summary>X. <strong>일반인 설득형 메시지</strong>.</details>
+
+<p><strong>18.</strong> 과대적합 = 훈련오차↓ 검증오차 재상승 = 저편향 고분산</p>
+<details><summary>정답</summary>O</details>
+
+<p><strong>19.</strong> 그리드 서치는 이전 실험 결과를 보고 유망 구간만 본다?</p>
+<details><summary>정답</summary>X. 그건 베이지안. 그리드=<strong>전수</strong>.</details>
+
+<p><strong>20.</strong> 카토그램은 값에 따라 지도 면적을 왜곡한다</p>
+<details><summary>정답</summary>O</details>
+
+<hr />
+<h2 id="시각화-3초-매칭">시각화 3초 매칭</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>보고 싶은 것</th>
+<th>차트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시간 추세</td>
+<td>선그래프</td>
+</tr>
+<tr>
+<td>분포·구간 빈도</td>
+<td>히스토그램</td>
+</tr>
+<tr>
+<td>이상치·사분위</td>
+<td>박스플롯</td>
+</tr>
+<tr>
+<td>두 연속 상관</td>
+<td>산점도</td>
+</tr>
+<tr>
+<td>세 변수(크기 포함)</td>
+<td>버블</td>
+</tr>
+<tr>
+<td>상관 행렬</td>
+<td>히트맵</td>
+</tr>
+<tr>
+<td>구성비+계층</td>
+<td>트리맵</td>
+</tr>
+<tr>
+<td>지역 통계</td>
+<td>단계구분도</td>
+</tr>
+<tr>
+<td>지역 크기 강조</td>
+<td>카토그램</td>
+</tr>
+<tr>
+<td>다변수 프로파일</td>
+<td>스타차트, 평행좌표, 체르노프</td>
+</tr>
+<tr>
+<td>설득 포스터</td>
+<td>인포그래픽</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="암기-카드">암기 카드</h2>
+<pre><code>일반화=train≈test
+정밀=예측P의 질 / 재현=실제P의 커버 / F1=조화
+ROC: x=FPR y=TPR / AUC→1
+층화K=비율유지 / LOOCV / LPOCV / 몬테카를로 / 부트=복원
+방지4=데이터·단순·규제·드롭아웃
+BN=안정화(본) + 과적합(부)
+L1선택 L2축소 / w=파라미터 / lr=하이퍼
+Batch전체 / Mini / SGD하나 / 모멘텀관성 / AdaGrad lr↓ / Adam합
+히스토그램=분포 / 히트맵≠트리맵 / 인포=설득
+모니터·리모델링 1문항
+</code></pre>
+</main>
+</div>
+<footer class="site">김계철 8/25 특강 포인트 + 기존 정리·기출 반영. 옵시디언 md와 동일 내용.</footer>
+</body>
+</html>

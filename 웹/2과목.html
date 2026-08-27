@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2과목 탐색 — 13회 빅분기 쪽집게</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">13회 빅분기 필기 쪽집게<small>2026.09</small></div><a href="index.html">홈</a><a href="합격전략.html">전략</a><a href="1과목.html">1 기획</a><a href="2과목.html" class="active">2 탐색</a><a href="3과목.html">3 모델링</a><a href="4과목.html">4 해석</a><a href="합본.html">합본·인쇄</a></header>
+<div class="layout">
+<nav class="toc"><strong>이 페이지</strong>
+<a class="h2" href="#1장-데이터-전처리-반드시-득점">1장. 데이터 전처리 — 반드시 득점</a>
+<a class="h3" href="#1-1-전처리-4영역-특강-100-정의">1-1. 전처리 4영역 특강 100% 정의</a>
+<a class="h3" href="#1-2-정제-결측-노이즈-이상값-특강">1-2. 정제 = 결측 + 노이즈 + 이상값 특강</a>
+<a class="h3" href="#1-3-변수-선택-래퍼-vs-임베디드-특강-100">1-3. 변수 선택 — 래퍼 vs 임베디드 특강 100%</a>
+<a class="h3" href="#1-4-차원축소-기준점은-항상-PCA-특강">1-4. 차원축소 — 기준점은 항상 PCA 특강</a>
+<a class="h3" href="#1-5-파생변수-vs-요약변수">1-5. 파생변수 vs 요약변수</a>
+<a class="h3" href="#1-6-변환-vs-스케일링-특강-실기와-직결">1-6. 변환 vs 스케일링 특강 — 실기와 직결</a>
+<a class="h3" href="#1-7-불균형-데이터-특강">1-7. 불균형 데이터 특강</a>
+<a class="h2" href="#2장-데이터-탐색-이-과목의-득점-코어-특강">2장. 데이터 탐색 — 이 과목의 득점 코어 특강</a>
+<a class="h3" href="#2-1-기초-통계량">2-1. 기초 통계량</a>
+<a class="h3" href="#2-1b-상관-특강-매회-1문항">2-1b. 상관 특강 — 매회 1문항</a>
+<a class="h3" href="#2-2-시각적-탐색">2-2. 시각적 탐색</a>
+<a class="h3" href="#2-3-비정형-탐색-특강-용어만-깊이-금지">2-3. 비정형 탐색 특강 — 용어만, 깊이 금지</a>
+<a class="h2" href="#3장-통계기법-기본-개념만-특강">3장. 통계기법 — 기본 개념만 특강</a>
+<a class="h3" href="#3-1-모수-vs-비모수-100">3-1. 모수 vs 비모수 100%</a>
+<a class="h3" href="#3-2-표본추출-4-척도-4-특강-100-틀리면-심각">3-2. 표본추출 4 · 척도 4 특강 100% — 틀리면 심각</a>
+<a class="h3" href="#3-3-조건부-확률-베이즈">3-3. 조건부 확률 · 베이즈</a>
+<a class="h3" href="#3-4-확률분포-정의-기댓값분산-특강-빅분기-특징">3-4. 확률분포 — 정의 + 기댓값·분산 특강 (빅분기 특징)</a>
+<a class="h3" href="#3-5-추정">3-5. 추정</a>
+<a class="h3" href="#3-6-가설검정-특강-실기-3유형과-동일">3-6. 가설검정 특강 · 실기 3유형과 동일</a>
+<a class="h3" href="#3-7-비모수-3과목-예상과-연결">3-7. 비모수 (3과목 예상과 연결)</a>
+<a class="h2" href="#시험-직전-체크리스트-2과목">시험 직전 체크리스트 (2과목)</a>
+<a class="h2" href="#계산-OX-훈련">계산 · OX 훈련</a>
+<a class="h2" href="#암기-카드">암기 카드</a></nav>
+<main class="paper">
+<h1>2과목. 빅데이터 탐색</h1>
+<div class="callout warning"><div class="callout-title">특강 — 방어 과목 · 과락 위험</div><p>타깃 <strong>11~12</strong>. 과락이 잘 나는 과목. <strong>1장·2장은 난이도 낮고 유형 한정 → 여기서 선점.</strong> 3장 추론통계는 경우의 수가 많아 난이도를 올릴 수 있다.
+3장은 <strong>기본 개념에 충실</strong>. 기출 재반복률이 높지 않으니 기출만 파지 말고 <strong>정의</strong>.
+층화추출·척도 4종·1·2종오류·p-value는 <strong>절대 놓치지 말 것</strong> (특강 마무리).</p></div>
+
+<p>이 과목 전체 = 전처리 4영역 <strong>정제 · 통합 · 축소 · 변환</strong> 을 펼친 것.</p>
+<hr />
+<h2 id="1장-데이터-전처리-반드시-득점">1장. 데이터 전처리 — 반드시 득점</h2>
+<h3 id="1-1-전처리-4영역-특강-100-정의">1-1. 전처리 4영역 특강 100% 정의</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>영역</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정제 Cleaning</strong></td>
+<td>결측, 노이즈, 이상값</td>
+</tr>
+<tr>
+<td><strong>통합 Integration</strong></td>
+<td>여러 소스 결합, 엔티티 식별, 중복 제거</td>
+</tr>
+<tr>
+<td><strong>축소 Reduction</strong></td>
+<td>변수선택, 차원축소, 표본추출, 이산화</td>
+</tr>
+<tr>
+<td><strong>변환 Transformation</strong></td>
+<td>정규화·스케일링, 로그 등 분포 변환, 집계</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1-2-정제-결측-노이즈-이상값-특강">1-2. 정제 = 결측 + 노이즈 + 이상값 특강</h3>
+<h4>결측</h4>
+<p>유형 3 (출제 빈도 낮음): MCAR(완전무작위) / MAR(다른 변수 관련) / MNAR(그 값 자체)</p>
+<p><strong>처리 — 출제 포인트는 여기</strong><br />
+| | 내용 | 주의 |<br />
+|---|---|---|<br />
+| <strong>삭제법</strong> | 완전삭제(행 제거), 변수 삭제 | 손실·편향. “항상 즉시 제거”(X) |<br />
+| <strong>대치법</strong> | 평균·중앙·최빈, 회귀대치, Hot-Deck(현 자료), Cold-Deck(외부), KNN, <strong>다중대치</strong>(여러 셋 만들어 통합) | 다중대치 = 제거가 아님 |</p>
+<h4>노이즈 감소 5 특강 난이도↑</h4>
+<ol>
+<li><strong>구간화(Binning)</strong> 2. <strong>회귀</strong> 3. <strong>군집화</strong> 4. <strong>결합 검사</strong>(컴퓨터+인간) 5. <strong>평활(이동평균 등)</strong><br />
+- ★ 11회: 노이즈 제거 = 스무딩</li>
+</ol>
+<h4>이상값</h4>
+<ul>
+<li>자연적 vs 인위적. <strong>무조건 제거는 오답.</strong> 삭제 / 변환·범주화 / 대체 가능</li>
+<li>탐지: 상자그림, <strong>ESD</strong>(평균±3σ), IQR(Q1−1.5IQR ~ Q3+1.5IQR), Z-score, DBSCAN, <strong>마할라노비스</strong>(다변량, 상관 반영)</li>
+</ul>
+<p><strong>상자그림이 하는 것 / 못 하는 것</strong> 특강 교집합 <a href="4과목.html">4과목_결과해석_쪽집게</a><br />
+- 가능: 5수 요약, 이상치, 산포, <strong>왜도 추정</strong><br />
+- 불가: <strong>데이터 개수</strong>, <strong>가설검정·통계적 유의성</strong>, <strong>평균 표시</strong></p>
+<h3 id="1-3-변수-선택-래퍼-vs-임베디드-특강-100">1-3. 변수 선택 — 래퍼 vs 임베디드 특강 100%</h3>
+<p>차원의 저주: 차원 &gt; 표본 → 희소, 과적합, 연산↑, 해석↓</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>내용</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filter</td>
+<td>모형과 무관, 통계량으로 걸러냄</td>
+<td>상관, 카이제곱, 정보이득</td>
+</tr>
+<tr>
+<td><strong>Wrapper 래퍼</strong></td>
+<td>모형 성능으로 변수 부분집합 탐색</td>
+<td><strong>전진 · 후진 · 단계적</strong></td>
+</tr>
+<tr>
+<td><strong>Embedded 임베디드</strong></td>
+<td>학습 과정에 선택 내장</td>
+<td><strong>Ridge, Lasso, Elastic Net</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>전진: 없음→하나씩 추가 / 후진: 전부→하나씩 제거 / 단계: 추가·제거 반복<br />
+- 3과목 회귀 변수선택과 <strong>교집합</strong>. 여기서 끝냈으면 3은 패스.</p>
+<p><strong>임베디드 = 4과목 규제와 교집합</strong> 특강</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>페널티</th>
+<th>계수 0?</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ridge L2</td>
+<td>Σw²</td>
+<td>안 됨 (축소만)</td>
+<td>다중공선, 분산↓</td>
+</tr>
+<tr>
+<td><strong>Lasso L1</strong></td>
+<td>Σ|w|</td>
+<td><strong>정확히 0 → 변수선택</strong></td>
+<td>희소 모델</td>
+</tr>
+<tr>
+<td>Elastic Net</td>
+<td>L1+L2</td>
+<td>일부 0</td>
+<td>상관 높은 변수 그룹</td>
+</tr>
+</tbody>
+</table></div>
+<p>문항: 수식·설명을 주고 Ridge냐 Lasso냐. <strong>순번 따라 돌아가며 출제.</strong></p>
+<h3 id="1-4-차원축소-기준점은-항상-PCA-특강">1-4. 차원축소 — 기준점은 항상 PCA 특강</h3>
+<p>PCA: 원변수를 <strong>보존하지 않음</strong>. 상관 높은 변동을 <strong>주성분(최대분산 축, 직교, 비지도)</strong> 으로.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>vs PCA</th>
+<th>차이 한 줄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>요인분석 FA</strong></td>
+<td>PCA=변동 큰 축 / FA=<strong>공통 잠재요인</strong></td>
+</tr>
+<tr>
+<td><strong>SVD</strong></td>
+<td>PCA는 <strong>정방</strong>(공분산) 분해 / SVD는 <strong>비정방도</strong> 가능 ★ 반복</td>
+</tr>
+<tr>
+<td><strong>LDA</strong></td>
+<td>PCA=비지도·분산최대 / LDA=<strong>지도·클래스 분리 최대</strong></td>
+</tr>
+<tr>
+<td>래퍼 변수선택</td>
+<td>원변수 <strong>선택</strong>(보존) / PCA는 <strong>변환</strong>(비보존)</td>
+</tr>
+</tbody>
+</table></div>
+<p>기타: t-SNE·UMAP(시각화), MDS(거리보존), 오토인코더, ICA<br />
+주성분 개수: 누적기여율 70~90%, 스크리 엘보, 고유값≥1 — 3과도 약하게 겹침(가중치↓)</p>
+<h3 id="1-5-파생변수-vs-요약변수">1-5. 파생변수 vs 요약변수</h3>
+<p>| 요약변수 | 수집 정보를 종합, 재활용 높음 | 1개월 총구매액 |<br />
+| 파생변수 | 의미 부여해 <strong>새로 만듦</strong>, 논리 타당성 | 구매등급, 최근1년 평균구매 ★ |</p>
+<p>사례 주고 “파생변수인가?” 가능.</p>
+<h3 id="1-6-변환-vs-스케일링-특강-실기와-직결">1-6. 변환 vs 스케일링 특강 — 실기와 직결</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>무엇을 바꾸나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>변환</strong></td>
+<td><strong>분포 자체</strong> (비대칭 → 대칭, 분산 안정)</td>
+</tr>
+<tr>
+<td><strong>스케일링</strong></td>
+<td><strong>상대적 크기</strong> (단위 통일). 분포 모양은 대체로 유지</td>
+</tr>
+</tbody>
+</table></div>
+<p>이상값이 있으면 스케일만으로 부족할 수 있고, 비대칭이면 변환이 필요.</p>
+<h4>분포 변환</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>효과</th>
+<th>주의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>로그</strong></td>
+<td>오른쪽 꼬리를 <strong>오른쪽으로 덜 끌리게</strong>(강도 큼)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>제곱근</strong></td>
+<td>같은 방향, <strong>강도 약함</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>지수·제곱</td>
+<td>왼쪽 꼬리 보정</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Box-Cox</strong></td>
+<td>정규성·분산안정</td>
+<td><strong>양수만</strong>. 음수면 오답 보기. λ=0 로그, 0.5 제곱근</td>
+</tr>
+<tr>
+<td>역수</td>
+<td>왜도 보정</td>
+<td><strong>순서 방향이 뒤집힘</strong> ★</td>
+</tr>
+</tbody>
+</table></div>
+<p>특강: 설명을 주고 로그 vs 제곱근 vs 지수 고르기. 실기는 Box-Cox 안 씀(이론만).</p>
+<p>구간화: 연속→구간. 비선형 패턴 파악 쉬움 (1세,2세 vs 10대,20대)</p>
+<h4>인코딩</h4>
+<p>| 레이블 | 0,1,2… | 순서 없는 범주에 크기 오해 |<br />
+| <strong>더미</strong> | 0/1, <strong>기준범주 1열 탈락</strong> | 회귀 해석용. 기준 대비 차이 |<br />
+| <strong>원핫</strong> | 범주마다 열, 기준 안 없앰 | 차원 폭증. 파이썬 모델링 필수 |<br />
+| 타깃 | 타깃 평균 | 누수 |<br />
+| 오디널 | 순서 보존 정수 | |</p>
+<p>특강: 더미 = 원핫과 비슷하나 <strong>기준값이 없어져 해석이 달라짐.</strong> 정의만 출제.</p>
+<h4>스케일링 4종 특강 100% — 3·4번째가 변별</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>방법</th>
+<th>범위/결과</th>
+<th>이상값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min-Max</td>
+<td>0~1</td>
+<td><strong>매우 민감</strong> (너무 잘 알려 최근엔 덜)</td>
+</tr>
+<tr>
+<td>Standard (Z)</td>
+<td>평균0, 분산1</td>
+<td>민감</td>
+</tr>
+<tr>
+<td><strong>MaxAbs</strong></td>
+<td>[-1,1], 0 기준 최대절대값</td>
+<td>희소 행렬에 유리</td>
+</tr>
+<tr>
+<td><strong>Robust</strong></td>
+<td>중앙값·IQR</td>
+<td><strong>이상값에 강함</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>수식·범위·정의를 체크. 선형 스케일은 <strong>피어슨 상관을 안 바꿈</strong>. 로그 등 비선형은 바꿈.</p>
+<h3 id="1-7-불균형-데이터-특강">1-7. 불균형 데이터 특강</h3>
+<p>타깃 비율이 다를 때 <strong>가상으로 비율을 바꿈</strong>.</p>
+<div class="callout warning"><div class="callout-title">특강 혼동 금지</div><p><strong>층화 K-fold</strong> (<a href="4과목.html">4과목</a>): 원래 비율을 폴드마다 <strong>유지</strong>
+<strong>불균형 처리</strong>(여기): 비율을 <strong>바꿈</strong></p></div>
+
+<p>| 언더 | 다수 클래스 줄임 | 정보 <strong>손실</strong>, 대용량에 유리 |<br />
+| 오버 | 소수 늘림 | <strong>과적합</strong> |<br />
+| SMOTE | 소수 <strong>합성 생성</strong> (단순복제 X) | |<br />
+| <strong>임계값 이동</strong> | 분류 컷오프를 옮김 | <strong>검정(추론) 단계</strong>. 학습 데이터 비율을 직접 바꾸지 않음 특강 |</p>
+<p>세부 기법(SMOTE 변형 등) 출제확률↓. 오버/언더 장단 + 임계값 시점만.</p>
+<hr />
+<h2 id="2장-데이터-탐색-이-과목의-득점-코어-특강">2장. 데이터 탐색 — 이 과목의 득점 코어 특강</h2>
+<p>3장 난이도를 대비하려면 <strong>여기서 틀리면 안 된다.</strong></p>
+<p>EDA(탐색, 기술통계) vs CDA(확증, 가설검정·추론)</p>
+<p>EDA 4원칙 ☞ 저잔재현: 저항성, 잔차, 재표현, 현시성</p>
+<h3 id="2-1-기초-통계량">2-1. 기초 통계량</h3>
+<p>중심: 산술 ≥ 기하 ≥ 조화 / 중앙값은 <strong>순서만</strong> 보므로 이상치에 강함 / 최빈은 범주형도<br />
+산포: 범위, 분산, SD, IQR, <strong>CV=SD/평균</strong> (단위 다른 집단 비교)<br />
+<strong>왜도&gt;0 오른쪽 꼬리: 최빈 &lt; 중앙 &lt; 평균</strong> (“평균은 꼬리를 따라간다”) ★매회<br />
+첨도: 정규=3 (excess는 0)<br />
+왜도·첨도 = 연속형 전용</p>
+<h3 id="2-1b-상관-특강-매회-1문항">2-1b. 상관 특강 — 매회 1문항</h3>
+<p>상관 = 두 변수의 <strong>강도 + 방향</strong>. 다변량이지만 탐색에도 위치.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>공분산 Cov</th>
+<th>피어슨 r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>범위</td>
+<td><strong>−∞ ~ +∞</strong></td>
+<td>−1~1</td>
+</tr>
+<tr>
+<td></td>
+<td>단위에 민감</td>
+<td>표준화한 공분산</td>
+</tr>
+<tr>
+<td></td>
+<td>독립이면 <strong>반드시 0</strong></td>
+<td>구간척도↑, <strong>선형</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>특강 포인트</strong><br />
+- 독립 → Cov=0 (O) / Cov=0 → 독립 (X, 비선형 가능)<br />
+- 피어슨: 구간·비율, 선형, <strong>이상치 민감</strong><br />
+- <strong>스피어만</strong>: 서열. 구간·비율을 <strong>순위화</strong> 가능. <strong>비선형(단조)도</strong> 포착 ★ 전부 출제 포인트<br />
+- 상관 크기만으로 <strong>통계적 유의성 불가 → 가설검정</strong> 필요<br />
+- 켄달 τ도 순위 기반</p>
+<h3 id="2-2-시각적-탐색">2-2. 시각적 탐색</h3>
+<p><strong>히스토그램</strong>: 계급(bin)이 좁으면 들쭉날쭉, 넓으면 패턴 소실 — 해석 문항<br />
+<strong>상자그림</strong>: 위 1-2절<br />
+고급(4과목과 중복, 정의만): 단계구분도, <strong>카토그램</strong>, 조건플롯, 평행좌표<br />
+- 다변량 시각 해석(PCA 바이플롯 읽기 등)은 가중치↓</p>
+<h3 id="2-3-비정형-탐색-특강-용어만-깊이-금지">2-3. 비정형 탐색 특강 — 용어만, 깊이 금지</h3>
+<p>한때 3~4문항으로 과락 발생 → 이후 가중치↓. <strong>실기 주대상도 아님.</strong></p>
+<p>전처리 용어만:<br />
+- 토큰화(Tokenizing)<br />
+- POS 태깅(품사)<br />
+- <strong>스테밍(Stemming)</strong>: 기계적 접사 제거<br />
+- <strong>표제어 추출(Lemmatization)</strong>: 사전 기반 원형</p>
+<p>불용어, 정규화 정도까지. 임베딩·토픽모델로 확장하지 말 것.</p>
+<hr />
+<h2 id="3장-통계기법-기본-개념만-특강">3장. 통계기법 — 기본 개념만 특강</h2>
+<h3 id="3-1-모수-vs-비모수-100">3-1. 모수 vs 비모수 100%</h3>
+<p>| 모수 | 특정 분포(정규 등) 가정, <strong>평균·분산</strong>으로 확률 |<br />
+| <strong>비모수</strong> | 분포 가정 없음, <strong>서열·순위</strong>. 평균·분산 개념을 안 씀 |</p>
+<h3 id="3-2-표본추출-4-척도-4-특강-100-틀리면-심각">3-2. 표본추출 4 · 척도 4 특강 100% — 틀리면 심각</h3>
+<p>| 단순무작위 | 전체에서 랜덤 |<br />
+| 계통 | 일정 간격 k |<br />
+| <strong>층화</strong> | 층 나누고 <strong>각 층에서</strong> 추출. <strong>층 내 동질, 층 간 이질</strong> |<br />
+| <strong>집락(군집)</strong> | 군집 <strong>통째로</strong>. <strong>군집 내 이질, 군집 간 동질</strong> |</p>
+<p>비확률: 편의, 판단, 할당, 눈덩이, 자기선택</p>
+<p>척도: 명목 / 서열 / 등간(절대0 없음) / 비율(절대0)</p>
+<h3 id="3-3-조건부-확률-베이즈">3-3. 조건부 확률 · 베이즈</h3>
+<p>P(A|B)=P(A∩B)/P(B)<br />
+<strong>독립이면</strong> P(A∩B)=P(A)P(B), P(A|B)=P(A) — 교집합 계산이 다름 특강<br />
+배반 ≠ 독립<br />
+베이즈: P(A|B)=P(B|A)P(A)/P(B) — 초기엔 많이, <strong>최근 가중치↓</strong>. 유도 관계만.</p>
+<h3 id="3-4-확률분포-정의-기댓값분산-특강-빅분기-특징">3-4. 확률분포 — 정의 + 기댓값·분산 특강 (빅분기 특징)</h3>
+<p>ADSP는 특징 구분 / <strong>빅분기는 E, V 수식까지</strong></p>
+<p><strong>이산</strong><br />
+| | 상황 | E | V |<br />
+|---|---|---|---|<br />
+| 베르누이 | 1회 성공실패 | p | p(1−p) |<br />
+| 이항 B(n,p) | n회 성공횟수 | <strong>np</strong> | <strong>np(1−p)</strong> |<br />
+| 기하 | 첫 성공까지 횟수 | 1/p | |<br />
+| 초기하 | <strong>비복원</strong> 성공횟수 | | 시행 간 <strong>비독립</strong> |<br />
+| 포아송 | 단위시간 발생횟수 | <strong>λ</strong> | <strong>λ</strong> |</p>
+<p><strong>연속</strong>: 정규 / t(꼬리 두꺼움, df↑→정규) / χ²(모분산, 적합도) / F(분산비, ANOVA)</p>
+<p>기댓값 성질 ★: E(aX+b)=aE(X)+b, <strong>V(aX+b)=a²V(X)</strong><br />
+독립이면 V(X±Y)=V(X)+V(Y) (빼도 더함)</p>
+<p><strong>CLT 100% (오답으로)</strong><br />
+- 모집단이 <strong>정규일 필요 없음</strong><br />
+- <strong>표본평균의 분포</strong> (표본분산의 분포 아님)<br />
+- n 충분히 크면 표본평균 ~ 정규 근사 → 모수적 검정 가능<br />
+- E(X̄)=μ, V(X̄)=σ²/n, SE=σ/√n</p>
+<h3 id="3-5-추정">3-5. 추정</h3>
+<p><strong>불편추정량</strong>: 한 번 구한 표본평균이 모평균과 같다는 뜻이 <strong>아님</strong>.<br />
+<strong>표본평균의 기댓값이 모평균과 같을 때</strong> = 불편. 특강 (오답 고르기용으로 정의를 정확히)</p>
+<p>좋은 추정량 ☞ 불효일충: 불편, 효율(분산 작을수록, “분산 0”은 함정), 일치, 충족<br />
+표본분산 n−1: 불편추정<br />
+MSE = Var + Bias²</p>
+<p><strong>구간추정</strong><br />
+- 점추정은 오류 큼 → 구간 + <strong>반드시 신뢰수준 명시</strong><br />
+- 95%의 의미: 같은 방법으로 100번 중 95번 <strong>모수를 포함</strong>. <strong>확률이 아님</strong> (모수는 상수)<br />
+- 신뢰수준↑ → 구간 <strong>넓어짐</strong> / 표본 n↑ → 구간 <strong>좁아짐</strong><br />
+- n을 4배로 → 구간 폭은 약 <strong>1/2</strong> (√n)<br />
+- z: 90% 1.645 / 95% 1.96 / 99% 2.576<br />
+- 모분산 알면 z, 모르면 t(df=n−1)<br />
+- 계산은 과거 회차 선까지. 확장 금지 특강</p>
+<h3 id="3-6-가설검정-특강-실기-3유형과-동일">3-6. 가설검정 특강 · 실기 3유형과 동일</h3>
+<ul>
+<li>검정 대상은 <strong>귀무가설</strong>. 반박 근거 있으면 기각, 없으면 <strong>기각하지 못함</strong> ≠ 귀무가 참</li>
+<li>H0: 같다·차이없다 / H1: 입증할 주장</li>
+<li>단측: 크다·작다·증가·감소 / 양측: 같지 않다</li>
+<li>α = 1종 허용 = P(참인 H0 기각)</li>
+<li>β = 2종 = P(거짓 H0 채택)</li>
+<li>검정력 = 1−β</li>
+<li><strong>p &lt; α → H0 기각</strong></li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>H0 참</th>
+<th>H0 거짓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기각</td>
+<td>1종 α</td>
+<td>검정력</td>
+</tr>
+<tr>
+<td>미기각</td>
+<td>OK</td>
+<td>2종 β</td>
+</tr>
+</tbody>
+</table></div>
+<p>모수적 검정의 가정 1호 = <strong>정규성</strong>. 확인: Shapiro, K-S, Q-Q, Jarque-Bera, 히스토그램<br />
+- t: 단일 / <strong>대응</strong>(같은 대상 전후) / <strong>독립 두 집단</strong><br />
+- 3집단↑ 평균 = ANOVA / 분산비교 = F / 범주 = χ²</p>
+<p>정규성 방법이 1·2·3·4로 제시됨 → “상위 키워드는 모수검정 가정”으로 묶어라 특강</p>
+<h3 id="3-7-비모수-3과목-예상과-연결">3-7. 비모수 (3과목 예상과 연결)</h3>
+<p>대응 t ↔ <strong>윌콕슨 부호순위</strong> 특강 예상<br />
+독립 t ↔ <strong>윌콕슨 순위합</strong>(만-휘트니) 특강 예상<br />
+3집단 ↔ 크러스칼-월리스 / 반복측정 ↔ 프리드먼</p>
+<hr />
+<h2 id="시험-직전-체크리스트-2과목">시험 직전 체크리스트 (2과목)</h2>
+<ol>
+<li>전처리 4: 정제·통합·축소·변환 / 정제=결측·노이즈·이상</li>
+<li>결측: 삭제 vs 대치 / 노이즈 5 / 이상값 무조건 제거 X</li>
+<li><strong>래퍼=전진후진단계 / 임베디드=Ridge Lasso Elastic</strong></li>
+<li>PCA 기준: FA=공통요인, SVD=비정방, LDA=지도</li>
+<li>변환=분포, 스케일=크기 / 로그&gt;제곱근 강도 / Box-Cox 음수 X</li>
+<li>스케일 변별: <strong>MaxAbs, Robust</strong> / 이상값에 Robust</li>
+<li>더미는 기준열 탈락 / 원핫은 전체 열</li>
+<li>불균형=비율 변경 ≠ 층화K-fold=비율 유지 / 임계값=검정단계</li>
+<li>왜도&gt;0: 최빈&lt;중앙&lt;평균 / 상자그림에 평균·n·가설검정 없음</li>
+<li>독립→Cov0 / 피어슨=선형·이상치민감 / <strong>스피어만=서열·비선형</strong></li>
+<li>모수=분포가정+평균분산 / 비모수=서열, 평균분산 없음</li>
+<li>층화=층내동질 / 집락=군집내이질 / 척도 4</li>
+<li>독립일 때 교집합=곱 / 베르누이·이항 E,V / 포아송 E=V=λ / 초기하=비복원</li>
+<li>CLT: 모집단 정규 불필요, <strong>표본평균</strong>의 분포</li>
+<li>불편 = E(추정량)=모수 (한 번 값이 같다가 아님)</li>
+<li>신뢰수준↑ 구간↑ / n↑ 구간↓ / 95%는 확률이 아님</li>
+<li>1종=억울한 기각 / 2종=범인 놓침 / p&lt;α 기각 / 단측 vs 양측</li>
+<li>비정형: 토큰·POS·스테밍·표제어만</li>
+</ol>
+<hr />
+<h2 id="계산-OX-훈련">계산 · OX 훈련</h2>
+<p><strong>1.</strong> 소득이 낮을수록 소득 문항 무응답 → 결측 유형은?</p>
+<details><summary>정답</summary>MNAR (값 자체와 관련)</details>
+
+<p><strong>2.</strong> Q1=40, Q3=60. IQR 이상값 하한·상한?</p>
+<details><summary>정답</summary>IQR=20 → 40−30=<strong>10</strong>, 60+30=<strong>90</strong></details>
+
+<p><strong>3.</strong> 왜도&gt;0일 때 최빈·중앙·평균 크기 순서</p>
+<details><summary>정답</summary>최빈 < 중앙 < 평균</details>
+
+<p><strong>4.</strong> 독립이면 공분산 0? 공분산 0이면 독립?</p>
+<details><summary>정답</summary>앞 O, 뒤 X</details>
+
+<p><strong>5.</strong> X~B(100, 0.2)의 평균과 분산</p>
+<details><summary>정답</summary>E=20, V=16</details>
+
+<p><strong>6.</strong> n=36, x̄=50, σ=12, 95% CI (z=1.96)</p>
+<details><summary>정답</summary>SE=2 → 50±3.92 → <strong>(46.08, 53.92)</strong></details>
+
+<p><strong>7.</strong> 표본을 4배로 하면 신뢰구간 폭은?</p>
+<details><summary>정답</summary>약 <strong>1/2</strong> (√n)</details>
+
+<p><strong>8.</strong> 95% 신뢰구간 = 모수가 그 안에 있을 확률 95% ?</p>
+<details><summary>정답</summary>X. 모수는 상수. ‘같은 방법 100번 중 95번 포함’.</details>
+
+<p><strong>9.</strong> 불편추정량 = 이번에 구한 x̄가 μ와 같다?</p>
+<details><summary>정답</summary>X. <strong>E(x̄)=μ</strong></details>
+
+<p><strong>10.</strong> 층화 vs 집락 한 줄</p>
+<details><summary>정답</summary>층화: 층내 동질·각 층 추출 / 집락: 군집내 이질·통째</details>
+
+<p><strong>11.</strong> 로그 vs 제곱근 vs Box-Cox 음수</p>
+<details><summary>정답</summary>로그가 강도 큼. Box-Cox는 <strong>양수만</strong>.</details>
+
+<p><strong>12.</strong> Min-Max와 Robust 중 이상값에 강한 것</p>
+<details><summary>정답</summary><strong>Robust</strong> (중앙값·IQR)</details>
+
+<p><strong>13.</strong> 불균형 오버샘플링 vs 층화 K-fold</p>
+<details><summary>정답</summary>오버는 비율을 <strong>바꿈</strong>. 층화K-fold는 <strong>유지</strong>.</details>
+
+<p><strong>14.</strong> 임계값 이동은 학습 단계에서 한다?</p>
+<details><summary>정답</summary>X — <strong>검정(추론) 단계</strong></details>
+
+<p><strong>15.</strong> 상자그림으로 표본 수 n을 알 수 있다?</p>
+<details><summary>정답</summary>X. 평균·가설검정도 불가.</details>
+
+<p><strong>16.</strong> 스피어만은 구간척도만, 선형만?</p>
+<details><summary>정답</summary>X. <strong>서열</strong>, 단조 비선형도.</details>
+
+<p><strong>17.</strong> CLT는 모집단이 정규분포여야 한다? 표본분산의 분포?</p>
+<details><summary>정답</summary>둘 다 X. 모집단 분포 무관, <strong>표본평균</strong>의 분포.</details>
+
+<p><strong>18.</strong> V(X−Y) (독립) = V(X)−V(Y) ?</p>
+<details><summary>정답</summary>X. <strong>V(X)+V(Y)</strong></details>
+
+<p><strong>19.</strong> p=0.03, α=0.05 → H0?</p>
+<details><summary>정답</summary><strong>기각</strong></details>
+
+<p><strong>20.</strong> PCA는 정방만, SVD는 비정방도?</p>
+<details><summary>정답</summary>O (공분산 PCA 기준)</details>
+
+<p><strong>21.</strong> Lasso는 계수를 0에 가깝게만 하고 0으로 만들지는 못한다?</p>
+<details><summary>정답</summary>X — 그건 Ridge. Lasso는 <strong>정확히 0</strong>.</details>
+
+<p><strong>22.</strong> 더미변수는 원핫과 달리 기준 범주 열이 빠진다?</p>
+<details><summary>정답</summary>O</details>
+
+<hr />
+<h2 id="암기-카드">암기 카드</h2>
+<pre><code>정제=결측·노이즈·이상 / 전처리4=정통축변
+래퍼=전후단 / 임베디드=릿지라소엘라
+PCA=최대분산·비지도 / FA=공통요인 / SVD=비정방 / LDA=지도
+변환=분포 / 스케일=크기 / Robust·MaxAbs가 변별
+로그&gt;제곱근 / Box-Cox 양수
+오버=과적합 / 언더=정보손실 / 임계값=검정단계
+왜도+ : 최빈&lt;중앙&lt;평균
+독립→Cov0 / 스피어만=서열+비선형
+층화=층내동질 / 집락=군집내이질
+CLT=표본평균, 모집단 정규 불필요
+불편=E(θ̂)=θ / n↑구간↓ / 신뢰수준↑구간↑
+1종=α 억울 / 2종=β 놓침
+대응t↔윌콕슨부호순위 / 독립t↔순위합
+</code></pre>
+</main>
+</div>
+<footer class="site">김계철 8/25 특강 포인트 + 기존 정리·기출 반영. 옵시디언 md와 동일 내용.</footer>
+</body>
+</html>
